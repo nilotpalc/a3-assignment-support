@@ -35,3 +35,25 @@ Add `--strip <folder>` to `qa_checks.py` to write tag-free copies for assembly.
 
 ## Known limits
 Scripts are aids; each `SKILL.md` also describes the manual procedure. Platform capabilities (web search, file writing, PDF rendering) in your Copilot setup are unverified: confirm on first use. See `tests/G1_build_acceptance_report.md` for script limits.
+
+## Prompts (`.github/prompts/`)
+Reusable prompt files, run in Copilot chat by typing `/` and the name. Each gate has a `run` prompt that produces the pack for review and an `approve` prompt that records your written approval. Edit the bracketed text in an `approve` prompt before sending it.
+
+| Prompt | Use |
+|---|---|
+| `g1-run`, `g1-approve` | Build acceptance |
+| `g2-run`, `g2-approve` | Template, requirement register, coverage matrix, K1 to K17 rulings |
+| `g3-run`, `g3-approve` | Prior-work fact ledger and shortlist |
+| `g4-run`, `g4-approve` | Scope and Part A |
+| `g5-run`, `g5-approve` | Part B |
+| `g6-run`, `g6-approve` | Part C |
+| `g7-run`, `g7-approve` | Part D |
+| `g8-run`, `g8-approve` | Assembly and full audit |
+| `g9-prep` | Submission checklist and AI-use fact sheet (G9 itself is yours alone) |
+| `section-draft` | One section: judgement capture, draft, delta QA, ledger update (asks for the section ID) |
+| `delta-qa` | Delta QA after any edit |
+| `reopen-after-change` | Lists what an edit reopens after a gate; changes nothing until you confirm |
+| `compress-gates` | Records consent to combine G4+G5 and/or G6+G7 for the deadline |
+| `status` | Read-only status: gates, word counts, next prompt |
+
+Prompt front matter uses `description` and `agent: a3-support-agent`. If your Copilot version does not accept `agent`, remove that line and select the agent manually.
