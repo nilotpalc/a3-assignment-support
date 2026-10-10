@@ -1,6 +1,6 @@
 ---
-name: g2-run
-description: G2: generate template, requirement register, conflict register, coverage matrix and K1-K17 rulings for review
+name: "g2-run"
+description: "G2: generate template, requirement register, conflict register, coverage matrix and K1-K17 rulings for review"
 disable-model-invocation: true
 ---
 Start G2. G1 must be recorded as approved.

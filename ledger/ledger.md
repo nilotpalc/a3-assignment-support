@@ -79,6 +79,7 @@ dimensions: Technology;Data;Talent;Process;Culture;Governance
 2026-10-10 | Peers | Public comparators may be named in Part C | Nilotpal
 2026-10-10 | AI assistance | Drafting only after user supplies judgement; programme confirmation given by user | Nilotpal
 2026-10-10 | K13 | Deadline 15 Oct 2026 | Nilotpal
+2026-10-10 | G1 | Build acceptance approved; no changes or conditions listed | Nilotpal
 </decision_log>
 
 <open_questions>
