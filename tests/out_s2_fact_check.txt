@@ -1,0 +1,9 @@
+# fact_check.py: sample of 24 facts from A1/A2 (expect 0 misses)
+24 facts checked, 0 misses, 2 placeholders flagged
+exit=0
+
+# planted misses (expect 2 misses)
+MISS P01 A1 C1.2 | about 6,000 unique accounts per market
+MISS P02 A2 A1 | ~20 analyst-days per request
+2 facts checked, 2 misses, 0 placeholders flagged
+exit=1

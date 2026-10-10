@@ -1,0 +1,852 @@
+AIBP - COURSE 3
+
+Assignment 3: AI Opportunity Portfolio with
+Maturity Assessment, Competitive Analysis, and
+Workforce Impact Scan
+Participant Worksheet | Organisational Readiness and Opportunity Discovery
+Assessment detail                                                       Requirement
+
+Content score                                                           100 marks
+
+Quality modifier                                                        +5 to -5; final recorded score capped at 100 and floored at 0
+
+Assessment basis                                                        Course 3 asynchronous learning content. No live-session-only
+                                                                        framework is required to complete this assignment.
+
+Submission format                                                       Complete this worksheet structure and submit as one PDF.
+                                                                        You may improve formatting, but retain all section numbers,
+                                                                        response fields and tables.
+
+Length                                                                  Recommended 16-20 pages of learner responses; maximum
+                                                                        20 pages excluding references, declaration and optional
+                                                                        evidence appendix.
+
+
+
+ WHAT THIS ASSIGNMENT IS
+ An organisation- or function-level decision artefact. You will assess AI readiness across six dimensions, build and sequence a
+ 5-7 opportunity portfolio, examine the competitive AI landscape, and redesign one affected role around human-AI
+ complementarity.
+
+
+
+ CONTINUITY FROM COURSES 1 AND 2
+ You may reuse the same organisational context and one or more opportunities from earlier assignments, but you do not
+ have to. Course 3 is broader: it asks you to move from a single use-case decision to a portfolio and organisational-readiness
+ perspective. Reuse is acceptable only where the opportunity still fits the purpose of this assessment.
+
+
+
+
+                 AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+How to Complete This Assignment
+The assessment tests organisational judgement, portfolio thinking and workforce redesign - not technical
+implementation.
+       Choose one clear assessment scope and keep it consistent: whole organisation, business unit/division, function, or a clearly
+        labelled representative/anonymised context.
+       Use High / Medium / Low maturity ratings only after considering the sub-dimensions and available evidence. Do not treat
+        self-perception as evidence.
+       Build 5-7 credible AI opportunities. They may include traditional AI/ML, GenAI, multimodal or agentic AI where
+        appropriate; do not force every opportunity into GenAI.
+       For competitive analysis, use public, current and identifiable sources. If evidence is unavailable, write Not evidenced
+        rather than inventing a signal.
+       Do not disclose confidential, personal, proprietary or commercially sensitive information. Anonymisation and clearly
+        labelled assumptions are acceptable.
+       Keep the workforce analysis focused on tasks and role redesign. The assignment does not ask you to make or justify
+        headcount-reduction decisions.
+       Make the final portfolio internally consistent with the maturity constraints you establish in Part A.
+
+    CONFIDENTIALITY, ASSUMPTIONS AND HYPOTHETICAL CONTEXTS
+    You may use a real context, an anonymised real context, a representative/composite professional context, or a clearly
+    labelled hypothetical context where real information cannot be safely disclosed. Estimates and assumptions are acceptable
+    when their basis is stated. Do not invent organisational facts and present them as real.
+
+
+
+    IMPORTANT: ASSESSMENT SCOPE
+    You are not required to assess your entire corporation if you do not have sufficient visibility. A business unit or function that
+    you understand well is acceptable. Your claims should match the scope you can credibly assess.
+
+
+
+What This Assignment Is Not
+       A full enterprise AI strategy or governance operating model.
+       An investment-grade ROI, NPV or payback business case.
+       A build-vs-buy-vs-partner or vendor-selection exercise.
+       A legal/regulatory opinion.
+       A production implementation plan.
+       A headcount-reduction plan.
+       A requirement to use the most advanced AI technology available.
+
+
+How This Is Marked
+    Part                                           Focus                                             Marks
+
+    A                                              Organisational AI Maturity Assessment             25
+
+    B                                              AI Opportunity Portfolio and                      30
+                                                   Sequencing
+
+    C                                              Competitive AI Positioning                        20
+
+    D                                              Workforce Impact and Role Redesign                25
+
+                                                   Content total                                     100
+
+                                                   Quality modifier                                  +5 to -5
+
+
+
+
+                     AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+ FINAL SCORE RULE
+ Final recorded score = content score + quality modifier, capped at 100 and floored at 0. The quality modifier is document-
+ level and does not re-score individual criterion weaknesses.
+
+
+
+Quality Modifier (+5 to -5)
+ Modifier                                                                Document-level standard
+
+ +5                                                                      Exceptional executive artefact: highly specific, coherent,
+                                                                         evidence-disciplined, concise and decision-ready.
+
+ +3 to +4                                                                Strong professional artefact with very good synthesis, evidence
+                                                                         use and cross-section consistency; only minor weaknesses.
+
+ +1 to +2                                                                Above-standard document-level synthesis or usability, though
+                                                                         not consistently exceptional.
+
+ 0                                                                       Competent submission meeting normal professional
+                                                                         expectations.
+
+ -1 to -2                                                                Noticeable document-level weaknesses: avoidable inconsistency,
+                                                                         weak synthesis/source discipline, or presentation problems.
+
+ -3 to -4                                                                Significant document-level problems: repeated unsupported
+                                                                         assertions, major contradictions, or serious non-compliance.
+
+ -5                                                                      Material integrity/submission-quality failure: undisclosed
+                                                                         fabrication, extensive placeholders, missing declaration,
+                                                                         unusable structure or equivalent fundamental problem.
+
+
+
+
+Part A: Organisational AI Maturity Assessment - 25 marks
+Assess readiness before prioritising opportunities. The core Course 3 principle is that organisational readiness is
+constrained by weak dimensions, not defined by the strongest one.
+
+A1. Define the assessment scope and evidence base - 3 marks
+ Field                                                                   Your response
+
+ Assessment scope                                                        [ ] Whole organisation [ ] Business unit/division [ ] Function [ ]
+                                                                         Representative/anonymised context
+
+ Organisation / context label
+
+ Why this is an appropriate scope for you to assess
+
+ Primary evidence available                                              Examples: direct operational knowledge, internal process
+                                                                         documents, published reports, colleague input, public sources
+
+ Important evidence limitations
+
+
+Response budget: 200 words maximum across the table.
+What earns marks: A clear, credible scope; appropriate evidence sources; and honest limits on what you can infer.
+
+
+
+
+                  AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+A2. Six-Dimension AI Maturity Assessment - 14 marks
+ RATING GUIDE
+ HIGH: the relevant practices/capabilities are broadly present, repeatable and evidenced.
+ MEDIUM: some capability exists, but it is partial, inconsistent, manual or dependent on individuals.
+ LOW: the capability is largely absent, unclear or materially blocks reliable AI deployment/scaling.
+ Rate the dimension as a whole after considering its sub-dimensions. Evidence is more important than optimism.
+
+
+
+                             Sub-dimensions taught in
+ Dimension                                                   Rating H/M/L                Evidence / indicators         Most material gap
+                             Course 3
+
+ Technology                  Infrastructure; integration;
+                             technical debt
+
+ Data                        Quality; accessibility;
+                             strategic value
+
+ Talent                      Skills inventory; learning
+                             culture; leadership
+                             capability
+
+ Process                     Standardisation;
+                             documentation; automation
+                             baseline
+
+ Culture                     Experimentation tolerance;
+                             data-driven decisions; cross-
+                             functional collaboration;
+                             visible leadership
+                             commitment
+
+ Governance                  Documented AI/data
+                             policies; ethics/risk review;
+                             clear accountability;
+                             incident response and
+                             monitoring
+
+
+
+Which rating are you least confident about, and what additional evidence would you need to validate or change
+it?
+Response budget: 150 words maximum after the table.
+What earns marks: All six dimensions assessed using the taught sub-dimensions, with evidence and a defensible overall rating;
+uncertainty is acknowledged rather than hidden.
+
+A3. Industry / peer benchmark - 4 marks
+Compare your focal context against an appropriate industry baseline or 1-2 relevant peers. The purpose is to
+identify relative strengths and gaps, not to create a league table.
+
+                                     What the evidence suggests
+ Benchmark source / peer                                                    Dimension(s) most relevant           Implication for your context
+                                     about AI readiness
+
+
+
+
+ Optional third source
+
+
+
+Response budget: 250 words maximum across the table.
+What earns marks: Relevant comparator(s), identifiable evidence, and a clear distinction between absolute self-assessment and
+relative sector/peer position.
+
+
+
+                   AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+A4. Weakest-dimension diagnosis and readiness priorities - 4 marks
+Identify the one or two maturity dimensions that most constrain AI progress in your selected scope.
+
+                                                           Which opportunities it                                      Evidence that it has
+ Constraint                  Why it matters                                              Priority intervention
+                                                           could block                                                 improved
+
+
+
+
+ Optional second
+ constraint
+
+
+Response budget: 250 words maximum.
+What earns marks: The diagnosis follows from A2/A3 and results in concrete capability-building priorities rather than generic
+aspirations.
+
+
+Part B: AI Opportunity Portfolio and Sequencing - 30 marks
+Move from readiness to portfolio choice. The goal is a balanced set of opportunities that fits the organisation you
+actually assessed.
+
+B1. Build a 5-7 opportunity portfolio - 10 marks
+Identify five to seven credible AI opportunities within your assessment scope. Reuse from earlier assignments is
+allowed where relevant.
+
+                        Opportunity /                                                              Primary value            Critical readiness
+ #                                               Function / workflow      AI pattern
+                        business problem                                                           mechanism                dependency
+
+ 1
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+ 6 (optional)
+
+ 7 (optional)
+
+
+
+
+ AI PATTERN
+ Use the technology that fits the problem: rules/automation, traditional ML, GenAI, multimodal AI, agentic AI or a hybrid. The
+ portfolio does not need to be “all GenAI”.
+
+
+Response budget: One concise row per opportunity; no separate business case is required.
+What earns marks: Five to seven distinct, credible opportunities tied to business problems/value and to readiness dependencies
+identified in Part A.
+
+B2. Classify Quick Wins, Strategic Bets and Moonshots - 8 marks
+ COURSE 3 PORTFOLIO LOGIC
+ QUICK WIN: can create business impact in roughly 3-6 months with most required readiness already in place.
+ STRATEGIC BET: significant potential value, but requires capability-building such as talent, data pipelines, process change or
+ culture change.
+ MOONSHOT: potentially transformational, high uncertainty and longer horizon (often 12-24 months); requires strength
+ across most/all readiness dimensions.
+
+                   AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+ Opportunity                        Classification                       Readiness rationale                   Time / uncertainty rationale
+
+ 1                                  Quick Win / Strategic Bet /
+                                    Moonshot
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+ 6 optional
+
+ 7 optional
+
+
+
+Response budget: 50 words maximum per opportunity across the rationale columns.
+What earns marks: Classification follows the Course 3 definitions and is consistent with the maturity evidence in Part A. A “Quick
+Win” must actually be ready enough to move quickly.
+
+B3. Sequence the portfolio and select the top three - 8 marks
+Rank your top three opportunities for attention. There is no required formula. Use the factors taught
+asynchronously: potential business impact, readiness/capability requirements, time to impact, risk/uncertainty,
+and strategic significance.
+
+                                                          Why this should move          Readiness condition or        What would change the
+ Priority                    Opportunity
+                                                          now / next                    dependency                    priority
+
+ 1
+
+ 2
+
+ 3
+
+
+
+In 2-3 sentences, explain how your portfolio balances delivery, capability-building and optionality rather than
+simply choosing the three easiest projects.
+Response budget: 300 words maximum across B3.
+What earns marks: A defensible sequence using taught portfolio logic; top priorities are consistent with Part A maturity and
+distinguish near-term delivery from strategic capability-building.
+
+B4. Cross-functional compound-value check - 4 marks
+Select one of your top three opportunities and test whether value could compound across functions - and
+whether risk could compound as well.
+
+ Question                                                                Your response
+
+ Selected opportunity
+
+ Upstream function / AI output it depends on
+
+ Downstream function / decision it affects
+
+ How value could compound
+
+ How error or bias could propagate
+
+ Control / hand-off needed
+
+
+                  AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+Response budget: 250 words maximum.
+What earns marks: A genuine cross-functional value chain with both compounded value and compounded risk considered. If no
+meaningful chain exists, a well-reasoned “not applicable” can earn marks.
+
+
+Part C: Competitive AI Positioning - 20 marks
+Use public evidence to understand what peers/competitors are doing, how AI is changing your industry, and
+where your organisation should lead or follow.
+
+ PUBLIC-EVIDENCE RULE
+ Use current, identifiable sources for material competitor/peer claims. Record source title/organisation/date/link in the
+ reference log. If a source category is not available or relevant, write Not evidenced / Not applicable rather than inventing
+ evidence. You are not expected to purchase access to a paid competitive-intelligence platform.
+
+
+
+C1. Five-source competitive intelligence scan - 8 marks
+Select two relevant competitors/peers/comparator organisations. A third is optional. Examine the five signal
+sources taught in Course 3.
+
+                                                                                                              CI / other
+                         Patent / R&D                               Product /            Corporate /
+ Comparator                                   AI hiring signals                                               structured               Overall position
+                         signals                                    deployment signals   regulatory filings
+                                                                                                              intelligence
+
+ Comparator 1                                                                                                                          Experimenting /
+                                                                                                                                       Scaling / Embedded
+
+ Comparator 2                                                                                                                          Experimenting /
+                                                                                                                                       Scaling / Embedded
+
+ Comparator 3
+ optional
+
+
+
+Which comparator warrants the closest strategic attention, and what combination of signals supports that
+conclusion?
+Response budget: 350 words maximum including the final explanation.
+What earns marks: The five-source framework is applied as evidence, not as a press-release summary; overall
+Experimenting/Scaling/Embedded judgement follows from multiple signals.
+
+C2. AI-enhanced Five Forces scan - 5 marks
+                                         Is AI strengthening or weakening     Are you on the favourable side of
+ Force                                                                                                              Most important implication
+                                         this force?                          the shift?
+
+ Barriers to entry
+
+ Buyer power
+
+ Supplier power
+
+ Threat of substitutes
+
+ Competitive rivalry
+
+
+
+Which one force is changing most because of AI in your industry, and which opportunity in Part B best responds
+to that shift?
+Response budget: 200 words maximum after the table.
+What earns marks: All five forces considered through an AI lens, with one structural shift connected back to the opportunity portfolio.
+
+
+
+
+                       AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+C3. Lead / follow / wait positioning for the top three opportunities - 4 marks
+ THREE-FACTOR DECISION FRAMEWORK
+ For each initiative, consider: (1) data moat potential; (2) regulatory clarity/risk; and (3) organisational readiness. Positioning
+ is initiative-specific, not a single company-wide label.
+
+
+
+                                                 Regulatory clarity /     Organisational
+ Top-three opportunity   Data moat potential                                                       Position                    Rationale
+                                                 risk                     readiness
+
+ Priority 1                                                                                        Lead / Fast follow / Wait
+
+
+ Priority 2
+
+
+ Priority 3
+
+
+
+Response budget: 50 words maximum per opportunity rationale.
+What earns marks: Positioning follows the three taught factors and may differ across initiatives. “Lead” is not automatically better
+than “follow” or “wait”.
+
+C4. Proprietary-data moat / flywheel test - 3 marks
+Apply the Course 3 three-question moat test to the one opportunity with the strongest potential for compounding
+advantage.
+
+ Question                                                                 Your response
+
+ Does the opportunity generate proprietary data competitors
+ cannot easily obtain?
+
+ Does that data feed a closed-loop system that improves the AI
+ with continued use?
+
+ Does the improving system create switching costs or another
+ compounding advantage?
+
+ Conclusion                                                               [ ] Defensible moat potential [ ] Partial/conditional [ ] No
+                                                                          meaningful moat
+
+ What would strengthen or erode the moat?
+
+
+Response budget: 250 words maximum.
+What earns marks: The conclusion follows from proprietary data, closed-loop learning and compounding advantage - not from data
+volume alone.
+
+
+
+
+                   AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+Part D: Workforce Impact and Role Redesign - 25 marks
+Move from “jobs affected” to task-level redesign. The purpose is to identify where AI should automate, augment,
+or leave human judgement intact - and what higher-value work released capacity should enable.
+
+D1. Select the workforce focus - 3 marks
+Select one role materially affected by one of your top three opportunities. Prefer the Priority 1 opportunity; if
+another top-three opportunity has clearer workforce implications, explain why you selected it.
+
+ Field                                                                    Your response
+
+ Selected opportunity
+
+ Role / role family affected
+
+ Why this role is materially affected
+
+ Current value bottleneck in the role
+
+ What should not be assumed                                               Example: “AI affects tasks; it does not automatically imply role
+                                                                          elimination.”
+
+
+Response budget: 200 words maximum.
+What earns marks: A clearly linked role and opportunity, with the workforce problem framed around activities/value rather than
+headcount reduction.
+
+D2. Task triage: Decompose -> Classify -> Redesign - 8 marks
+ ASSESSMENT ADAPTATION OF VIDEO 24
+ Video 24 recommends decomposing a role into roughly 30-50 tasks for a full workplace redesign exercise. To keep this
+ assessment manageable, document 15-20 representative tasks that together cover the material work of the role. You may
+ include a fuller 30-50 task decomposition in an optional appendix.
+
+
+
+ CLASSIFICATION TEST
+ AUTOMATABLE: clear input, rule set and expected output; machine can execute reliably and the organisation is comfortable
+ without human review.
+ AUGMENTABLE: AI can improve human performance, but context/judgement/human review remains necessary.
+ IRREDUCIBLY HUMAN: human judgement, broader context, accountability or relationship is essential.
+
+
+
+                                                 Current share /
+ #                      Discrete task                                     Classification           Why                      AI / human boundary
+                                                 frequency
+
+ 1                                                                        Automatable /
+                                                                          Augmentable /
+                                                                          Irreducibly human
+
+ 2                                                                        Automatable /
+                                                                          Augmentable /
+                                                                          Irreducibly human
+
+ 3                                                                        Automatable /
+                                                                          Augmentable /
+                                                                          Irreducibly human
+
+ 4                                                                        Automatable /
+                                                                          Augmentable /
+                                                                          Irreducibly human
+
+
+
+
+                   AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+                                                Current share /
+ #                     Discrete task                                     Classification           Why                      AI / human boundary
+                                                frequency
+
+ 5                                                                       Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 6                                                                       Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 7                                                                       Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 8                                                                       Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 9                                                                       Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 10                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 11                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 12                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 13                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 14                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 15                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 16                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 17                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 18                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 19                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+ 20                                                                      Automatable /
+                                                                         Augmentable /
+                                                                         Irreducibly human
+
+
+
+Response budget: Complete at least 15 rows; 20 maximum in the main submission.
+What earns marks: Tasks are genuinely discrete; classifications use the taught three-question logic; boundaries reflect determinism,
+external context and comfort with unsupervised machine decisions.
+
+
+
+
+                  AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+D3. Redesign the role and redeploy capacity - 5 marks
+ Current role composition                                               Redesigned role composition
+
+ Routine / automatable work now consuming capacity                      What AI/automation will take over
+
+ Work that remains human-led but AI-augmented                           How the human role changes
+
+ Higher-value / irreducibly human work currently constrained            Where released capacity will be redeployed
+
+ Current success measures                                               New success measures after redesign
+
+
+What is the single most important role-design change required so that people experience AI as capability
+expansion rather than role erosion?
+Response budget: 300 words maximum across D3.
+What earns marks: The redesign does more than remove tasks: it deliberately reallocates capacity to higher-value augmented and
+human work and updates success measures accordingly.
+
+
+
+
+                 AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+D4. Capability and organisational redesign response - 5 marks
+D4.1 Emerging AI capability / role family - 2 marks
+Which of the six role families taught in Course 3 is the most material capability gap for this
+opportunity/portfolio?
+
+[ ] AI Systems Engineers [ ] MLOps / Governance Specialists [ ] Foundation Model / Prompt Specialists [ ] AI Product
+Managers [ ] Responsible AI / Ethics Officers [ ] Customer / Regulatory Explainers
+
+ Decision                                                                 Your response
+
+ Why this role/capability is the current bottleneck
+
+ Build internally / hire / source externally - and why
+
+
+
+D4.2 Role-redesign framework - 3 marks
+Select the framework that best fits your current maturity: [ ] Accenture Transition-Stage [ ] MIT Sociotechnical [ ]
+Deloitte Principle-Based
+Explain why this framework fits the maturity evidence from Part A and what one structural/organisational
+change it would prioritise.
+Response budget: 200 words maximum across D4.
+What earns marks: The capability decision and redesign framework are sequenced to current organisational maturity, not chosen
+because they sound most sophisticated.
+
+D5. Human-AI collaboration evidence plan - 4 marks
+Design a small evaluation that tests whether the redesigned work actually benefits from augmentation.
+
+ Test condition                                  What will be measured                             Expected learning
+
+ Human alone
+
+ AI alone
+
+ Human + AI
+
+
+
+ Decision question                                                        Your response
+
+ Primary metric(s)                                                        Examples: accuracy/quality, time, throughput, error rate,
+                                                                          customer outcome
+
+ Task(s) likely inside AI capability frontier
+
+ Task(s) where human judgement/context remains important
+
+ What result would justify the redesigned collaboration pattern
+
+ What result would make you redesign the workflow again
+
+
+Response budget: 300 words maximum.
+What earns marks: Human-alone, AI-alone and human+AI are compared on meaningful outcomes; the plan recognises the jagged
+technological frontier and includes a redesign condition.
+
+
+
+
+                   AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+Submission Checklist
+[ ] My assessment scope is clear and my claims do not exceed the evidence I can credibly access.
+[ ] All six maturity dimensions are rated using the Course 3 sub-dimensions and evidence.
+[ ] I have distinguished self-assessment from industry/peer benchmarking.
+[ ] My portfolio contains 5-7 distinct opportunities and does not force every problem into GenAI.
+[ ] Quick Win / Strategic Bet / Moonshot classifications match readiness and time/uncertainty.
+[ ] My top-three sequence is consistent with Part A maturity constraints.
+[ ] Competitive claims are publicly sourced or marked Not evidenced / Not applicable.
+[ ] I have applied all five competitive-intelligence signal categories without inventing unavailable evidence.
+[ ] Lead / follow / wait positions are initiative-specific and use data moat, regulatory clarity/risk and readiness.
+[ ] My workforce analysis focuses on tasks and role redesign rather than assuming job elimination.
+[ ] I completed at least 15 representative tasks in the task-triage table.
+[ ] Released capacity is deliberately redeployed to higher-value human/augmented work.
+[ ] The selected organisational redesign framework matches Part A maturity.
+[ ] The human-AI evidence plan compares Human alone / AI alone / Human + AI.
+[ ] Assumptions, anonymisation and hypothetical elements are clearly labelled.
+[ ] AI assistance, if used, is disclosed and I remain responsible for the final submission.
+
+Competitive / Benchmark Evidence Reference Log
+List public sources used in A3 and Part C. For internal/confidential evidence used elsewhere, identify only the source
+type/date if disclosure is permitted. This log is excluded from the page limit.
+
+                                               Source title / source                             URL / location if
+ Evidence ID          Organisation / topic                              Date                                              Used in section
+                                               type                                              shareable
+
+ E1
+
+ E2
+
+ E3
+
+ E4
+
+ E5
+
+ E6
+
+ E7
+
+ E8
+
+
+
+
+                 AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+Academic Integrity and AI-Assistance Disclosure
+ USE OF AI TOOLS
+ You may use AI tools only within the programme's applicable academic-integrity rules. AI assistance does not transfer
+ responsibility for factual accuracy, source integrity, organisational claims, analysis or originality. Do not upload restricted
+ employer information, confidential documents or personal data into public AI tools.
+
+
+
+ Disclosure field                                                          Your response
+
+ Did you use an AI tool while preparing this assignment?                   [ ] No [ ] Yes
+
+ If yes, name the tool(s) and describe how they were used
+
+ What did you independently verify or materially revise?
+
+
+
+Honour Declaration
+[ ] The analysis and judgement in this submission are my own.
+[ ] Organisational facts are accurate to the best of my knowledge; estimates, assumptions, anonymisation and
+hypothetical elements are clearly labelled.
+[ ] I have not fabricated benchmark, competitor, patent, hiring, product, filing or other competitive-intelligence
+evidence.
+[ ] I have not disclosed confidential, personal or proprietary information that I am not authorised to share.
+[ ] Where I used AI assistance, I have disclosed it above and remain responsible for the final submission.
+
+ Name                                             Date                                              Signature / typed acknowledgement
+
+
+
+
+                    AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+Participant-Facing Scoring Summary
+Criterion                                                                Marks
+
+A1. Assessment scope and evidence base                                   3
+
+A2. Six-Dimension Maturity Assessment                                    14
+
+A3. Industry / peer benchmark                                            4
+
+A4. Weakest-dimension diagnosis and priorities                           4
+
+PART A                                                                   25
+
+B1. 5-7 opportunity portfolio                                            10
+
+B2. Quick Win / Strategic Bet / Moonshot classification                  8
+
+B3. Portfolio sequencing and top three                                   8
+
+B4. Cross-functional compound-value check                                4
+
+PART B                                                                   30
+
+C1. Five-source competitive intelligence scan                            8
+
+C2. AI-enhanced Five Forces scan                                         5
+
+C3. Lead / follow / wait positioning                                     4
+
+C4. Proprietary-data moat / flywheel test                                3
+
+PART C                                                                   20
+
+D1. Workforce focus                                                      3
+
+D2. Task triage                                                          8
+
+D3. Role redesign and capacity redeployment                              5
+
+D4. Capability and organisational redesign response                      5
+
+D5. Human-AI collaboration evidence plan                                 4
+
+PART D                                                                   25
+
+CONTENT TOTAL                                                            100
+
+QUALITY MODIFIER                                                         +5 to -5; final score capped at 100 / floored at 0
+
+
+
+THE STANDARD TO AIM FOR
+A strong Course 3 artefact connects four decisions: where the organisation is ready, which opportunities deserve attention,
+how AI is changing the competitive context, and how work should be redesigned around human-AI complementarity. The
+sections should tell one coherent story.
+
+
+
+
+                  AIBP | Course 3 | Assignment 3 - AI Opportunity Portfolio with Maturity, Competitive and Workforce Assessment
+

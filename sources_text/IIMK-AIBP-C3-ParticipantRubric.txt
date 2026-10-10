@@ -1,0 +1,326 @@
+                                                             AIBP - COURSE 3
+
+                 Participant-Facing Rubric & Performance
+                                Descriptors
+           Assignment 3: AI Opportunity Portfolio with Maturity Assessment, Competitive Analysis, and
+                                             Workforce Impact Scan
+
+    HOW TO USE THIS RUBRIC
+    Use this alongside the Assignment 3 worksheet. The descriptors show what strong performance looks like; they are not a second set of
+    tasks. Exact marks within a criterion depend on completeness, evidence, reasoning and consistency. The assessment rewards
+    defensible organisational judgement, not a predetermined maturity rating, portfolio type, competitive position or workforce outcome.
+
+
+
+    Part                                          Focus                                              Marks
+
+    A                                             Organisational AI Maturity Assessment              25
+
+    B                                             AI Opportunity Portfolio and Sequencing            30
+
+    C                                             Competitive AI Positioning                         20
+
+    D                                             Workforce Impact and Role Redesign                 25
+
+                                                  CONTENT TOTAL                                      100
+
+                                                  Quality modifier applied after content             +5 to -5
+
+
+
+    FINAL SCORE RULE
+    Final recorded score = content score + quality modifier, capped at 100 and floored at 0. The modifier is document-level and does not
+    re-score individual criterion weaknesses.
+
+
+
+
+What the assessment rewards
+       Scope discipline: claims stay within what you can credibly observe or evidence.
+       Evidence-based maturity judgements rather than optimistic self-rating.
+       A portfolio that connects opportunities to readiness constraints, time-to-impact, risk and strategic significance.
+       Competitive conclusions that distinguish public signals from assumptions and “not evidenced” gaps.
+       Workforce redesign at task level: automation frees capacity for augmentation and irreducibly human work rather than
+        assuming headcount reduction.
+       Cross-section coherence: maturity, opportunity sequencing, competitive position and workforce redesign should tell one
+        decision story.
+
+What does not earn extra marks
+       Assessing the whole corporation when you only have evidence for one function or business unit.
+       Rating the organisation “High” on maturity without evidence.
+       Including more than seven opportunities or choosing only the most technologically advanced opportunities.
+       Labelling every priority a Quick Win or every initiative “Lead”.
+       Using all five competitive-intelligence source types when some are genuinely unavailable; “Not evidenced / Not applicable”
+        is acceptable when handled transparently.
+       Decomposing 30-50 tasks in the main submission. The assessed requirement is 15-20 representative tasks; a fuller
+        decomposition is optional.
+       Proposing headcount reduction as proof of successful workforce redesign.
+
+                                   AIBP | Course 3 | Assignment 3 - Participant Rubric and Performance Descriptors
+Part A - Organisational AI Maturity Assessment (25 marks)
+Criterion                       Marks                         Full / near-full marks          Partial marks                    Low / no marks
+
+A1. Assessment scope &          3                             Scope is clear and              Scope is usable but evidence     Scope is unclear/over-broad;
+evidence base                                                 appropriately bounded;          or limitations are only partly   evidence base is weak;
+                                                              evidence sources are            developed, or claims slightly    limitations are ignored.
+                                                              credible for that scope;        exceed visibility.
+                                                              important limitations are
+                                                              explicit.
+
+A2. Six-Dimension Maturity      14                            All six dimensions are          All six dimensions are           Several dimensions are
+Assessment                                                    assessed using the taught       attempted, but some ratings      missing or unsupported;
+                                                              sub-dimensions; H/M/L           rely on general impressions,     ratings appear aspirational;
+                                                              ratings are supported by        sub-dimensions are               little distinction between
+                                                              specific indicators; material   unevenly used, or                capability, evidence and
+                                                              gaps are identified;            gaps/evidence are generic.       assumption.
+                                                              uncertainty is openly tested.
+
+A3. Industry / peer             4                             Uses relevant industry          Comparator is broadly            Irrelevant comparator,
+benchmark                                                     baseline or 1-2 suitable        relevant but evidence or         unsupported league-table
+                                                              peers; evidence is              relative interpretation is       style judgement, or no
+                                                              identifiable; comparison        thin; comparison becomes         meaningful benchmark.
+                                                              distinguishes absolute          descriptive rather than
+                                                              readiness from relative         diagnostic.
+                                                              position and produces a
+                                                              useful implication.
+
+A4. Weakest-dimension           4                             One or two genuine              Constraint is plausible but      Priority is disconnected
+diagnosis & priorities                                        readiness constraints follow    weakly linked to                 from maturity evidence or
+                                                              from A2/A3; blocked             opportunities, or                expressed only as broad
+                                                              opportunities are identified;   intervention/evidence            aspiration.
+                                                              interventions and evidence      remains generic.
+                                                              of improvement are
+                                                              concrete.
+
+
+
+PART A PRINCIPLE
+The organisation is not “ready” because one dimension is strong. The assessment should identify where a weak dimension constrains
+reliable AI adoption or scaling.
+
+
+
+
+Part B - AI Opportunity Portfolio and Sequencing (30 marks)
+Criterion                       Marks                         Full / near-full marks          Partial marks                    Low / no marks
+
+B1. 5-7 opportunity portfolio   10                            Contains 5-7 distinct,          Portfolio is mostly credible     Fewer than five usable
+                                                              credible business problems;     but some opportunities are       opportunities, idea list
+                                                              AI pattern fits each problem;   technology-led, repetitive,      without business
+                                                              value mechanism is clear;       generic or weakly connected      problems/value, or “all
+                                                              each opportunity identifies a   to readiness/value.              GenAI” with little technology
+                                                              real readiness dependency                                        fit.
+                                                              from Part A.
+
+B2. Quick Win / Strategic Bet   8                             Every opportunity is            Classifications are broadly      Labels are applied by
+/ Moonshot                                                    classified using the taught     sensible but some rationales     intuition only; “Quick Win”
+                                                              definitions; readiness and      are generic or inconsistent      is used despite major
+                                                              time/uncertainty rationales     with maturity evidence.          readiness gaps without
+                                                              are specific and consistent                                      explanation.
+                                                              with Part A.
+
+
+
+
+                                     AIBP | Course 3 | Assignment 3 - Participant Rubric and Performance Descriptors
+Criterion                       Marks                        Full / near-full marks           Partial marks                  Low / no marks
+
+B3. Sequence portfolio & top    8                            Top three are deliberately       Top three are plausible but    Ranking is based mainly on
+three                                                        sequenced using impact,          sequencing logic,              ease, excitement or
+                                                             readiness/capability, time-      dependencies or change         technology novelty; little
+                                                             to-impact, risk/uncertainty      triggers are                   link to Part A or no
+                                                             and strategic significance;      underdeveloped.                meaningful prioritisation
+                                                             conditions and                                                  logic.
+                                                             reprioritisation triggers are
+                                                             explicit; portfolio balances
+                                                             delivery, capability-building
+                                                             and optionality.
+
+B4. Cross-functional            4                            Shows a genuine upstream-        Cross-functional link exists   Simply names two functions
+compound-value check                                         to-downstream AI/value           but value/risk propagation     without a meaningful
+                                                             chain; explains how value        or control is generic.         dependency or ignores
+                                                             compounds, how error/bias                                       propagated risk.
+                                                             could propagate, and what
+                                                             hand-off/control is required.
+                                                             A justified N/A can score
+                                                             well.
+
+
+
+PART B PRINCIPLE
+The portfolio should not simply select the easiest projects. A strong portfolio combines near-term delivery with capability-building
+and preserves strategic options.
+
+
+
+
+Part C - Competitive AI Positioning (20 marks)
+Criterion                       Marks                        Full / near-full marks           Partial marks                  Low / no marks
+
+C1. Five-source competitive     8                            Uses two relevant                Relevant comparators and       Unsupported competitor
+intelligence scan                                            comparators; applies the         some useful evidence, but      claims, single-signal
+                                                             five signal categories as        scan leans heavily on one      labelling, or invented
+                                                             evidence where available;        source type, press releases    evidence. Missing categories
+                                                             public claims are traceable;     or untested interpretation.    are penalised only when
+                                                             Experimenting/Scaling/Emb                                       they are ignored rather than
+                                                             edded judgement follows                                         transparently marked Not
+                                                             from multiple signals;                                          evidenced / N/A.
+                                                             strategic attention
+                                                             conclusion is evidence-
+                                                             based.
+
+C2. AI-enhanced Five Forces     5                            All five forces are              Five forces are covered but    Standard Five Forces
+scan                                                         considered through an AI         some are generic or the        summary with little AI-
+                                                             lens; direction of change and    portfolio implication is       specific reasoning or no
+                                                             the organisation’s side of the   weak.                          strategic implication.
+                                                             shift are reasoned; the most
+                                                             important structural change
+                                                             is linked back to the
+                                                             opportunity portfolio.
+
+C3. Lead / Fast follow / Wait   4                            Applies data-moat potential,     Positions are plausible but    Treats “Lead” as inherently
+for top three                                                regulatory clarity/risk and      one or more factors are        superior or gives one
+                                                             organisational readiness to      weakly applied.                company-wide position
+                                                             each top-three opportunity;                                     without initiative-level
+                                                             positioning can differ by                                       reasoning.
+                                                             initiative and follows the
+                                                             evidence.
+
+C4. Proprietary-data moat /     3                            Tests proprietary data,          Addresses the three            Equates “we have lots of
+flywheel test                                                closed-loop learning and         questions but treats one       data” with a moat or gives a
+                                                             compounding advantage            element superficially or       conclusion unsupported by
+                                                             separately; conclusion is        overstates the conclusion.     the three-part test.
+                                                             proportionate and explains
+                                                             what could strengthen or
+                                                             erode the moat.
+
+
+
+
+                                    AIBP | Course 3 | Assignment 3 - Participant Rubric and Performance Descriptors
+PART C EVIDENCE RULE
+You are not expected to buy paid competitive-intelligence access. If a source category is unavailable or irrelevant, mark it Not
+evidenced / Not applicable and calibrate your conclusion accordingly rather than inventing a signal.
+
+
+
+
+Part D - Workforce Impact and Role Redesign (25 marks)
+Criterion                      Marks                        Full / near-full marks           Partial marks                   Low / no marks
+
+D1. Workforce focus            3                            Selects a role materially        Role is relevant but            Role appears arbitrary or
+                                                            affected by a priority           bottleneck or link to the       the analysis begins from
+                                                            opportunity; identifies the      priority opportunity is         assumed headcount
+                                                            current value bottleneck         underdeveloped.                 reduction.
+                                                            and frames the issue around
+                                                            activities and value, not
+                                                            automatic role elimination.
+
+D2. Task triage: Decompose-    8                            Provides 15-20 genuinely         Required task count is met      Too few usable tasks; broad
+Classify-Redesign                                           discrete representative          but some tasks are too          activities instead of tasks;
+                                                            tasks; classifications           broad, classifications are      automation/augmentation/h
+                                                            correctly use determinism,       uneven, or boundary             uman categories applied
+                                                            external context and             rationales are generic.         without the taught logic.
+                                                            comfort with unsupervised
+                                                            decisions; AI/human
+                                                            boundary is explicit.
+
+D3. Redesign role & redeploy   5                            Shows what automation            Redesign is sensible but        Simply removes tasks,
+capacity                                                    takes over, what remains         capacity redeployment or        reduces headcount, or
+                                                            human-led but augmented,         new success measures are        leaves the human role as
+                                                            where released capacity          weak.                           “verify what AI already did”
+                                                            moves, and how success                                           without redesign.
+                                                            measures change; redesign
+                                                            elevates human
+                                                            contribution.
+
+D4.1 Emerging AI               2                            Identifies the most material     Reasonable role family but      Selects a fashionable role
+capability / role family                                    role-family capability gap;      sourcing/bottleneck logic is    family with little connection
+                                                            explains why it is a             thin.                           to the opportunity/portfolio.
+                                                            bottleneck and whether to
+                                                            build, hire or source it.
+
+D4.2 Organisational role-      3                            Selects one taught               Framework is plausible but      Framework selected for
+redesign framework                                          framework because it fits        maturity fit or structural      sophistication/name
+                                                            Part A maturity; explains        implication is generic.         recognition with no link to
+                                                            one concrete                                                     maturity evidence.
+                                                            structural/organisational
+                                                            change it would prioritise.
+
+D5. Human-AI collaboration     4                            Compares Human alone, AI         Three test conditions are       No comparable test, only
+evidence plan                                               alone and Human+AI on            present but metrics, frontier   speed measured, or assumes
+                                                            meaningful metrics;              distinction or redesign         Human+AI must win
+                                                            identifies tasks                 trigger is weak.                regardless of evidence.
+                                                            inside/outside the AI
+                                                            capability frontier; specifies
+                                                            evidence for retaining the
+                                                            collaboration design and a
+                                                            condition that would trigger
+                                                            redesign.
+
+
+
+PART D PRINCIPLE
+Video 24 asks what happens to the capacity released by automation. Strong role redesign deliberately redeploys that capacity into
+higher-value augmented and irreducibly human work.
+
+
+
+
+                                   AIBP | Course 3 | Assignment 3 - Participant Rubric and Performance Descriptors
+Quality Modifier (+5 to -5)
+    Modifier                                                               Participant-facing descriptor
+
+    +5                                                                     Exceptional executive artefact: highly specific, coherent, evidence-
+                                                                           disciplined, concise and genuinely decision-ready.
+
+    +3 to +4                                                               Strong professional artefact with very good synthesis, evidence
+                                                                           use and cross-section consistency; only minor weaknesses.
+
+    +1 to +2                                                               Above-standard document-level synthesis or usability, though not
+                                                                           consistently exceptional.
+
+    0                                                                      Competent submission meeting normal professional expectations.
+
+    -1 to -2                                                               Noticeable document-level weaknesses: avoidable inconsistency,
+                                                                           weak synthesis/source discipline, or presentation problems.
+
+    -3 to -4                                                               Significant document-level problems: repeated unsupported
+                                                                           assertions, major contradictions, or serious non-compliance.
+
+    -5                                                                     Material integrity/submission-quality failure: undisclosed
+                                                                           fabrication, extensive placeholders, missing declaration, unusable
+                                                                           structure or equivalent fundamental problem.
+
+
+
+    NO DOUBLE PENALTY
+    The modifier does not deduct the same weakness twice. If a criterion already loses marks for weak evidence or reasoning, the
+    modifier changes only when that weakness becomes a document-wide coherence, integrity or professional-quality problem.
+
+
+
+
+Quick Pre-Submission Self-Check
+        [ ] My assessment scope matches what I can genuinely observe or evidence.
+        [ ] Every maturity rating cites indicators and considers the taught sub-dimensions.
+        [ ] My 5-7 opportunities are distinct business problems, not a list of AI technologies.
+        [ ] My Quick Win / Strategic Bet / Moonshot labels are consistent with the maturity evidence.
+        [ ] My top three include explicit readiness conditions and circumstances that would change the priority.
+        [ ] Material competitor/peer claims are traceable to current sources; unavailable evidence is marked honestly.
+        [ ] My Lead / Fast follow / Wait decisions are initiative-specific.
+        [ ] I completed 15-20 discrete role tasks, not broad activities.
+        [ ] My role redesign explains where released capacity goes and how success measures change.
+        [ ] My final workforce test allows the possibility that Human alone, AI alone or Human+AI may perform best for different
+         tasks.
+        [ ] Assumptions, anonymisation, hypothetical elements and AI assistance are clearly disclosed.
+
+    THE STANDARD TO AIM FOR
+    A strong Course 3 artefact connects four decisions: where the organisation is ready, which opportunities deserve attention, how AI is
+    changing the competitive context, and how work should be redesigned around human-AI complementarity.
+
+
+
+
+                                   AIBP | Course 3 | Assignment 3 - Participant Rubric and Performance Descriptors
+

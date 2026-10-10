@@ -1,0 +1,21 @@
+# qa_checks.py control (expect 0 blocking)
+
+0 blocking, 0 warnings, 3 drafts checked
+exit=0
+
+# qa_checks.py seeded errors (expect detection of all planted errors)
+BLOCKING D5         missing_section            no draft file with this section id
+BLOCKING A2         rating_mismatch            Governance: text Medium vs ledger Low
+BLOCKING B2         untagged_claim             This quick win will save 12% of effort within 6 months.
+WARNING  B2         terminology                'quick win' -> use 'Quick Win'
+BLOCKING B2         classification_mismatch    O2: text Strategic Bet vs ledger Moonshot
+BLOCKING C1         undefined_id               E:E9 not in ledger
+BLOCKING C1         figure_mismatch            F1 expected '~25' near tag
+BLOCKING C3         word_cap                   21 words > cap 10
+BLOCKING D1         placeholder                [X]%
+WARNING  B2/B3      repetition                 13 shared 8-word phrases, e.g. 'and the ranking depends on readiness this item'
+BLOCKING D1         verbatim_reuse             17 shared 10-word phrases, e.g. 'account list reached the field which delayed the whole retention'
+BLOCKING ledger     quick_win_low_dependency   O3 is Quick Win but dependency rated Low
+
+10 blocking, 2 warnings, 6 drafts checked
+exit=1

@@ -1,0 +1,789 @@
+Course 2 Assignment 2 — GenAI
+Technology Assessment Worksheet with
+Vendor Evaluation Scorecard
+Part A: Technology Fit and Architecture Decision
+A1. Define the business and technology proposition
+               Field                                                My Response
+Function                       Strategy and Analytics
+Business problem / workflow    Sensitivity analysis of macroeconomic and geopolitical events on business
+                               performance. The leadership team (LT) poses a question; Commercial Strategy must
+                               return an evidence-backed point of view.
+Current way the work is done   Analysts interpret the LT question, research the web, review internal dashboards and
+                               competitive-intelligence studies, and present a point of view as a slide deck. An
+                               existing research agent scans the web and a vector database of collated reports for a
+                               first layer of reporting, but cannot access transactional records or numerical
+                               dashboards. A full cycle takes ~25 analyst-days per request.
+Proposed role of AI            A research agent that, given the LT question, drafts a research plan, gathers evidence
+                               from the web, internal vector databases and transactional/predictive dashboards, and
+                               produces draft recommendations. It informs and drafts only: analysts review and
+                               validate every output before it reaches the LT, and it takes no actions in any other
+                               system.
+Primary user                   Commercial Strategy Analysts
+Input into the system          LT question; public web sources; transactional sales-history dashboards; competitive-
+                               intelligence repository (vector databases of public and subscribed sources); predictive
+                               volume dashboard.
+Output required                4-5 recommendations, each backed by three primary evidences with three supporting
+                               evidences apiece, plus an appendix of charts and data tables with named sources for
+                               every figure.
+Consequence if the output is   A confidently wrong report that passes analyst review could misinform an LT strategy
+materially wrong               decision. More likely, analysts detect and rework it, roughly doubling cycle time and
+                               eroding trust in the tool. The agent takes no actions, so errors remain reversible before
+                               any decision is made.
+A2. Decide what should and should not be delegated to GenAI
+Workflow step            What the system            Zone      Best mechanism (Rules      Rationale
+                         must do                    (1/2/3)   / traditional ML / GenAI
+                                                              / human / hybrid)
+1. Intake & problem      Convert the raw            2         Hybrid (GenAI + Human)     Structuring a vague leadership
+framing — leadership     leadership team                                                 question into a decision
+team poses an often-     question plus the                                               statement and issue tree is
+vague request in the     manager’s                                                       multi-step reasoning over
+leadership forum; the    clarification notes into                                        supplied notes — useful but
+team manager             a structured problem                                            requiring verification. GenAI
+clarifies the ask with   statement: decision at                                          drafts against consulting
+the leader and peers     stake, scope, key sub-                                          frameworks encoded in the
+and frames the           questions and                                                   prompt; the manager validates
+problem statement.       success criteria —                                              the framing with the leader
+                         drafted for manager                                             before any research begins.
+                         review, never sent to
+                         the leadership team
+                         unreviewed.
+2. Domain scoping &      Retrieve and               1         GenAI                      Summarising supplied sources
+external trend           summarise supplied                                              and extracting cited candidate
+research — analysts      public sources and                                              trends is transformation of
+identify the domains     analyst reports;                                                provided material — a core
+linked to the problem    extract candidate                                               GenAI strength. The grounding
+statement and review     trends with a source                                            rule (every claim traced to a
+public information       citation for every                                              supplied document, no model-
+and internal/external    claim. No facts                                                 memory facts) keeps this out of
+analyst reports for      recalled from model                                             Zone 3; analysts spot-check
+emerging trends.         memory — every trend                                            citations before any trend
+                         must trace to a                                                 progresses.
+                         supplied document.
+3. Quantitative /        Analyse the structured     2         Hybrid (Traditional ML +   Testing trends against
+technical validation     data extracts provided               GenAI + Human)             transactional and predictive
+— a second analyst       and flag where the                                              data is analysis, not
+tests the candidate      data supports,                                                  transformation of supplied text.
+trends against           weakens or                                                      Deterministic queries and
+existing dashboards      contradicts each                                                traditional ML produce the
+and consultancy-         candidate trend; state                                          numbers; GenAI only explains
+provider data to         confidence and data                                             results supplied to it and must
+reinforce them or        gaps explicitly rather                                          not generate figures. The
+surface contrarian       than smoothing over                                             second analyst verifies every
+signals.                 conflicting evidence.                                           support/contradict call before
+                                                                                         synthesis.
+4. Point-of-view         Consolidate the            2         Hybrid (GenAI + Human)     Consolidating validated
+synthesis &              validated evidence                                              evidence and generating a
+stakeholder              into a draft point of                                           contradiction checklist against
+alignment —              view and generate a                                             supplied stakeholder positions
+manager and              contradiction                                                   is multi-step reasoning —
+analysts build the       checklist against the                                           valuable but verified. Alignment
+point of view and        stakeholder positions                                           conversations and the final
+sense-check it with      supplied to it; the                                             point of view remain human,
+senior leaders and       alignment                                                       because stakeholder trust and
+functional heads to      conversations and                                               judgement cannot be
+avoid contradicting      final judgement                                                 delegated.
+market/business-         remain human.
+head positions.
+Workflow step           What the system           Zone       Best mechanism (Rules       Rationale
+                        must do                   (1/2/3)    / traditional ML / GenAI
+                                                             / human / hybrid)
+5. Executive            Draft the executive       1          Hybrid (GenAI + Human)      Drafting a summary and slide
+synthesis & delivery    summary and slide                                                outline from an approved point
+— the findings are      outline from the                                                 of view is transformation of
+condensed into an       approved point of                                                supplied material — no facts
+executive summary       view, in house style                                             come from model memory. The
+and a selected-         and within length                                                stakes of an LT deliverable are
+evidence                limits; the manager                                              managed through mandatory
+presentation shared     edits and approves                                               manager approval, not by
+with the leadership     before anything                                                  avoiding GenAI.
+team.                   reaches the
+                        leadership team.
+
+
+
+
+Step that genuinely    Step you would not      Reasoning
+needs GenAI            delegate to GenAI
+Steps 2 & 3            Step 5                  Step 2 genuinely needs GenAI because it involves variable, source-rich
+                                               research: retrieving, summarising and comparing public sources, analyst
+                                               reports and internal CI material with citations. Step 3 should not be
+                                               delegated to GenAI for numerical validation; deterministic dashboard
+                                               queries, statistical checks and traditional ML should produce the figures,
+                                               with GenAI only explaining supplied outputs. I would not delegate final
+                                               point-of-view approval and LT-facing recommendation aka Step 5. Those
+                                               require accountable judgement, stakeholder alignment and acceptance
+                                               of strategic risk, so the manager must approve the narrative before it
+                                               reaches leadership.
+
+
+A3. Choose the appropriate model family and adaptation route
+A3.1 Model-family decision
+Decision factor    Requirement for your use case                            What it implies for model choice
+Capability         The hardest work is Step 2 and Step 4: source-rich       Use a routed / combination strategy. Reserve
+                   research, issue-tree reasoning, synthesis of             a frontier closed model for complex research
+                   weak/contradictory evidence and testing of               synthesis and contrarian reasoning in Steps
+                   alternative hypotheses. Step 3 should not generate       2 and 4. Use smaller specialised models,
+                   numbers; it should explain outputs from                  templates or deterministic tools for intake
+                   dashboards, deterministic queries or notebooks.          structuring, dashboard-result explanation,
+                   Steps 1 and 5 are mainly structured drafting from        formatting and executive drafting. This
+                   supplied material.                                       avoids paying frontier-model cost for every
+                                                                            step.
+Cost / expected    The overall request volume is low, likely monthly, but   Low overall volume makes limited frontier
+volume             the workflow has repeated internal iterations.           use acceptable, but repeated iterations
+                   Frontier-model calls are needed only for limited high-   should be routed to cheaper models or
+                   value reasoning passes in research planning,             deterministic components. The economic
+                   synthesis and hypothesis challenge. Repetitive work      design is therefore not “one best model”, but
+                   such as re-framing, summarising supplied                 escalation: simple, repetitive tasks use a
+                   dashboard outputs, citation checks and slide-outline     low-cost path; only genuinely hard synthesis
+                   drafting may run many more times during each             uses the frontier path.
+                   request.
+Data control /     The system uses public sources, subscribed               Prefer an enterprise-approved model
+residency          competitive-intelligence material, internal              gateway or company cloud environment with
+Decision factor      Requirement for your use case                               What it implies for model choice
+                     repositories and aggregated commercial                      logging, access controls and no vendor
+                     dashboards. Even where personally identifiable data         training on inputs/outputs. Self-hosted
+                     is not required, the LT question, internal                  open-weight models may be appropriate for
+                     performance context and strategic interpretation            narrower sensitive summarisation tasks, but
+                     may be commercially sensitive. Data residency may           a fully self-hosted frontier model is unlikely
+                     not be the main constraint, but data-control and            to be the least-cost route unless required by
+                     access-boundary requirements are material.                  policy.
+Language             The reports are only meant to be generated in               No multilingual capability is required. Model
+                     English.                                                    selection should prioritise English reasoning
+                                                                                 quality, citation discipline, long-context
+                                                                                 handling and business-writing reliability
+                                                                                 rather than paying for broad multilingual
+                                                                                 coverage that the use case does not need.
+
+Recommended family: [ ] Frontier closed [ ] Open-weight / self-hosted [ ] Small or specialised [x] Routed / combination
+strategy
+
+Why is this the smallest/least costly family that can reliably clear the requirement?
+
+A routed / combination strategy is the smallest reliable option because the workflow contains different task types.
+Steps 2 and 4 require strong reasoning over many sources, weak signals and contrarian hypotheses, so limited
+frontier-model use is justified there. However, Steps 1, 3 and 5 are mainly structured drafting, summarisation of
+supplied outputs, formatting and explanation, which can run on smaller specialised models, templates or
+deterministic tools. Quantitative validation itself should remain with dashboard queries, notebooks or traditional
+ML; GenAI should explain only supplied results. This design avoids paying frontier-model cost for every iteration
+while preserving capability where the strategic judgement load is highest. Enterprise access controls and a model
+gateway also keep the model layer swappable if cost, performance or data-control needs change.
+
+A3.2 Adaptation route
+Select one: [ ] Prompt/context only [x] Retrieval required [ ] Fine-tuning justified [ ] Retrieval + fine-tuning [ ] Another
+mechanism
+
+Is the gap primarily one of knowledge, behaviour, or both? Explain why your selected approach addresses the actual gap.
+
+The gap is primarily knowledge, with some behaviour control. The system must answer from current public sources,
+subscribed/internal CI material and live commercial dashboards, not from model memory. Retrieval is therefore
+required to ground each claim in the right evidence and keep analysis current. Behaviour can be managed through
+prompts, structured templates, citation rules and human review; fine-tuning is not justified initially because the
+model does not need a new capability, only access to the right sources and disciplined output rules.
+
+A4. Multimodal and agentic applicability
+A4.1 Multimodal fit
+Does the use case genuinely require a modality beyond text? [ ] No [x ] Image/document [ ] Audio/voice [ ] Video [ ]
+Multiple modalities
+
+Modality or text-only     Why it is necessary / sufficient                     Real-world test you would require before
+decision                                                                       deployment
+Image / Document          Image/document understanding is required             Test on representative, anonymised charts,
+                          only when evidence appears in charts,                infographics, scanned reports and dashboard
+                          infographics, scanned reports or dashboard           screenshots against analyst-verified answers.
+                          exports and structured data is unavailable.          Require ≥95% numerical extraction accuracy,
+                          APIs or database extracts remain preferred           100% source attribution for material claims,
+                          because they are more accurate and                   and correct abstention when labels or scales
+Modality or text-only      Why it is necessary / sufficient                   Real-world test you would require before
+decision                                                                      deployment
+                           auditable. The AI may extract figures, interpret   are unreadable. Material findings remain
+                           visual trends and flag supporting or               subject to analyst review; failures route to
+                           contradictory evidence, but analysts validate      structured data or manual analysis.
+                           material interpretations.
+Multi Modality (Not        Audio and video capabilities are not required.
+Required)                  The workflow centres on knowledge research,
+                           assimilation and synthesis; it does not involve
+                           voice-based interviews, speech recognition or
+                           video-object interpretation, so those
+                           modalities would add cost without material
+                           value.
+
+A4.2 Agentic fit and autonomy
+Does the proposed AI need to take action in another system? [x ] No — inform/draft/recommend only [ ] Yes — take
+actions
+
+Agent/delegation decision         My Response
+Goal given to the system          Given the approved problem statement for an LT question, produce a draft evidence pack
+                                  — a research plan, cited findings from approved sources, and 4-5 draft
+                                  recommendations — for analyst review. It informs and drafts only; it takes no action in
+                                  any other system.
+Information it may perceive       Public web sources; the internal competitive-intelligence repository (vector databases of
+                                  public and subscribed provider material); read-only extracts from the transactional sales-
+                                  history and predictive volume dashboards; consultant reports from partner agencies.
+Actions/tools it may use —        Web search and retrieval; read-only queries against the CI vector databases and supplied
+write Not applicable if none      dashboard extracts; document parsing; file generation to assemble the draft report. No
+                                  write access to any system of record, no email or messaging, no external publishing.
+Maximum action authority          Decide its own research plan — which sources on the approved allowlist to query, in
+                                  what order, and how to structure the draft. It may not add sources beyond the allowlist,
+                                  write to any system, or distribute its output.
+Action requiring human            No in-run actions require approval because the agent is read-only. Release is human-
+approval                          gated: an analyst validates every citation and the manager approves the point of view
+                                  before anything reaches the LT. Extending the source allowlist also requires human
+                                  approval.
+Safe behaviour when a             Retry a failed retrieval a predetermined number of times; on continued failure, log the
+tool/action fails                 error, skip the source and flag the evidence gap in the draft rather than filling it from
+                                  model memory. Never fabricate a citation; unresolved gaps route to the analyst.
+
+Autonomy level: [ ] Assisted [ x] Augmented [ ] Autonomous [ ] Not agentic
+
+Why is this the minimum level of autonomy required to capture the value? If not agentic, why is a copilot/assistant or
+ordinary automation sufficient?
+
+Augmented is the minimum level that captures the value. The value case is cycle time: a full LT response currently
+consumes ~25 analyst-days, most of it in first-pass reading, retrieval and drafting. An assisted copilot would keep
+the analyst in the loop for every retrieval and summarisation step, forfeiting most of that saving and leaving little
+time for the higher-value work of stress-testing hypotheses and building the storyline. Autonomy above augmented
+captures no additional value: the deliverable is an LT recommendation that requires accountable human
+judgement regardless, and release is already human-gated, so removing analyst review would add risk without
+saving material effort. Augmented lets the agent plan and execute the multi-step research unsupervised within its
+read-only source allowlist, while analysts concentrate on validating evidence, challenging the draft
+recommendations and shaping the “so what” — the judgement work that justifies the workflow.
+Part B: Economics, Failure Modes and Controls
+B1. What will this actually cost?
+Disclaimer: The cost ranges below are directional estimates for assessment purposes. They were researched, structured
+and extracted with the help of AI, then adapted to this use case based on the stated architecture, expected request
+volume and available organisational context. They should not be treated as vendor quotations or approved budget figures.
+
+Cost component           Estimated annual       Basis of estimate
+                         cost / range
+Model / inference        $5k-$20k               Low request volume, likely monthly LT questions, with frontier-model calls
+                                                used only for research planning, synthesis and challenge; cheaper models
+                                                or templates used for drafting and formatting.
+Data engineering /       $40k-$90k              Biggest setup effort: connecting approved public/subscribed sources, CI
+pipelines                                       repositories, dashboard extracts and metadata so the agent can retrieve
+                                                evidence reliably.
+Integration with         $40k-$50k              Read-only integration with competitive-intelligence repositories and
+existing systems                                document stores are already available within the organization,
+                                                connectivity to sales-history dashboards and predictive volume
+                                                dashboards need to be designed and deployed; no write-back or workflow
+                                                automation.
+Monitoring and           $5k-$40k               Citation checking, evidence-gap logging, reviewer workflow automation,
+guardrails                                      residual-error tracking and periodic quality audits during pilot/early
+                                                production.
+Infrastructure /         $10k-$30k              Enterprise model gateway, secure cloud environment, vector
+hosting where                                   store/indexing layer, access controls and logs (already in existence).
+relevant
+Other material           $10k-$30k              Vendor/functional charge backs, subscribed-source access, analyst
+recurring cost                                  review time, maintenance and prompt/template updates, support team
+                                                maintenance.
+Indicative annual        $90k-$270k             Directional estimate for a controlled pilot / early-production deployment;
+TCO                                             excludes large enterprise-wide platform costs already funded elsewhere.
+
+Which cost is likely to dominate the economics, and what technology choice could materially reduce it without
+compromising the requirement?
+
+The dominant cost is likely to be data engineering and integration, not model inference or repeated ML
+computation. Traditional ML models would be built and refreshed separately by data scientists, while the GenAI
+workflow would use lightweight inference or lookup against approved outputs, dashboard aggregates, scenario
+tables and pre-computed sensitivities. A routed architecture could reduce cost by using frontier models only for
+complex synthesis and challenge, smaller models or templates for routine drafting, and deterministic analytics or
+lightweight lookup for quantitative validation.
+
+B2. Hallucination and quality-control design
+B2.1 Name the consequential confident error
+The most consequential confident error is a false causal link between an external macro/geopolitical event and
+business performance. For example, the agent could state that a competitor price move, sanctions change or
+demand shock explains a volume or margin movement when the internal dashboard shows a different driver, or
+when the cited source does not support that claim. If undetected, the LT could approve the wrong commercial
+response, such as changing pricing, inventory posture or customer targeting. Even if analysts catch it, the team
+loses time re-checking evidence and confidence in the tool falls. The error is therefore not a generic hallucination;
+it is a wrongly evidenced strategic explanation.
+B2.2 Build the guardrail stack
+Guardrail layer                    How it would work for your use case
+GROUND — what                      The system may answer only from approved sources: current public web results,
+trusted/live source should         subscribed/partner analyst reports in the CI repository, and read-only extracts from sales-
+the system answer from?            history and predictive-volume dashboards. Model memory may be used for language and
+                                   structure, not for factual claims, figures or assumptions.
+CITE — how can a                   Every material market, competitor, customer, volume, margin or macro claim must carry a
+user/reviewer trace factual        source link, document title, date and page/table/chart reference where available.
+claims?                            Recommendations must show the evidence chain: primary evidence, supporting evidence
+                                   and any contradictory signal reviewed.
+ROUTE — what condition             Route to analyst review or safe fallback when a recommendation has fewer than the
+sends the case to a human          required evidence items, cites stale or inaccessible sources, shows contradiction
+or safe fallback?                  between dashboard data and external research, or depends on an uncited assumption.
+                                   The fallback is to mark “evidence gap” rather than infer from model memory.
+MONITOR — what residual            On each pilot report, sample material claims and measure: unsupported-claim rate,
+error will be measured on          wrong-citation rate, numerical mismatch rate against dashboard extracts, and missed-
+real traffic?                      contradiction rate. Track by report and by source type, with analyst corrections logged
+                                   before any LT-facing use.
+
+State the initial review/restriction/pause threshold for residual error. If it cannot yet be evidenced, state how the pilot will
+establish it before go-live.
+
+Initial pilot threshold: pause LT use if any unsupported material recommendation is found, if numerical
+mismatches exceed 2% of checked figures, or if wrong/missing citations exceed 5% of sampled material claims in
+two consecutive reports. These thresholds are assumptions for the pilot; final go-live thresholds will be set from
+analyst-reviewed error logs across representative cases.
+
+B3. Security and autonomy risk
+B3.1 Lethal-trifecta test
+Exposure                      Yes /       Evidence from your proposed design
+                              No
+Can the AI access             Yes         It can access commercially sensitive LT questions, aggregated transactional sales-
+private or sensitive                      history data and predictive-volume dashboard extracts. Access should be read-
+data?                                     only, role-based and limited to the datasets required for the approved use case.
+Can it consume                Yes         It uses public web sources and subscribed/partner reports. Even with an approved
+untrusted external                        source allowlist, external pages and documents may contain inaccurate claims or
+content?                                  prompt-injection content, so they must be treated as untrusted inputs.
+Can it send information       No          The proposed agent is inform/draft/recommend only. It has no email, messaging,
+externally or take an                     publishing, write-back or system-of-record action permissions; outputs remain
+external action?                          inside the analyst review workflow until a human approves release.
+
+Does one system contain all three exposures? [ ] Yes [x] No
+
+If yes, which capability will you remove, constrain or place behind a human/system gate? If no, identify the architectural
+choice that keeps the trifecta broken.
+
+No. The architecture deliberately keeps the lethal trifecta broken by allowing sensitive-data access and external-
+content retrieval, but removing external-send and write-action authority. Source allowlisting reduces exposure, but
+it does not make public or third-party content trusted; the stronger control is permission design. The agent is read-
+only, cannot email, message, publish, update business systems or add new sources, and can only generate an
+internal draft evidence pack for analyst review. Human approval is required before any output reaches the LT or any
+wider audience. User access should also be role-based, approved by a business owner and reviewed quarterly, but
+access management is a supporting control rather than the main trifecta break.
+B3.2 Worst credible action/agent failure
+Question                  Your response
+Worst realistic action    The agent builds a persuasive but wrongly evidenced recommendation from an inaccurate
+or downstream             external source or a misread dashboard extract. The immediate output is only a draft, but the
+consequence               downstream risk is that analyst review misses the error and the LT uses it to make a poor
+                          pricing, inventory or market-response decision.
+Is it reversible? Why /   Partly reversible. The agent’s own output is reversible because it is an internal draft and can be
+why not?                  corrected before release. The downstream business decision may not be fully reversible once
+                          communicated or acted on, because pricing moves, inventory shifts or stakeholder
+                          commitments can create cost, delay or credibility damage.
+Maximum                   The agent may plan the research, retrieve from approved sources, analyse supplied extracts,
+unsupervised chain        draft findings and flag confidence/evidence gaps. It may not send, publish, update business
+you would permit          systems, add sources, or mark a recommendation as approved.
+Tool / permission cap     Read-only retrieval, read-only dashboard/query access, document parsing and internal draft
+                          generation only. No email, messaging, external publishing, write-back, workflow automation or
+                          system-of-record permissions.
+Human approval point      An analyst must verify citations, figures and contradictory evidence before the manager
+                          approves the final point of view. Only a human may release the report to the LT or use it to
+                          trigger business action.
+Safe behaviour when a     Retry once or twice, then log the failure, mark the affected claim as an evidence gap, lower
+tool or reasoning step    confidence and exclude unsupported recommendations from the main answer. Never fill
+fails                     missing data from model memory or hide missing citations.
+
+If the current design is not agentic, identify the most consequential action a future team might be tempted to automate
+and explain why it should remain outside the model’s authority or behind a human gate.
+
+The likely temptation is to remove the analyst/manager review gate and offer leaders a self-service
+recommendation engine. That should remain outside the model’s authority because the output can influence
+strategic choices even without a technical write-back action. A confident but wrong causal story could lead to poor
+pricing, inventory or market-response decisions, and the risk would compound if reused across functions at scale.
+The model may accelerate research and drafting, but human review must remain the release gate for any LT-facing
+recommendation.
+Part C: Vendor Evaluation and Commercial Safeguards
+Vendor Evidence Log (required, unscored)
+A detailed evidence log is included in the Appendix1, with a summarized view of the evidence evaluated across all three
+vendors provided below.
+
+Vendor evidence fit rating summary
+High = strong fit for this Strategy and Analytics use case; Medium = useful but conditional/partial fit; Low = weak fit,
+material limitation or limited relevance.
+
+Source / document / evidence-pack item                                         Vendor A fit    Vendor B fit   Vendor C fit
+Vendor Fact Sheet — Business outcome claim                                     Medium          Medium         Medium
+Architecture Note — Deployment and model family                                Medium          High           Low
+Security Note — Data location / retention                                      Medium          High           Medium
+Security Note — Access / isolation / transparency                              High            High           Medium
+Capability Note — Modalities                                                   High            High           Medium
+Agent Note — Agentic capability                                                Medium          High           Low
+PoC Policy — Proof on customer data                                            High            High           Medium
+Known Limitation — Failure modes                                               Medium          Medium         Low
+Commercial Sheet — Indicative cost                                             Low             Medium         High
+Exit Note — Portability                                                        Low             High           Low
+Contract Extract — Key buyer terms                                             Medium          High           Low
+Contract Extract — Audit / exit                                                Medium          High           Medium
+Programme-Controlled Comparative PoC — Long-document synthesis                 High            Medium         Low
+Programme-Controlled Comparative PoC — Multimodal document                     High            Medium         Medium
+reasoning
+Programme-Controlled Comparative PoC — Agentic tool-use sandbox                High            Medium         Low
+
+
+C1. Hype-versus-proof test
+Test                       Vendor A                         Vendor B                           Vendor C (optional)
+1. Can the vendor          Yes, but only as a claim:        Yes, with a clearer control-led    Partly. Vendor C can state a
+state the business         Vendor A says it can rapidly     outcome: Vendor B offers a         clear outcome for high-volume
+outcome in one             deploy secure enterprise         private, routed GenAI stack that   extraction, categorisation and
+clear sentence?            GenAI applications with          can support secure evidence        template-driven
+                           strong reasoning and             retrieval, summarisation and       summarisation at predictable
+                           multimodal capability. For       draft synthesis inside             cost, but that is not the core
+                           this use case, the testable      customer-controlled                outcome required here. The
+                           outcome is a faster, cited       infrastructure. For this use       use case needs open-ended
+                           first-draft evidence pack for    case, the claim is credible but    research synthesis and
+                           LT questions, not proof of       still needs representative proof   evidence-backed
+                           final strategic decision         on LT-style questions and          recommendations, where
+                           quality. Evidence: A-01, A-02.   CI/dashboard evidence.             Vendor C’s own limitations
+                                                            Evidence: B-01, B-02, B-03.        weaken the claim. Evidence:
+
+
+1
+    Please refer to Appendix 1
+Test                  Vendor A                         Vendor B                           Vendor C (optional)
+                                                                                          C-01, C-08.
+2. Will it prove      Yes, conditionally. Vendor A     Yes, and strongest on proof        Partly. Vendor C offers a ten-
+performance on        offers a two-week PoC on up      route. Vendor B offers a four-     business-day PoC on up to
+representative/real   to 25,000 customer               week PoC in the customer           10,000 records/documents
+-world data rather    records/documents with           VPC/on-prem environment,           with customer edge cases and
+than only a curated   customer-defined metrics         with representative data,          acceptance metrics, so it is
+demo?                 and failed-case disclosure.      customer-defined metrics,          not only a curated demo.
+                      That is better than a curated    retained evaluation harness        However, aggregate failure
+                      demo, but the proof must be      and disclosure of                  categories and limited routing
+                      run on representative LT-style   configuration/failure cases.       transparency make this
+                      questions, CI sources and        This best matches the use          weaker proof for open-ended
+                      dashboard extracts before        case’s need to test sensitive LT   research synthesis and
+                      selection. Evidence: A-07.       questions and dashboard            citation quality. Evidence: C-
+                                                       evidence inside customer           07, C-08.
+                                                       boundaries. Evidence: B-07.
+3. Does it explain    Yes, with important gaps.        Yes, and most transparently.       Yes, but less convincingly for
+architecture,         Vendor A explains its            Vendor B explains deployment       this use case. Vendor C
+limits, edge cases    managed cloud architecture,      options, model-routing             explains its managed
+and measured          proprietary model tiers,         approach, permission controls,     architecture, proprietary
+failure/error         multimodal/tool-use              human checkpoints,                 routing, fixed permission
+information?          capability and known             model/version disclosure and       scopes and disclosed
+                      limitations, including long-     known performance limits on        weaknesses in open-ended
+                      context omissions, weak          novel multi-step reasoning and     strategic reasoning and long
+                      citation support and             long mixed-format documents.       cross-document synthesis. It
+                      ambiguous connector              It also provides measured          has measured programme
+                      failures. It also has measured   programme PoC results and          results, but routing
+                      programme PoC results. The       stronger                           transparency and quality
+                      gap is limited transparency      configuration/evaluation           commitments are weaker for
+                      into model weights, routing      transparency. Evidence: B-02,      this Strategy and Analytics use
+                      logic and proprietary            B-04, B-06, B-08, P-03/P-04, P-    case. Evidence: C-02, C-06, C-
+                      workflow definitions.            09, P-10/P-11.                     08, P-03/P-04, P-09, P-10/P-
+                      Evidence: A-02, A-05, A-06,                                         11.
+                      A-08, P-03/P-04, P-09, P-
+                      10/P-11.
+
+Which material vendor claim would you refuse to accept without additional evidence, and what proof would you demand?
+Cite the relevant Evidence ID(s).
+
+I would refuse to accept Vendor B’s claim that open-weight routed models can handle the full Strategy and
+Analytics evidence-pack workflow without representative proof. B-02, B-05 and B-06 support the architecture,
+document/image capability and configurable tooling, but B-08 admits weaker performance on novel multi-step
+reasoning and long mixed-format documents. The proof required is a customer-data PoC using LT-style questions,
+CI reports and dashboard extracts, with measured citation accuracy, critical-omission rate, numerical consistency
+and evidence-gap behaviour. I would also test Vendor A’s “leading reasoning and multimodal capability” claim (A-
+01, A-05) against the same harness, because programme results (P-03/P-04, P-09) are indicative, not proof on this
+use case. Vendor C should be treated as extraction/summarisation only unless C-08 is overcome in the PoC.
+C2. Weighted vendor evaluation scorecard and hard gates
+C2.1 Set the weights before scoring
+Criterion               Weight %       Why this weight matters for your use case
+Security and            30             The use case handles sensitive LT questions, dashboard extracts and untrusted external
+data handling                          content. Security must therefore cover data location, training use, retention, auditability
+                                       and whether tools enforce user-authorised access.
+Real-task               30             The value depends on a reliable cited evidence pack for ambiguous LT strategy
+performance                            questions, including long-document synthesis, contradictory evidence, multimodal
+                                       document reasoning, citation discipline and dashboard-output explanation.
+Ease of exit /          20             The buyer must retain prompts, retrieval corpus, evaluation sets, logs, workflow design
+portability                            and outputs so the solution can move if cost, performance or policy fit changes.
+Implementation          20             Cost matters because expected request volume is low but each LT question may involve
+and Annual Run-                        repeated iterations. Fees, implementation, infrastructure and control add-ons must be
+Time Costs                             balanced against cycle-time savings; low cost matters only if gates are still met.
+TOTAL                   100%
+
+C2.2 Score the vendors
+Criterion                         Weight      Vendor A     A             Vendor B      B            Vendor C           C
+                                              score /10    weighted      score /10     weighted     score /10          weighted
+Security/data handling            30          7            21            9             27           6                  18
+Real-task performance             30          9            27            8             24           5                  18
+Ease of exit                      20          4            8             9             18           4                  8
+Implementation and                20          4            8             7             14           9                  18
+Annual Run-Time Costs
+TOTAL                             100                      64                          83                              62
+
+
+
+
+Vendor           Key score evidence / gaps
+Vendor A         Best real-task evidence: leads grounded Q&A, citation correctness, long-document synthesis, multimodal
+                 reasoning and agentic completion (P-01, P-02, P-03/P-04, P-09, P-10). This supports 9/10 performance.
+                 Security is conditional: managed cloud, 30-day diagnostic content retention unless Premium Control is
+                 bought, and Not evidenced customer-side equivalent audit records (A-02, A-03, A-04).
+Vendor B         Most balanced full-solution fit. Customer-controlled deployment, prompts, outputs, retrieval data, logs,
+                 keys, identities, model versions and tool permissions make it the best broad platform for retrieval, collation,
+                 governed tooling and routine synthesis (B-02, B-03, B-04, B-06, B-11). Use Vendor A selectively only for
+                 hardest frontier reasoning after Vendor B governs the evidence layer (B-08, P-03/P-04, P-09, P-10).
+Vendor C         Best cost score: lowest platform, implementation and reference usage costs, with optional advanced
+                 dashboards (C-09, P-12). But it is vendor-managed, uses proprietary routing/fixed scopes and retains
+                 request content unless configured otherwise (C-02, C-03, C-04, C-06). Cost does not offset weaker
+                 strategic reasoning, long-document synthesis and agentic fit (C-08, P-03/P-04, P-10/P-11).
+C2.3 Apply hard go/no-go gates
+Non-negotiable       Minimum requirement               Vendor A                 Vendor B                Vendor C
+Security / data      Enterprise controls, no           Pass, conditional on     Pass (B-03, B-04, B-    Pass, conditional
+handling gate        shared-model training on          Premium Control /        11).                    on zero-content
+                     customer content, role-based      zero-content                                     logging and
+                     access, audit logs and an         retention being                                  metadata
+                     acceptable retention posture      contracted (A-03, A-                             controls (C-03, C-
+                     for sensitive LT questions and    04, A-11).                                       04).
+                     dashboard context.
+Real-task            Representative PoC must           Pass to pilot; must      Pass to pilot; must     Fail for
+performance gate     show reliable cited synthesis     prove on customer        prove frontier-         independent-
+                     of LT-style questions, long CI    data (A-07, A-08, P-     equivalent              workhorse role
+                     reports and dashboard             03/P-04, P-09).          sufficiency for the     unless redesigned
+                     extracts; no unsupported                                   hardest synthesis       as a narrow
+                     material recommendation;                                   cases (B-07, B-08,      extraction
+                     wrong/missing citation rate                                P-03/P-04, P-09).       component only
+                     ≤5% of sampled material                                                            (C-08, P-03/P-04,
+                     claims.                                                                            P-10/P-11).
+Data portability /   Export prompts, retrieval         Fail or high-risk        Pass (B-10, B-12).      Fail: proprietary
+exit gate            corpus, evaluation sets, logs,    exception:                                       routing, model-
+                     outputs and workflow              documents,                                       selection logic
+                     configuration with transition     prompts, logs and                                and vendor-
+                     support; no critical              outputs export, but                              managed indexes
+                     dependence on non-                embedding vectors                                are not
+                     exportable routing/index logic.   and proprietary                                  exportable, with
+                                                       workflow/orchestrati                             only a 30-day
+                                                       on definitions do not                            export window (C-
+                                                       (A-10, A-12).                                    10, C-12).
+Use-case-specific    System must support a read-       Pass, provided quick-    Pass (B-06, B-11).      Fail for the full
+gate                 only augmented research           start autonomous                                 design because
+                     agent with configurable source    templates are                                    fixed scopes,
+                     allowlist, maximum-               disabled and read-                               short action chain
+                     step/permission controls,         only permissions are                             and weaker
+                     evidence-gap behaviour and        enforced (A-06, A-                               agentic
+                     human release gate.               08).                                             blocking/completi
+                                                                                                        on increase
+                                                                                                        complexity and
+                                                                                                        reduce fit (C-06,
+                                                                                                        P-10/P-11).
+
+Which vendor leads after the weighted score and hard gates are considered together? Explain any case where the highest
+numerical score should nevertheless not be selected.
+
+Vendor B leads after the weighted score and hard gates are considered together. Vendor A has the strongest raw
+model-performance evidence, but it fails or is high-risk on the portability gate because key routing/workflow assets
+and embedding vectors are not exportable. It should therefore be considered only if Vendor B’s pilot fails to meet
+the real-task performance threshold and Procurement explicitly accepts the lock-in risk. Vendor C should not be
+selected as an independent solution: its low cost and extraction strength do not compensate for weaker strategic
+reasoning, long-document synthesis, agentic completion and exit position. At most, Vendor C could be
+reconsidered for a narrower extraction-only component, but that would add orchestration complexity and would
+not replace the routed research-and-synthesis architecture.
+C3. Lock-in and exit assessment
+Layer                   Current/proposed                 What would make switching         Mitigation
+                        dependency                       difficult?
+Infrastructure          Prefer customer-controlled       Vendor-managed indexes,           Keep source documents,
+                        VPC/private-cloud route;         proprietary orchestration and     dashboard extracts, vector
+                        managed cloud only if            cloud-only deployment could       corpus, logs and evaluation data
+                        retention and audit terms are    make migration slow or            in customer-controlled storage
+                        acceptable.                      incomplete.                       where possible.
+Foundation model        Routed model family:             Prompts, retrieval settings and   Maintain model-agnostic
+                        smaller/specialised paths for    evaluations may become            prompts, task interfaces,
+                        routine work, stronger           tuned to one model family or      acceptance tests and fallbacks;
+                        reasoning model for              proprietary routing policy.       avoid hard-coding vendor-
+                        synthesis/challenge.                                               specific model behaviour into the
+                                                                                           process.
+Engineering / tool      Read-only connectors to          Custom connectors,                Document connector
+layer                   web, CI repositories,            permission logic and tool         specifications, permission
+                        document parsing and             schemas may be hard to            scopes, source allowlist and
+                        dashboard extracts.              reproduce with another            error-handling rules outside the
+                                                         vendor.                           vendor platform.
+Application /           Research plan, evidence          Proprietary workflow              Own the workflow design,
+workflow layer          pack, citation checker,          definitions, routing rules or     templates, evaluation harness,
+                        contradiction checklist and      evaluation dashboards could       reviewer rubric, outputs and
+                        human approval workflow.         trap the operating process.       correction logs; require export
+                                                                                           and transition support.
+
+If the selected vendor doubled its price, stopped meeting requirements or fell behind technologically in two years, what
+specifically would you need in order to leave?
+
+To leave, the buyer would need a complete export of prompts, templates, retrieval corpus, source metadata,
+evaluation sets, scoring rubrics, logs, analyst corrections, generated outputs, workflow configuration, connector
+specifications and access-control design. The replacement vendor must be able to replay the evaluation harness
+on representative LT-style questions and match agreed thresholds before migration. This is why Vendor B’s
+exportable deployment assets and customer-controlled logs are material advantages. Vendor A’s non-exportable
+orchestration and Vendor C’s proprietary routing/indexes would require a rebuild, not just a commercial switch.
+
+C4. AI-specific contract safeguards
+AI-specific contract       Minimum position you would require                    Why it matters for this use case
+issue
+Vendor use / training      No vendor training or model improvement using         The inputs include commercially sensitive
+on your data               customer prompts, outputs, dashboard context,         LT questions, internal performance
+                           CI documents or review logs without separate          context and subscribed research. Data
+                           written approval; zero-content retention where        leakage or later reuse would be
+                           available.                                            disproportionate to the pilot value.
+Ownership of inputs        Customer retains all rights to inputs, retrieved      The evidence pack and reviewer
+and outputs                sources, prompts, evaluation sets, analyst            corrections become organisational
+                           corrections and generated outputs, subject to         knowledge and should remain usable if
+                           third-party source licences.                          the vendor is replaced.
+Quality / outcome          Quality commitments tied to the pilot evaluation      Uptime does not prove the agent can
+commitments, not           harness: citation accuracy, numerical                 produce reliable strategic evidence. The
+uptime alone               consistency, omission rate, evidence-gap              key risk is a persuasive but wrongly
+                           behaviour and representative task completion,         evidenced recommendation.
+                           with remediation if thresholds are missed.
+Liability / indemnity      Liability cap and indemnity should include            A failure could expose sensitive strategy
+AI-specific contract     Minimum position you would require                     Why it matters for this use case
+issue
+                         confidentiality breach, IP/data misuse, security       material or contribute to a costly business
+                         incident, unauthorised support access and failure      decision if review controls fail.
+                         to meet agreed data-handling obligations; generic
+                         low SaaS caps are insufficient.
+Audit, portability and   Customer-accessible logs, configuration                The buyer needs to investigate errors,
+exit rights              disclosure, model/version change notice, export        reproduce pilot results and leave if
+                         of                                                     performance, cost or policy fit
+                         prompts/corpus/evaluations/outputs/workflows,          deteriorates.
+                         deletion certification and transition support for at
+                         least 90 days.
+
+Which two protections are non-negotiable for this use case, and why?
+
+The two non-negotiables are data-use/training restrictions and audit/portability/exit rights. Data-use restrictions
+are essential because the workflow exposes sensitive LT questions, commercial context, dashboard extracts and
+subscribed research material. Audit and exit rights are equally critical because the buyer must be able to
+investigate failures, reproduce pilot results and move the workflow if the vendor falls behind, raises prices or no
+longer meets policy requirements. Quality / outcome commitments are also a critical go-live condition, even if not
+selected as one of the two protections: uptime alone is insufficient for this use case. The contract should tie
+remediation to the evaluation harness, including citation accuracy, numerical consistency, omission rate,
+evidence-gap behaviour and representative task completion.
+Part D: Executive Decision and 90-Day Action Plan
+D1. Executive recommendation
+Decision: [x ] Proceed to controlled pilot [ ] Proceed only after specified conditions close [ ] Redesign [ ] Do not proceed
+
+Decision field         Recommendation
+Use case               Build a read-only AI evidence-pack workflow for Commercial Strategy Analysts answering LT
+                       macro/geopolitical sensitivity questions. Target first validated drafts in ~15 analyst-days versus
+                       ~25 today; final recommendations remain human-reviewed.
+Technology             Use Vendor B as the governed evidence and orchestration layer. Retrieve from allowlisted public,
+architecture           CI and dashboard sources; use deterministic queries for figures; route routine work to
+                       smaller/open-weight models and escalate only difficult synthesis where pilot evidence requires it.
+Model family           Use a routed family: smaller/open-weight models for retrieval, extraction, citation checks and
+                       routine drafting; approved frontier access only for complex synthesis or hypothesis challenge.
+                       Numerical validation stays in dashboards, queries or notebooks.
+Multimodal             Predominantly text. Document/image understanding is needed only for scanned reports, charts or
+requirement            screenshots when structured extracts are unavailable. Audio and video are not required.
+Autonomy level         Augmented, read-only autonomy. The agent may plan research, query approved sources and
+                       assemble an internal draft. It may not write, publish, distribute, add sources or approve
+                       recommendations.
+Preferred vendor /     Vendor B is preferred for customer-controlled deployment, configurable permissions, portability
+route                  and routed-model flexibility. Vendor A is considered only if Vendor B fails the performance pilot
+                       and lock-in risk is explicitly accepted.
+Principal cost         Data engineering and read-only integration: connecting sources, dashboards, metadata,
+driver                 evaluation and monitoring controls. Frontier inference should remain limited to cases where it
+                       materially improves synthesis quality.
+Principal failure /    The main risk is a persuasive but wrongly evidenced recommendation, caused by missed
+security risk          contradictory evidence, misread dashboard extracts or untrusted content. The pilot must prove
+                       citation accuracy, numerical consistency, evidence-gap behaviour and secure handling.
+Most important         Mandatory evidence traceability and human release: every material claim, figure and
+guardrail              recommendation must link to an approved source, pass citation and contradiction checks, or be
+                       labelled as an evidence gap.
+Decisive reason for    Proceed to a controlled pilot with Vendor B because it best balances sensitive-data control, read-
+the                    only tooling, exit rights and sufficient performance evidence (B-02, B-03, B-06, B-10, B-12).
+recommendation         Production depends on meeting pilot thresholds.
+
+
+D2. 90-Day GenAI action plan
+Days 1-30 — List and prioritise
+Action                                    Owner                                      Evidence of completion
+List 3-5 credible GenAI / multimodal /    Strategy and Analytics Manager, with       Short opportunity list completed,
+agentic opportunities in Strategy and     Commercial Strategy Analysts               showing 3-5 use cases and confirming
+Analytics, and indicate where the                                                    the LT evidence-pack workflow as the
+assessed LT evidence-pack use case                                                   priority candidate for controlled-pilot
+sits                                                                                 design
+Confirm executive sponsor / business      Head - Performance Analytics /             Named sponsor confirmed, with
+owner                                     Commercial Strategy Director               agreement on the business problem,
+                                                                                     expected value, risk appetite and pilot
+                                                                                     decision rights
+Action                                   Owner                                      Evidence of completion
+Confirm the assessed use case still      Business Owner, Strategy Manager,          Go / no-go note completed,
+deserves to enter controlled pilot       Data / AI Product Owner                    confirming that the use case is
+design                                                                              valuable, feasible, bounded and
+                                                                                    suitable for a read-only augmented
+                                                                                    GenAI pilot
+
+Days 31-60 — Govern and set up
+Action                       Owner                              Evidence of completion
+Establish guardrails and     Strategy & Analytics Manager,      Guardrail checklist approved, covering grounded
+residual-error monitoring    Risk / Compliance Partner          sources, citation rules, evidence-gap behaviour,
+                                                                unsupported-claim tracking, wrong-citation rate and
+                                                                numerical-mismatch monitoring
+Establish human              Strategy & Analytics Manager,      Reviewer workflow documented, confirming analyst
+approval / action gates      Executive Sponsor,                 validation and manager approval before any LT-facing use
+                             Commercial Strategy Director
+Confirm security / data      Information Security Lead, Data    Approved data-boundary note completed, defining
+boundaries                   Owner, Legal / Compliance          allowed sources, read-only access, retention rules, role-
+                             Partner                            based permissions and prohibited external sharing
+Confirm model / vendor       Data / AI Product Owner,           Exit checklist completed, covering export of prompts,
+abstraction and exit         Enterprise Architect,              retrieval corpus, evaluation sets, logs, outputs, workflow
+approach                     Procurement                        configuration and connector specifications
+Lock pilot success           Business Owner, Strategy &         Pilot scorecard signed off before testing, including cycle-
+measures before              Analytics Manager, AI Product      time reduction target, citation accuracy, numerical
+execution                    Owner                              consistency, critical-omission rate, evidence-gap
+                                                                behaviour and user-review effort
+
+Days 61-90 — Pilot and decide
+Action                       Owner                              Evidence of completion
+Run a controlled pilot on    AI Product Owner, Commercial       Pilot completed using representative LT-style questions,
+representative / real data   Strategy Analysts, Data            CI reports, public sources and dashboard extracts within
+                             Engineering Lead                   approved access boundaries
+Measure against pre-         Strategy & Analytics Manager,      Evaluation report completed, showing performance
+agreed success and           AI Governance Lead, Analyst        against cycle-time, citation, numerical-consistency,
+failure metrics              Reviewers                          omission, safety and reviewer-effort thresholds
+Review security,             Information Security Lead, Risk    Risk review completed, including unsupported claims,
+hallucination and action-    / Compliance Partner, Business     wrong citations, tool failures, evidence gaps, access-
+failure evidence             Owner                              control issues and any attempted out-of-scope behaviour
+Make Proceed / Redesign      Executive Sponsor, Business        Day-90 decision recorded with rationale: proceed to
+/ Stop decision              Owner, Strategy & Analytics        limited production, redesign the workflow / vendor route,
+                             Manager                            or stop the initiative
+
+What single Day-90 result would make you stop or materially redesign the initiative?
+
+Stop or materially redesign the initiative if the pilot produces any unsupported material recommendation, if wrong
+or missing citations exceed 5% of sampled material claims, if numerical mismatches exceed 2% of checked
+figures, or if analyst review does not reduce the cycle from roughly 25 analyst-days to a meaningfully lower effort
+level. The initiative should also stop if security review finds that sensitive LT questions, dashboard extracts or
+vendor/evaluation artefacts cannot be kept within approved access and retention boundaries.
+Academic Integrity and AI-Assistance Disclosure
+Disclosure field                                            Your response
+Did you use an AI tool while preparing this assignment?     [ ] No [x ] Yes
+If yes, name the tool(s) and describe how they were used    Notion AI was used to structure, edit and improve the
+                                                            clarity, formatting and tone of the worksheet responses. It
+                                                            also helped review the assignment against the provided
+                                                            instructions and suggest stronger wording for tables,
+                                                            guardrails, vendor-evaluation logic and the 90-day action
+                                                            plan.
+What did you independently verify or materially revise?     I independently selected and owned the use case,
+                                                            judgement, vendor recommendation and final
+                                                            conclusions. I reviewed the AI-assisted wording for
+                                                            consistency with the assignment instructions, checked the
+                                                            scorecard arithmetic and evidence references, and
+                                                            materially revised the final submission to ensure that
+                                                            assumptions, estimates, controls and stop/redesign
+                                                            conditions reflected my own analysis.
+
+
+
+Honour Declaration
+✓   The analysis and judgement in this submission are my own.
+✓   Organisational facts are accurate to the best of my knowledge; estimates, assumptions, anonymisation and
+    hypothetical elements are clearly labelled.
+✓   I have not fabricated vendor capabilities, benchmark results, proof-of-concept outcomes, contract terms or source
+    evidence.
+✓   I have not disclosed confidential, personal or proprietary information that I am not authorised to share.
+✓   Where I used AI assistance, I have disclosed it above and remain responsible for the final submission.
+
+
+Name                   Date           Signature / typed acknowledgement
+
+Nilotpal Choudhury     18/09/2026
+
+
+
+
+Appendix
+Appendix 1
+The detailed vendor evidence log is available for download if needed.
+
+
+ Vendor Evidence
+    Log.docx
+

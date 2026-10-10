@@ -1,0 +1,25 @@
+id	doc	section	exact_text	status	note
+T01	A1	C1.2	about 5,000 unique accounts per market	documented	
+T02	A1	C1.3	costing roughly 2–3 weeks, about 80–120 hours	estimate	
+T03	A1	D1.2	about 5:1 in favour of avoiding false negatives	documented	
+T04	A1	D1.2	roughly USD 15K	estimate	
+T05	A1	D1.2	roughly USD 3K	estimate	
+T06	A1	Exec summary	2,000–3,000 sales hours a year	estimate	
+T07	A1	Exec summary	a potential 10–15% conversion uplift	estimate	
+T08	A1	D2.1	5% relative reduction	documented	
+T09	A1	D2.1	annual churned-account rate of roughly [X]%	placeholder	
+T10	A1	D2.1	First scored account list within [3–4] months of funding	placeholder	
+T11	A1	A1.1	double-digit million-dollar margin growth over three years	documented	
+T12	A1	A1.1	more than 500 customer activations	documented	
+T13	A1	A1.1	approximately 50,000 accounts	documented	
+T14	A1	B2.1	4–5 pilots in 12 months	documented	
+T15	A1	C2.2	200–300 person-hours	estimate	
+T16	A1	C1.2	only about 1,500 usable churned accounts	documented	
+T17	A2	A1	~25 analyst-days per request	documented	
+T18	A2	B1	$90k-$270k	estimate	
+T19	A2	D1	~15 analyst-days versus ~25 today	documented	
+T20	A2	B2.2	numerical mismatches exceed 2% of checked figures	assumption	
+T21	A2	B2.2	wrong/missing citations exceed 5% of sampled material claims	assumption	
+T22	A2	C2.3	Vendor B leads after the weighted score and hard gates	documented	
+T23	A2	A1	4-5 recommendations, each backed by three primary evidences	documented	
+T24	A2	A3.1	No multilingual capability is required	documented	

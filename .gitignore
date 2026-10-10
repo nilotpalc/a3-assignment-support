@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+build/
+.venv/
+.DS_Store
+# original PDFs and anything office policy treats as confidential stay out of git
+*.pdf
+*.docx
+course_notes/

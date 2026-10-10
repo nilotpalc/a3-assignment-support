@@ -1,0 +1,1246 @@
+Module 1 | Assignment 1 – AI Opportunity
+Scan
+My Function – Strategy and Analytics
+
+Why this is the right anchor - I lead the development of reporting and analytics tools and currently support the
+global marketing function in shaping its five-year digital strategy roadmap.
+
+
+
+Executive Summary
+ Field                   Response
+
+ Organisation            An integrated oil and gas energy major (global lubricants division)
+
+ Industry                Energy / Consumer Packaged Goods
+
+ Your role               Strategy and Analytics
+
+ Function                Strategy and Analytics (Global Lubricants)
+
+ Current readiness       Five of the nine A2 ratings are Red, two Amber, two Green: technique fit is broadly sound,
+ position                but governance is Red on all three initiatives and data readiness is Red on two
+
+ Priority                A supervised-classification early-warning signal for volume-loss / churn, built on 5+ years
+ opportunity             of account-level sales history (~50K accounts per market), so account managers can
+                         intervene before the current rule flags risk — today only after two years of volume decline.
+                         Cross-sell / up-sell and the generative account-brief are scoped out as next extensions
+                         once the churn dataset exists.
+
+ Top three               1. Churn early-warning signal (Now) — the priority opportunity above; multi-million-dollar
+ opportunities           gross margin protected.
+                         2. Order-status and lead-time visibility (Next) — a real-time order-status view across SAP,
+                         logistics and credit systems, with lead-time master data refreshed by regression from
+                         despatch history; releases roughly 2,000–3,000 sales hours a year.
+                         3. Sector-matched value cases (Later) — generative retrieval and drafting over tagged
+                         proof points to build customer-specific value cases; a potential 10–15% conversion uplift,
+                         held as a revenue hypothesis until an assisted-versus-unassisted pilot proves it.
+
+ Accountable owner       Regional commercial performance and business-reporting lead, managing the solution
+ for the first move      sustainability through the proposed governance model
+
+ Data gap that must      No signed-off definitions exist for churn and its early-warning attributes — premium mix,
+ close first             sectoral driver, engagement recency — so each market reads churn differently and the
+                         pooled training set (C1.2) cannot be assembled. First move: agreed definitions published
+                         in the data dictionary — roughly one month, 200–300 person-hours — with sign-off tabled
+                         at the next data governance council.
+
+ Expected business       Multi-million-dollar gross margin protected — not new revenue — if earlier churn flags
+ impact                  prevent a small share of avoidable volume loss among low- and mid-volume accounts;
+                         basis is the historical churned-account base and prior commercial value of retention
+Field          Response
+
+               actions. Chartered target: a 5% relative reduction in the derived annual churn rate against
+               the pilot-market baseline within 12 months of go-live.
+
+What you are   Three decisions: (1) approval to pilot in one large, mature market with 5+ years of account-
+asking for     level sales history and ~50K accounts; (2) a project team of analysts, data science and
+               data engineering to publish churn definitions, build pipelines and derive the labelled
+               training set for the recall-tuned model, tested against the pilot-market baseline over 12
+               months; (3) formal nomination of the regional commercial performance and business-
+               reporting lead to the pilot team as accountable owner, reviewing data definitions and model
+               results before scores enter the market's live account-planning workflow.
+Part A: Current-State Scan and Readiness
+Part A1 – What is Actually Running
+Part A1.1 – Inventory of live systems classiﬁed by paradigm and status 1
+The internal customer analytics module is a rule-based, production workflow that supports sales teams in
+identifying churned and at-risk customers across approximately 50,000 accounts. Its high-level function is to translate
+account history into prioritised retention, cross-sell, and upsell actions. The core business value is clear: it has helped
+focus sales attention on accounts where intervention could protect or grow margin, contributing double-digit million-
+dollar margin growth over three years. However, because the current logic depends on a two-year volume-decline
+rule, it is more reactive than predictive.
+
+The internal lead-generation assistant is a generative AI pilot used by marketing teams to research and prioritise
+high-potential prospects from event and channel lead lists. Its high-level function is to convert large, relatively
+unstructured lead pools — typically 1,000 to 5,000 prospects — into a more focused pipeline for sales follow-up. The
+system uses structured prompts and public-source research to assess sector fit and likely buying potential. Its main
+advantage is speed and consistency in early-stage prospect research, though the final prioritisation still needs
+stronger explainability and governance before production scale-up.
+
+The customer segmentation platform was a classical machine learning workflow that is now retired. It used
+promotion-linked consumption data to cluster customers by shared promotional interests, helping marketing teams
+identify inactive customers who could be reactivated through targeted campaigns. Its high-level function was to move
+beyond broad campaign targeting and create more behaviour-based customer segments. While active, it generated
+more than 500 customer activations and approximately low-six-figure USD incremental revenue, showing that
+segmentation can create value when the underlying behavioural signal is clean and actionable.
+
+The channel performance dashboard is a hybrid, production system that combines structured transactional data,
+external market indicators, forecasting models, fixed allocation logic, and GenAI-assisted explanations. Its high-level
+function is to help leadership review channel-level performance and test forward volume and margin positions under
+changing market conditions. The dashboard supports quarterly and annual planning by linking historical channel
+performance with forward-looking forecasts. Its hybrid nature is important: the forecasting component learns from
+data, while the allocation logic remains rule-based and the GenAI layer helps explain performance drivers.
+
+The market intelligence platform is a generative AI, production capability that helps the commercial analysis team
+work with external research on markets, customers, competitors, and macro trends. Its high-level function is to
+reduce manual research effort by allowing users to query curated intelligence reports and run predefined workflows
+for competitor profiling, market monitoring, and strategic reporting. The system is valuable because it converts high-
+volume, text-heavy market information into faster and more consistent commercial insight. Its main contribution is not
+replacing judgement, but giving analysts a stronger and quicker starting point for strategic interpretation.
+
+Part A1.2 – The AI-vs-Automation test applied honestly to three of them
+The AI-versus-automation test shows that the three reviewed workflows should not be treated as uniformly “AI” or
+“non-AI”.
+
+For the internal customer analytics module, the current rule-based approach is too late for the business decision
+it is meant to support. The existing logic identifies churn or risk only after a sustained decline in volume, by which
+point the customer relationship may already have weakened. A more useful answer would change with context:
+product-mix shifts, customer feedback, sales-engagement notes, complaint patterns, and promotion response may all
+indicate emerging risk before volume loss becomes visible. This makes the opportunity suitable for a supervised AI
+model, but only after the underlying account-level data strategy is strengthened. The first move is therefore not
+
+
+1
+    Refer Appendix 1 for more details
+model deployment; it is to bring the additional signals into one governed dataset and validate whether historical churn
+outcomes can support reliable prediction.
+
+The channel performance dashboard is a hybrid case rather than a pure AI case. Some parts of the workflow,
+such as allocation of volume and margin by channel, follow stable business logic and should remain governed
+through documented rules, named ownership, and periodic review. Other parts, especially forward forecasting, do
+change with the situation because they depend on historical performance and external market indicators. Those
+elements justify a learned model, provided that forecasts are monitored against monthly actuals. Where GenAI is
+used to explain performance drivers, the control requirement is different again: summaries need spot-checks for
+confident but incorrect interpretations before being consumed by the broader sales and marketing community.
+
+The internal lead-generation assistant is also best understood as a hybrid workflow. GenAI is well suited to the
+research stage because it has to interpret open-web sources, company context, sector signals, and qualitative
+evidence that cannot be fully captured through fixed rules. However, the final likelihood-to-buy ranking should not
+depend entirely on GenAI judgement. Since sales teams need to understand and defend why one prospect is
+prioritised over another, the final scoring layer should move to written rules over a defined taxonomy of evidence. This
+would preserve the value of GenAI in evidence gathering while making the commercial decision more transparent,
+auditable, and repeatable.
+
+Part A2 – Readiness Three Questions
+Part A2.1 - Three initiatives scored Green, Amber or Red on all three questions,
+with evidence
+            Initiative              Status        Question       Rating             Observable justification
+
+                                                                           The use case is well-suited to supervised
+                                                                           ML for earlier churn / at-risk prediction, but
+                                                Q1 Right                   the live solution today is a two-year
+                                  Live          problem,        Amber      volume decline threshold approach that is
+                                                right AI type              too late for the business. The AI technique
+                                                                           fit is directionally right, but not yet
+                                                                           implemented end-to-end.
+
+                                                                           Beyond transactional history, the
+                                                                           additional signals — CSI, product mix,
+ Internal customer analytics
+                                                                           engagement / sentiment — are not yet
+ module tracks churned and                      Q2 Data
+                                                                           confirmed as available with defined
+ at-risk customers,               Live          genuinely       Red
+                                                                           sources, history depth, label coverage
+ recommending sector-                           ready
+                                                                           (account and semantic attributes), or
+ specific cross-sell and
+                                                                           quality checks. The dataset is therefore
+ upsell opportunities
+                                                                           not model-ready.
+
+                                                                           Governance exists for transaction data in
+                                                                           terms of business finance, IT focal points
+                                                Q3                         owning the space, but the new signals
+                                                Governance                 required for a viable model have no
+                                  Live                          Red
+                                                outlasts                   agreed data owner, access controls, or
+                                                sponsor                    standing control forum yet. The capability
+                                                                           would depend on individuals rather than
+                                                                           durable governance.
+         Initiative            Status        Question       Rating           Observable justification
+
+                                                                     The core research task is a strong fit for
+                                                                     GenAI because it depends on interpreting
+                                                                     unstructured public-source information,
+                                                                     sector context, and company-level signals
+                                            Q1 Right
+                                                                     that cannot be captured reliably through
+                             Live (Pilot)   problem,        Green
+                                                                     fixed rules alone. The final buy-probability
+                                            right AI type
+                                                                     ranking should be separated into a
+                                                                     defined scoring logic, but the evidence-
+                                                                     gathering and synthesis problem is well
+                                                                     matched to GenAI.
+
+                                                                     The pilot does not require a labelled
+                                                                     historical dataset in the same way as a
+                                                                     supervised model, but it still needs a
+Internal lead-generation                                             reliable evaluation base. Today, the
+assistant uses structured                                            prompt instructions are reviewed and
+                                            Q2 Data
+prompts and public-source                                            adjusted for each business or sector
+                             Live (Pilot)   genuinely       Amber
+research to recommend                                                request. Readiness is therefore partial:
+                                            ready
+high-potential prospects                                             adding a standard taxonomy and rule-
+from event and channel                                               based scoring layer would make the
+leads                                                                evidence behind each buy-probability
+                                                                     recommendation more explainable and
+                                                                     repeatable.
+
+                                                                     Because the solution is still in pilot,
+                                                                     governance currently sits mainly with the
+                                                                     responsible data scientist who reviews the
+                                                                     agent instructions. That is not yet durable
+                                            Q3
+                                                                     enough for production. The pilot needs a
+                                            Governance
+                             Live (Pilot)                   Red      controlled repository of approved prompt
+                                            outlasts
+                                                                     instructions, version history for changes,
+                                            sponsor
+                                                                     and periodic review with business and AI
+                                                                     focal points so the guidance remains
+                                                                     current as sectors, data sources, and
+                                                                     commercial priorities change.
+
+                                                                     Competitive-intelligence work means
+                                                                     pulling insights from messy, unstructured
+                                                                     inputs—licensed reports, pricing notes,
+                                            Q1 Right                 supply signals, and competitor
+                             Proposed       problem,        Green    commentary—then turning them into
+A competitive-intelligence
+                                            right AI type            comparable views for market and bid
+data product connecting
+                                                                     decisions. GenAI fits this extraction and
+licensed pricing, supply
+                                                                     structuring job at scale, as long as outputs
+signals, and competitor
+                                                                     are grounded and quality-checked.
+intelligence for GenAI-
+assisted market and bid                                              We do have licensed news and research
+analysis                                                             feeds, but the intended product depends
+                                            Q2 Data                  on collecting and structuring a wider set of
+                             Proposed       genuinely       Red      market and competitor signals end to end.
+                                            ready                    Right now there’s no defined data
+                                                                     strategy— source inventory, ingestion
+                                                                     approach, history depth,
+           Initiative               Status        Question      Rating             Observable justification
+
+                                                                           metadata/taxonomy, quality checks, or a
+                                                                           reusable corpus for evaluation and
+                                                                           refresh.
+
+                                                                           Third-party feeds come with external
+                                                                           governance, but the broader signal set
+                                                                           doesn’t. There’s no named data/product
+                                                Q3
+                                                                           owner, formal review forum, access
+                                                Governance
+                                  Proposed                      Red        controls, or clear retention and usage
+                                                outlasts
+                                                                           rules for newly collected intelligence. New
+                                                sponsor
+                                                                           sources are still being explored for
+                                                                           collection capability, so governance is ad
+                                                                           hoc and person-dependent.
+
+
+
+
+Part A2.2 – Every Green is evidence-gated, not asserted
+ Green rating                           Artefact, system, forum, or role        Where a grader could verify it
+                                        that proves it
+
+ Internal lead-generation               A deployed cloud program gathers        SharePoint folder holding each
+ assistant uses structured              public-web evidence on each             generated report, including a
+ prompts and public-source              prospective client and generates an     rationale column explaining every
+ research to recommend high-            Excel report containing the collected   likelihood-to-buy rating.
+ potential prospects from event         evidence and likelihood-to-buy
+ and channel leads; Q1 Right            ratings, shared with the requesting
+ problem, right AI type                 function.
+
+ A competitive-intelligence data        The proposed product would collect      The formal company digital
+ product connecting licensed            and structure high-volume,              ecosystem: a named product owner
+ pricing, supply signals, and           unstructured web-based intelligence     and data-controls documentation
+ competitor intelligence for            that fixed rules cannot capture and     covering retention and governance,
+ GenAI-assisted market and bid          humans cannot execute at scale,         shared between product-owner and
+ analysis; Q1 Right problem, right      organised into reusable data            business-sponsor focal points.
+ AI type                                products.
+
+
+
+
+Part A2.3 – The two weakest ratings analysed, with an internal accountability
+factor
+Weakest Rating 1
+
+Data readiness (Q2 data Genuinely Ready) for the internal customer analytics module (churn and at-risk
+module) is Red, and the reason is a delivery choice made three years ago that has never been revisited: the platform
+was built on the easiest available data — sales transactions — with legacy pilot rules to prove the concept quickly,
+then embedded into day-to-day working, which removed the urgency to strengthen the foundations. The signals that
+would surface risk earlier are not model-ready. Sales engagement minutes are mandated in the CRM but adoption
+and quality are a known concern; premium-mix and sectoral drivers are defined differently across countries and
+sectors and are recorded nowhere; complaints and escalations reach account managers by email rather than a
+controlled incident log, so they never reach a churn-risk score. The accountability factor is internal, not technical —
+no decision has been tabled to move beyond transaction-only data, and no data owner has been appointed for the
+additional signals 2
+
+Weakest Rating 2
+
+Governance (Q3 Governance outlasts sponsor) on the lead-generation pilot is Red, because it was never
+commissioned at all: the pilot began as an ad-hoc business request for GenAI public-web research on prospective
+clients, running the whole pipeline through GenAI agents became the default, and no decision was ever tabled to
+convert it into a defined capability. This is an internal accountability gap, not a resourcing one. Three consequences
+follow — no sector taxonomy exists to structure the evidence, so the likelihood-to-buy rating rests wholly on GenAI
+judgement; the prompt instructions, largely transferable across sectors, sit with one responsible data scientist with no
+controlled repository, version history, or review forum, so a single people move breaks the service; and because
+token costs are low and not recovered internally, there is no financial forcing function for controls. The gap will surface
+exactly when it hurts most — a surge in demand or a staff transition, with no documented process to fall back on.
+
+
+
+
+2
+    Detailed analysis in Appendix 3
+Part B – Technique Selection
+Part B1 – Routing Each Problem to the Right Technique
+Part B1.1 Five candidate problems routed to a paradigm with justiﬁcation
+                                      Paradigm          Why this and not the next-        What would change my
+ #     Candidate problem
+                                      selected                   nearest                         mind
+
+     Sales teams lack a
+     single, reliable, real-time
+     view of end-to-end order
+     status and inventory (on-
+                                                       We need to give the customer       If the order, despatch and
+     ground, in-transit, back-
+                                   Supervised          a date, and we already hold        credit-block timestamps
+     orders) across
+                                   Regression (for     years of despatch history to       do not stitch into one order
+     SAP/logistics/credit
+                                   revised lead time   learn from. That is regression.    record, or the delays come
+1    systems, causing manual
+                                   assessment) /       Generative would invent            from causes nobody logs,
+     daily checks, inconsistent
+                                   Rules or            confidence we cannot audit,        I would drop the prediction
+     customer updates,
+                                   Automation          and rolling up order status is     layer and simply ship the
+     missed expectation-
+                                                       just stable logic.                 real-time status view.
+     setting, and avoidable
+     lost business when
+     supply or lead-times
+     shift.
+
+     Customer-facing teams
+     cannot quickly find and
+     trust the "one right
+                                                                                          If we cannot vouch for
+     answer" on products,
+                                                       What the field actually wants is   accuracy, versions and
+     specifications, client
+                                                       an answer, written out, drawn      lineage in the approved
+     approvals, and
+                                                       from approved documents.           library, or three documents
+     competitor comparisons
+                                                       Better search with tagging         answer the same question
+     because approved
+2                                  Generative          would hand them ten files and      differently, I would step
+     collateral is scattered,
+                                                       leave the reading to them. And     back to governed search
+     search is poor, and
+                                                       no rule set can anticipate how     with named document
+     recommendation-check
+                                                       differently people ask the         owners until there
+     steps are error-prone —
+                                                       same question.                     genuinely is one right
+     leading to slow
+                                                                                          answer.
+     responses and
+     occasional incorrect
+     guidance in the field.
+
+     Account planning and                              Churn is something we              If churn is labelled
+     retention decisions are                           already record as having           inconsistently, or the early
+     made with delayed,                                happened or not, so this is        signals really live in
+     unstructured, and siloed      Supervised
+                                                       classification. We act on a        engagement notes and
+     intelligence — customer       classification
+                                                       ranked risk list rather than a     complaint emails nobody
+3    briefs, competitor moves,     (Churn) /
+                                                       predicted volume, and a            captures, the model has
+     sector/regulatory context,    Generative /
+                                                       retention conversation has to      nothing to learn from.
+     and win/loss reasons —        Hybrid
+                                                       be explainable. The competitor     Then it is a rules-based
+     so teams spend                                    briefs are a separate,             watchlist first, and fix
+     significant manual effort                         generative job.                    capture at source.
+     preparing insights and
+                                        Paradigm         Why this and not the next-       What would change my
+  #      Candidate problem
+                                        selected                  nearest                        mind
+
+       still lack an early-warning
+       signal for volume-
+       loss/churn risk and a
+       consistent fact base for
+       account strategy.
+
+       Sales capacity is
+       constrained by high-
+       volume, low-value
+       administrative work —
+       writing visit reports,
+                                                       Visit reports and follow-up
+       tracking actions and
+                                                       notes are writing, with a          If it turns out the team
+       follow-ups, preparing
+                                                       person reading them before         needs fixed fields filled in,
+       routine customer
+                                                       they go anywhere, so there is      or nobody has defined
+       materials, handling
+                                                       no single correct output to        what a good visit report
+ 4     repetitive                    Generative
+                                                       score against. Classification      should contain, this stops
+       allocation/response
+                                                       would only sort the inbox /        being an AI problem and
+       emails, and entering
+                                                       notifications, and no rule-        becomes a template and
+       lead/prospect data —
+                                                       based workflow can support         workflow fix instead.
+       resulting in inconsistent
+                                                       report writing.
+       documentation, missed
+       follow-ups, and reduced
+       time spent on selling and
+       customer problem-
+       solving.
+
+       Sales teams struggle to
+       build credible, customer-
+       specific value cases
+                                                                                          If nothing links technical
+       because proof points
+                                                       Finding the right proof point is   evidence to application,
+       (testimonials, reference
+                                                       retrieval over well-tagged         sector and a quantified
+       cases, quantified
+                                                       evidence; turning it into a        outcome, and the
+       technical evidence) are
+                                                       value case is writing. Tagging     documentation stays
+       fragmented across
+ 5                                   Generative        alone labels the cases but         patchy, no model will
+       systems and hard to
+                                                       never builds the argument,         match reliably. The first
+       match to a given
+                                                       and a bespoke deep-learning        move is then tagging and
+       customer's sector and
+                                                       model is expensive overkill at     a data dictionary with a
+       situation — so value
+                                                       our volumes.                       named content owner, not
+       propositions remain
+                                                                                          a build.
+       generic, slower to
+       produce, and less
+       persuasive in deals.
+
+
+
+
+Part B1.2 – The three-ingredient test applied to at least one supervised candidate
+Candidate - Sales teams lack a single, reliable, real-time view of end-to-end order status and inventory (on-ground,
+in-transit, back-orders) across SAP/logistics/credit systems, causing manual daily checks, inconsistent customer
+updates, missed expectation-setting, and avoidable lost business when supply or lead-times shift. [Regression]
+ Ingredient                                                      Present?
+
+ Labelled historical data                                        Partial
+
+ Clear target variable — Delivery Lead Time for a Sales Order    Yes
+
+ Enough examples across full range                               Partial
+
+
+
+Two of the three ingredients are Partial, and the constraint is labelling rather than volume. More than five years of
+SAP order history sits in the central data warehouse carrying order status, delivery status and actual delivery
+outcomes, so promised-versus-actual lead time can be rebuilt at order level and the target variable is unambiguous.
+What is missing is explanatory coverage: customer location type, segment, product type, route condition and
+manufacturing dependency are not consistently defined or sit outside the current SAP extract, so the model would
+learn average lane behaviour rather than exception risk. No named business owner yet validates these fields as
+complete, accurate and fit for modelling; appointing one, in logistics or SAP masterdata, is the condition that moves
+both Partials to Yes.
+
+Part B1.3 - At least one candidate correctly routed away from AI
+The real-time delivery-tracking component of candidate #1 — a live platform continuously predicting lead time
+and pushing order-status updates to sales — is routed away from AI; it is a masterdata and process fix. SAP already
+holds standard lead times, but they are set from planner judgement with no formal review cycle, so they drift.
+Refreshing them periodically from roughly six months of manufacturing and delivery history, seeded offline by the
+B1.2 regression, lets the order system quote a realistic date at entry, with threshold rules flagging orders not
+scheduled within standard planning time or not dispatched within the lane standard. A live model would add serving,
+drift-monitoring and integration cost to restate what refreshed lead times already say, and its scores cannot be
+explained to a customer in one sentence — while OTIF is already reasonable and the real pain is the badly delayed
+exception. The logistics process owner and the SAP masterdata owner hold this, to be tabled in the next annual
+planning cycle with the supply chain organisation.
+
+Part B2 – When a Simpler Approach beats Generative AI
+Part B2.1 – A proposed generative use case diagnosed against the three-question
+test
+Internal lead-generation assistant uses structured prompts and public-source research to recommend high-potential
+prospects from event and channel leads — seeded in A1.2 #3. → by Marketing Intelligence
+
+               Diagnostic                                                  Selection
+
+ Output structured or open-ended?           Structured
+
+ Must a single decision be explained?       Yes
+
+ How many times per day?                    <1/month today (4–5 pilots in 12 months); 2–4 batches/month planned
+
+ Directional tally                          Simpler/predictive 2 of 3; Generative 1 of 3
+
+ Considered verdict                         Hybrid
+Hybrid, split step by step: GenAI keeps public-source research, summarisation and taxonomy mapping; the final
+High / Medium / Low rating moves to written scoring rules over five fixed features — fleet size, EV deployment,
+relevant capex, sector fit, stated energy-transition intent. Explainability at low volume decides it: sales must defend
+one prospect over another, and 4–5 pilot runs in twelve months makes no throughput case for a full GenAI rating
+service. The gain is a rating that reproduces on re-run and a rationale that survives challenge; the board argument is
+decision control, not token cost. Errors are cheap but lopsided — a wrong High burns a few hours of cold-calling out
+of a 1K–5K batch, reviewed before contact, while an invented fleet size quoted to a prospect is the real damage. The
+requesting sales team absorbs both. A named Marketing Intelligence product owner holds prompts, taxonomy and
+rules in a versioned repository. Labels are the constraint: none exist, and the customer database records only wins,
+so rules start unlabelled while each batch's logged outcome builds the base for a supervised upgrade.
+
+Part B2.2 – Order-of-magnitude cost comparison with visible reasoning
+    Cost line                    Generative approach                                Simpler alternative
+
+                                                                       Same batches reuse a structured prospect
+ Volume              2–4 lead batches/month, each researched
+                                                                       dataset; GenAI refreshes only new or
+ assumption          afresh; token cost repeats per prospect.
+                                                                       changed evidence.
+
+ Build or set-up     Lower: 1–2 months to standardise prompts,         Higher: 4–6 months to define taxonomy,
+ effort              sources and report format.                        features, scoring rules and dataset.
+
+ Data                                                                  High: no labels exist today; standard fields,
+                     Low: evidence stays case-by-case, never
+ preparation                                                           agreed H/M/L rules and logged batch
+                     becoming reusable labels.
+ and labelling                                                         outcomes build the dataset.
+
+ Running cost        Medium–high: each batch repeats web               Low–medium: only new or materially changed
+ per month           research, extraction and summarisation.           evidence needs GenAI refresh.
+
+ Ongoing
+                     Medium: prompts, source reliability and           Medium–high: taxonomy, scoring rules and
+ maintenance
+                     hallucination checks need a named owner.          dataset need active ownership.
+ and ownership
+
+ Rough annual        Medium initially, rising with usage as GenAI      Higher in year one; lower per batch once
+ total               research repeats.                                 reusable data exists.
+
+
+
+
+Part B2.3 – At least one non-obvious call with clear reasoning
+Hybrid, split step by step: GenAI keeps public-source research, summarisation and taxonomy mapping; the final
+High / Medium / Low rating moves to written scoring rules over five fixed features — fleet size, EV deployment,
+relevant capex, sector fit, stated energy-transition intent. Explainability at low volume decides it: sales must defend
+one prospect over another, and 4–5 pilot runs in twelve months makes no throughput case for a full GenAI rating
+service. The gain is a rating that reproduces on re-run and a rationale that survives challenge; the board argument is
+decision control, not token cost. Errors are cheap but lopsided — a wrong High burns a few hours of cold-calling out
+of a 1K–5K batch, reviewed before contact, while an invented fleet size quoted to a prospect is the real damage. The
+requesting sales team absorbs both. A named Marketing Intelligence product owner holds prompts, taxonomy and
+rules in a versioned repository. Labels are the constraint: none exist, and the customer database records only wins,
+so rules start unlabelled while each batch's logged outcome builds the base for a supervised upgrade.
+Part C: Data Readiness Audit
+Part C1 – Four Vs and Data Suﬃciency
+Part C1.1 – Four Vs assessed for the priority use case
+    Field             Response
+
+    Minimum           About 5,000 unique customer accounts per market, taken from central sales history in the
+    viable dataset    internal data lake. Each account needs 12–15 months of continuous transactions, plus
+                      semantic attributes covering the last six months of account status. Churn prediction only.
+                      Cross-sell and up-sell need a wider feature set, so they wait.
+
+    Why this is the   At that size the model sees enough accounts — and enough month-on-month movement
+    minimum           inside each one — to build stable features for supervised churn classification. Twelve to fifteen
+                      months also covers a full seasonal cycle. Churn is the rare event, so the number of churned
+                      accounts limits us, not the row count.
+
+    What you have     One market's pilot produced roughly 1,500 usable churned-account records. That is the real
+    today against     training set. Positive examples, not transaction volume, decide how much the model can learn.
+    that
+
+    The gap, and      Pool comparable markets into one representative churn dataset. That needs data-sharing
+    how it closes     clearance from each market's business data owner — and, once the pilot becomes a funded
+                      project, sign-off from the data governance council.
+
+
+Part C1.2 – Minimum viable dataset estimated with reasoning 3
+The minimum viable dataset is about 5,000 unique accounts per market drawn from central sales history in the
+internal data lake, each carrying 12–15 months of continuous transactions plus semantic attributes covering the last
+six months of account status — enough month-on-month movement to build stable features, and enough history to
+cover a full seasonal cycle. What binds is not row count but the rare event: one market's pilot produced only about
+1,500 usable churned accounts, and that is the real training set. Scope therefore stays churn-only, with cross-sell and
+up-sell waiting on a wider feature set, and the gap closes by pooling comparable markets into one representative
+churn dataset. That needs data-sharing clearance from each market's business data owner, and data governance
+council sign-off once the pilot becomes a funded project.
+
+Part C1.3 – Learning or evaluation signal availability4
+The signal this model needs is a binary churned / retained flag per account per observation period, and it does not
+exist as a field anywhere today — it has to be derived. The source itself is sound: account-level sales history in the
+central data lake, fed from the core transaction system, spanning multiple markets, with larger markets holding five-
+figure account counts and 5+ years of transactions. Deriving the label is a rule-based build — gaps and sporadic
+activity read as zero sales, a sustained absence of orders marks the account churned — costing roughly 2–3 weeks,
+about 80–120 hours, of dedicated data engineer or data scientist time, and the churn definition itself needs sign-off
+from the business data owner. That capacity is not confirmed: it competes with existing reporting and analytics
+commitments, and would have to be secured when the work is formally scheduled and funded.
+
+
+
+3
+    Refer to Appendix 5
+4
+    Refer to Appendix 6
+Part C2 – Data Quality and Data Debt
+Part C2.1 – Five-point audit completed with evidence
+ Dimension         Rating       Evidence that decided the rating
+
+ Completeness      Weak         Transaction history is populated across 5+ years and ~50K
+                                accounts. Every early-warning feature is absent: CRM engagement
+                                minutes have known adoption and capture gaps, complaint emails
+                                sit in account managers' inboxes, premium-mix drivers are recorded
+                                nowhere.
+
+ Accuracy          Adequate     Transactional values reconcile to financial reporting, so that layer is
+                                verified in use. No sample check has been run on CRM engagement
+                                notes or complaint records, so the accuracy of the churn-signal
+                                fields is asserted, not evidenced.
+
+ Consistency       Weak         Central sales history follows documented data standards in the data
+                                lake. Premium-mix, sectoral drivers and semantic feature labels are
+                                defined differently across countries and sectors, and no churn risk
+                                definition is centrally signed off, so the same concept differs by
+                                market.
+
+ Timeliness        Adequate     The data lake refreshes monthly, which matches the monthly
+                                account-planning decision window. CRM notes and complaint
+                                emails rely on manual capture against an SLA nobody monitors, so
+                                freshness of the early-warning signals is unproven.
+
+ Lineage           Adequate     Transactional data traces to the core transaction system via the data
+                                lake, with source documentation. Unstructured sources carry no
+                                lineage today; provenance and change history must be designed
+                                into collection before a derived churn feature survives audit.
+
+
+Part C2.2 – Data debt statement with a named owner and an order-of-magnitude
+cost
+The definitions behind the churn signal have no accountable business owner, and that is the debt keeping data
+readiness Red (A2, Q2). Churn, premium mix, sectoral driver and engagement recency carry no signed-off entry in
+the data lake's data dictionary, which is why C2.1 rates Completeness and Consistency Weak. Until that closes, the
+churn label in C1.3 stays provisional and the pooled multi-market training set in C1.2 cannot be defended. The fix
+belongs to the regional commercial performance and business-reporting lead within Marketing Analytics — a
+business leader answerable for what the numbers mean and responsible for reporting, rather than a data engineering
+role that can only implement definitions once they are set. It runs to roughly 2–3 analysts part-time with country and
+sector focal points over 3–4 weeks, some 200–300 person-hours or low 5-figure costs of internal time with no
+external spend, tabled for sign-off at the next steering committee by end of the current quarter. Left open, every
+market reads the score against its own definition of churn, no scored account list survives a challenge in an account-
+planning review, and sales revert to the two-year volume rule.
+Part C3 – Data Rights and the Governance Position
+Part C3.1 – Lawful basis named and purpose limitation checked
+No personal data is in use for the audited churn slice: the dataset holds account-level transactions and status
+attributes, with contact names, engagement notes and complaint correspondence excluded by design. The reused
+asset is account-level sales history in the internal data lake — 5+ years, roughly 50K accounts per market —
+originally collected for order fulfilment, invoicing and commercial reporting within one geography.
+
+Purpose fit is Unclear: churn scoring is a marketing analytics use case, and multi-market pooling (C1.2) exceeds
+single-market reporting, potentially triggering data-export controls — the binding obligation examined in C3.2.
+Development therefore proceeds on larger markets while smaller ones pause pending export-controls clearance, with
+legal guidance if needed. Sign-off sits with the regional commercial performance and business-reporting lead in
+Marketing Analytics — the owner nominated in C2.2, pending formal appointment.
+
+Part C3.2 – One sectoral or cross-border obligation identiﬁed and applied
+Of the three obligations assessed against the pooled C1.2 dataset — the internal cross-border data-transfer
+standard, GDPR transfer rules, and local data-localisation requirements — the internal transfer standard binds
+hardest, and its status is Unclear pending written confirmation from a designated company focal point. It applies to
+account-level commercial data whether or not that data is personal, so clearance under it gates any export of rows
+from a market; GDPR reaches only the sole-proprietor accounts flagged in C3.1 and falls away once they are
+excluded at extraction. The build changes accordingly: region-scoped models for North America, EU, and one Asia-
+Pacific grouping replace a single global model, with only derived account-level features and the churn label leaving a
+market — raw extracts and person-identifying fields do not — and markets without clearance train locally or stay on
+pause. Written clearance gates assembly of the pooled dataset, and the regional grouping is re-cut if clearance is
+refused.
+
+Part C3.3 – One privacy-preserving option considered and decided
+ Option considered                 Decision    Reason in this context
+
+ Masking / pseudonymisation        Adopt       C3.1 already excludes person-identifying fields, so the only
+ Federated Learning                Defer       residual exposure is the sole-proprietor account name, which can
+ Synthetic Data                    Reject      itself identify a person. Pseudonymising that name at extraction
+                                               closes the boundary case while preserving churn patterns and
+                                               account-level joins, at roughly a day of data-engineering time.
+                                               Federated learning is deferred, not adopted: it is the only option
+                                               that helps if cross-border clearance is refused, but per-market
+                                               training infrastructure has not been scoped. Synthetic data is
+                                               rejected — at roughly 1,500 churned accounts it would not reliably
+                                               preserve rare-case coverage or cross-field correlations.
+Part D – Opportunity Shortlist and First Move
+Part D1 – Shortlist and the Error-Cost Trade-Oﬀ
+Part D1.1 – Five to seven use cases with paradigm and value type
+#   Use case                              Paradigm         Value   Indicative value and           Effort/readiness
+                                                           type    basis
+1   Sales teams lack a single,            Supervised       Cost    Roughly 2,000–3,000            High
+    reliable, real-time view of end-to-   Regression               sales hours a year
+    end order status and inventory        (for revised             released globally by
+    (on-ground, in-transit, back-         lead time                cutting manual order-
+    orders) across                        assessment)              status follow-up emails
+    SAP/logistics/credit systems,         / Rules or               and calls; basis is current
+    causing manual daily checks,          Automation               sales effort spent
+    inconsistent customer updates,                                 reconciling SAP, logistics
+    missed expectation-setting, and                                and credit updates for
+    avoidable lost business when                                   customer responses.
+    supply or lead-times shift.                                    Secondary value is fewer
+                                                                   avoidable expectation-
+                                                                   setting failures when
+                                                                   lead-time master data is
+                                                                   refreshed from actual
+                                                                   delivery history.
+2   Customer-facing teams cannot          Generative       Cost    Mid five-figure annual         Medium
+    quickly find and trust the "one                                hour release if approved-
+    right answer" on products,                                     product, technical
+    specifications, client approvals,                              specification clarifications
+    and competitor comparisons                                     and competitor-answer
+    because approved collateral is                                 searches reduce
+    scattered, search is poor, and                                 significantly leading to
+    recommendation-check steps                                     10–15% time liberation
+    are error-prone — leading to                                   for customer-facing
+    slow responses and occasional                                  teams; basis is the
+    incorrect guidance in the field.                               repeated time spent
+                                                                   locating, checking and re-
+                                                                   checking approved
+                                                                   collateral before field
+                                                                   responses. Value should
+                                                                   be counted as
+                                                                   productivity, not revenue,
+                                                                   until conversion impact is
+                                                                   evidenced.
+3   Account planning and retention        Supervised       Risk    Multi-million-dollar gross-    Medium
+    decisions are made with               classification           margin risk reduction if
+    delayed, unstructured, and            (Churn) /                earlier churn flags
+    siloed intelligence — customer        Generative /             prevent a small share of
+    briefs, competitor moves,             Hybrid                   avoidable volume loss
+    sector/regulatory context, and                                 among low- and mid-
+    win/loss reasons — so teams                                    volume accounts; basis is
+    spend significant manual effort                                the existing at-risk
+    preparing insights and still lack                              customer population,
+    an early-warning signal for                                    historical churned-
+    volume-loss/churn risk and a                                   account base and prior
+    consistent fact base for account                               commercial value from
+    strategy.                                                      retention / premium-sales
+                                                                   actions. Read as margin
+                                                                   protected, not
+                                                                   guaranteed new revenue.
+    #   Use case                            Paradigm     Value        Indicative value and         Effort/readiness
+                                                         type         basis
+    4   Sales capacity is constrained by    Generative   Cost         Mid five-figure annual       High
+        high-volume, low-value                                        hour release if routine
+        administrative work — writing                                 visit notes, follow-up
+        visit reports, tracking actions                               summaries and standard
+        and follow-ups, preparing                                     customer materials take
+        routine customer materials,                                   about 10–15% less seller
+        handling repetitive                                           time; basis is recurring
+        allocation/response emails, and                               administrative work
+        entering lead/prospect data —                                 across the global sales
+        resulting in inconsistent                                     organisation. Guardrail is
+        documentation, missed follow-                                 that follow-up quality and
+        ups, and reduced time spent on                                CRM completeness must
+        selling and customer problem-                                 improve, not merely shift
+        solving.                                                      editing work to
+                                                                      managers.
+    5   Sales teams struggle to build       Generative   Revenue      Potential multi-million-     Medium
+        credible, customer-specific value                             dollar gross-margin uplift
+        cases because proof points                                    if sector-matched proof
+        (testimonials, reference cases,                               points improve
+        quantified technical evidence)                                opportunity conversion by
+        are fragmented across systems                                 about 10–15% versus the
+        and hard to match to a given                                  prior full-year baseline;
+        customer's sector and situation                               basis is the current
+        — so value propositions remain                                qualified-opportunity
+        generic, slower to produce, and                               pipeline and gross-
+        less persuasive in deals.                                     margin-per-win
+                                                                      assumptions. This
+                                                                      remains a revenue
+                                                                      hypothesis until a pilot
+                                                                      compares assisted
+                                                                      versus unassisted
+                                                                      proposals.
+
+
+
+
+Part D1.2 – The error-cost trade-oﬀ for the priority use case
+The trade-off runs about 5:1 in favour of avoiding false negatives, so the model is tuned toward recall. A missed at-
+risk account costs roughly USD 15K — the annual gross margin lost or materially eroded before anyone intervenes
+— while a false alarm costs roughly USD 3K in a week of account-manager and customer-operations effort plus an
+incentive worth around 10% of gross margin. The probability threshold is therefore set low, accepting more false
+alarms so fewer at-risk accounts slip through, and the flags split into two bands: high-probability accounts go to
+account managers with the score's top drivers and a required retention conversation; the larger low-probability band
+goes to customer operations for lighter-touch outreach. That workload is plausible only if the low band is phased
+across the month and capped by queue size — if the queue breaches the agreed cap, the threshold rises or the
+rollout is limited by market. 5
+
+
+
+
+5
+    Refer to additional details in Appendix 8
+Part D1.3 – Now, Next, Later, Park sequencing with rationale
+Sequence       Use cases       Rationale
+               by
+               number
+
+Now            [3]             Highest value at stake: multi-million-dollar margin risk in a market where cost-
+                               conscious customers defend on price. Readiness is the weakest link — A2 rates data
+                               and governance Red — but the ~1,500 churned accounts in C1.2 make a single-
+                               market pilot feasible at medium effort. Risk stays contained: recall-tuned scores inform
+                               retention conversations, they do not automate them.
+
+Next           [1]             Deferred, not declined. Data readiness is the strongest of the five — 5+ years of
+                               despatch history — but effort is high across SAP, logistics and credit, and B1.3 routes
+                               the live prediction layer away from AI. Value is 2,000–3,000 released sales hours; it
+                               reinforces [3] during supply volatility rather than protecting margin on its own.
+
+Later          [5]             Revenue upside is real but unproven — a hypothesis until a pilot compares assisted
+                               against unassisted proposals, and new contracts also turn on commercial terms this
+                               initiative cannot influence. Readiness is the block: nothing links technical evidence to
+                               sector and a quantified outcome. Medium effort; the live risk is a confident error inside
+                               a customer-facing value case.
+
+Park           [2,4]           [2] is parked as a duplicate of the sharper-scoped [5] over the same approved-
+                               collateral corpus; revisit only if that library proves accurate, versioned and owned. [4] is
+                               parked on scope, not value: outputs differ by sector, region and individual, so no
+                               agreed definition of a good visit report exists. Revisit once a template and workflow
+                               standard is set.
+
+
+
+
+Part D2. One-Page Charter for the Priority Use Case
+Part D2.1 – Charter complete with baseline, metric, guardrail, owner and stop rule
+       Field                                                       Response
+
+Selected use           The volume-loss / churn early-warning signal — the slice of B1.1 candidate #3 audited through
+case                   C1–C3. Cross-sell / up-sell and the generative account-brief half are out of scope for this
+                       charter.
+
+Problem in             At-risk accounts surface only after two years of volume decline — too late for a retention
+one sentence           conversation to change the outcome.
+
+Technique              Supervised classification, as routed in B1.1.
+
+Data source            Account-level sales history in the internal data lake (5+ years, ~50K accounts per market) plus
+                       account-status attributes. Access owner: the regional commercial performance and business-
+                       reporting lead (C2.2, appointment pending). Lawful basis (C3.1): no personal data — person-
+                       identifying fields excluded at extraction; sole-proprietor names pseudonymised.
+
+Baseline today         Annual churned-account rate of roughly [X]% of the pilot market's active accounts, derived by
+                       applying the C1.3 churn rule to the trailing 12 months of transaction history.
+Business            Annual churn rate among scored accounts, measured on the same derived label used for the
+success             baseline.
+metric
+
+Target for that     A 5% relative reduction against the pilot-market baseline within 12 months of go-live date.
+metric
+
+Guardrail           Retention incentive spend on flagged accounts must stay within 10% of gross margin protected,
+metric              and the low-risk outreach queue within the customer-operations capacity cap agreed in D1.2; a
+                    breach raises the scoring threshold.
+
+Who changes         Account managers (~[N] in the pilot market) hold a required retention conversation on high-
+their               band flags; customer operations run lighter-touch outreach on the lower band; both log actual
+behaviour           outcomes to grow the training set.
+
+Timeframe           First scored account list within [3–4] months of funding; first measurable churn read after six
+                    months on live volume; full-year review at 12 months.
+
+Named owner         Regional commercial performance and business-reporting lead within Marketing Analytics (per
+                    C2.2) — a named role, appointment pending, not a committee.
+
+Stop rule           If, after two quarterly reviews on live volume, the false-negative rate exceeds the holdout
+                    benchmark by more than 5 percentage points — or flagged accounts retain no better than the
+                    two-year volume rule — stop, revert to the rules-based watchlist, and return the analyst hours.
+
+
+
+
+Part D2.2 – The one failure mode that would matter most, named and mitigated
+      Field                                                      Response
+
+Failure mode          Drift — the churn patterns the model learned stop matching the market, so genuinely at-risk
+                      accounts are no longer flagged while the account list still looks healthy, and sales lose
+                      volume with no warning.
+
+Why this one          Supply-driven availability gaps and sharp pricing moves shift buying behaviour faster than
+above all others      any retrain cycle — the known shocks in this market. Bias matters less on account-level
+                      commercial data, and confident errors are buffered because a human retention conversation
+                      sits between every score and every action. Drift arrives silently: the D2.1 guardrail watches
+                      incentive spend and queue capacity, not model validity, so the queue keeps clearing while the
+                      model scores yesterday's market.
+
+How you would         Monthly monitoring of input feature distributions and the output score distribution against the
+detect it early       training profile. Alert threshold: the flagged-account share moves more than 3 percentage
+                      points for two consecutive months above the initial model benchmark, or a top-five feature
+                      distribution shifts materially. Watcher: the project data scientist in year one, then a standing
+                      metric reported to the business owner. Quarterly false-negative checks against the holdout
+                      benchmark remain the lagging confirmation, not the early warning.
+
+Mitigation before     Validate on a time-separated holdout — train on the earlier period, test on the most recent —
+launch                to measure how fast performance decays and set the retrain cadence. Build the distribution-
+                      monitoring dashboard and alert thresholds before go-live, and agree the retrain trigger with
+                      the business owner. The monthly review of 10–12 actual churn cases with account managers
+                      and customer operations remains the field-level cross-check on whether flagged drivers
+                      match on-ground reality.
+Accountable if it   The regional commercial performance and business-reporting lead within Marketing Analytics
+happens anyway      — the D2.1 owner — who invokes the D2.1 stop rule if drift is confirmed and a retrain does
+                    not recover performance.
+Honour Code Declaration
+1. I declare that this AI Opportunity Scan is my own work, prepared for the organisation and function named in it.
+
+2. Where I have used the work, words or frameworks of others, I have said so and attributed them correctly.
+
+3. Where I have used an AI assistant to draft, structure or edit any part of this submission, I have stated below what I
+used it for. Use of an AI assistant is permitted on this programme. Concealing it is not.
+
+4. The organisational facts, figures and system names in this submission are accurate to the best of my knowledge,
+and where I have estimated, I have said that I estimated.
+
+5. I have not disclosed confidential information beyond what my employer permits me to share, and I accept
+responsibility for that judgement.
+
+Statement on use of AI assistance: Used Notion AI to structure the working draft, create placeholders, and convert
+the assignment worksheet into editable tables. I also actively used Notion AI to translate my raw ideas and initial
+thoughts into structured sentences, which I then reviewed and edited. Organisational evidence, figures, judgements,
+and decisions are my responsibility.
+
+ Field                 Your response
+
+ Full name             Nilotpal Choudhury
+
+ Programme cohort      Professional Certificate Programme in AI for Business Professionals
+
+ Organisation          An integrated oil and gas energy major (global lubricants division)
+
+ Function declared     Strategy and Analytics (Global Lubricants)
+
+ Date                  23-August-2026
+
+ Signature
+
+Assignment 1: AI Opportunity Scan. Module 1: AI and Machine Learning Foundations. Total marks 100, plus a quality
+modifier of +5 to -5.
+Appendix
+Appendix 1
+     #             System or workflow                  Paradigm           Status               Function served
+
+                                                                                      Helps sales teams identify churned
+                                                                                      and at-risk customers across ~50K
+         Internal customer analytics module
+                                                                                      accounts, prioritising retention,
+         tracks churned and at-risk customers,         Rule-
+ 1                                                                  Production        cross-sell, and upsell actions that
+         recommending sector-specific cross-sell       based
+                                                                                      contributed double-digit million-
+         and upsell opportunities
+                                                                                      dollar margin growth over three
+                                                                                      years.
+
+                                                                                      Helps marketing teams shortlist
+         Internal lead-generation assistant uses                                      high-probability prospects from 1K–
+         structured prompts and public-source                                         5K event and channel leads, giving
+ 2                                                     Generative   Pilot
+         research to recommend high-potential                                         sales teams a focused pipeline for
+         prospects from event and channel leads                                       sector-specific business
+                                                                                      development.
+
+                                                                                      Helps marketing teams target
+         Customer segmentation platform uses
+                                                                                      inactive customers within derived
+         promotion-linked consumption data to          Classical
+ 3                                                                  Retired           segments, generating 500+
+         cluster customers by shared promotional       ML
+                                                                                      activations and ca. low-six-figure
+         interests
+                                                                                      USD incremental revenue.
+
+                                                                                      Helps leadership review channel-
+         Channel performance dashboard
+                                                                                      level performance and test forward
+         combines historical transactional data
+                                                                                      volume and margin positions
+ 4       with external market indicators to report     Hybrid       Production
+                                                                                      against changing external
+         performance by channel and forecast
+                                                                                      conditions, informing quarterly and
+         forward volume and margin
+                                                                                      annual planning decisions.
+
+         Market intelligence platform aggregates                                      Helps the commercial analysis team
+         external research on markets,                                                replace time-intensive manual
+         customers, and competitors, letting users                                    research with faster, more
+ 5       query curated intelligence reports and        Generative   Production        consistent intelligence, deepening
+         run predefined workflows for competitor                                      its read on recent market
+         profiling, market monitoring, and strategic                                  movements and the macro trends
+         reporting                                                                    shaping the industry.
+
+
+
+
+Appendix 2
+                            Does the right answer change with the
+ Entry from inventory                                                       Verdict         What this means for you
+                            situation? Concrete example
+
+ Internal customer          Yes. The rule only fires after two years of                     Data strategy first, model
+ analytics module           volume decline — by then the                    AI              second. Pull the extra signals
+ tracks churned and         relationship has already deteriorated.          (currently,     into one account-level table,
+ at-risk customers,         Real churn signals shift with context:          rule-based)     then train a supervised
+ recommending               product-mix changes, verbatim feedback,                         classification model on
+ sector-specific            sales-engagement notes, promotion                               historical churn outcomes.
+                          Does the right answer change with the
+ Entry from inventory                                                    Verdict       What this means for you
+                          situation? Concrete example
+
+ cross-sell and upsell    response. No analyst can write fixed                         And validate the patterns
+ opportunities            thresholds for that. A model that learns                     properly — in training and
+                          these patterns together would flag risk far                  against a holdout period —
+                          earlier.                                                     before the score replaces the
+                                                                                       volume rule in sales
+                                                                                       workflows.
+
+                                                                                       The verdict holds. But the two
+ Channel
+                                                                                       halves need different care:
+ performance
+                          Partly. The allocation side is written rules                 the allocation rules need a
+ dashboard
+                          — fixed logic splits volume and margin by                    documented owner and
+ combines historical
+                          channel, same approach every time. The                       periodic review, not model
+ transactional data
+                          forecast is learned: a time-series model                     governance. The forecast
+ with external market                                                    Hybrid
+                          reads transactional history and external                     needs drift monitoring against
+ indicators to report
+                          macro indicators, shifting as conditions                     monthly actuals; GenAI
+ performance by
+                          shift. GenAI now explains the drivers.                       summaries need spot-checks
+ channel and forecast
+                          Forecasting learned; allocation written.                     for confident errors before the
+ forward volume and
+                                                                                       S&M community consumes
+ margin
+                                                                                       the outcomes as fact.
+
+                                                                                       Split the pipeline. Keep
+                                                                                       GenAI agents for what they
+ Internal lead-           Partly. Gathering and interpreting lead                      do well — parsing public web
+ generation assistant     evidence — social signals, market news,                      sources and mapping
+ uses structured          business size — is genuinely situational;                    findings to a defined
+ prompts and public-      no analyst could script rules for open-web     Hybrid        taxonomy. Then hand the
+ source research to       research. The final ranking is different.      (currently,   final ranking to written scoring
+ recommend high-          Today GenAI produces it end to end, but        Generative)   rules. Sales can see exactly
+ potential prospects      it could follow written scoring rules                        why a lead scored high, every
+ from event and           instead. Boundary: research learned;                         ranking becomes auditable,
+ channel leads            ranking should be written.                                   and the pilot stops depending
+                                                                                       on GenAI for the one step
+                                                                                       that needs explaining.
+
+
+
+
+Appendix 3
+          Field                                             Response
+
+ Initiative              Internal customer analytics module tracks churned and at-risk customers,
+                         recommending sector-specific cross-sell and upsell opportunities
+
+ Question                Q2 Data genuinely ready
+
+ Rating                  Red
+
+ Why this gap exists     This gap traces back to an early delivery choice that never got revisited. Under
+                         time pressure, the platform was built on the easiest available data — sales
+                         transactions — and a set of legacy pilot rules to prove the concept quickly. It
+                         then became part of day-to-day ways of working, which removed the urgency
+                         to strengthen the foundations. Three years on, the churn logic still reacts too
+                         late, and the signals that would surface risk earlier are not model-ready. Sales
+          Field                                           Response
+
+                       engagement minutes are mandated in the CRM, but adoption and data quality
+                       are a known concern, with no clear accountability to fix capture at source.
+                       Premium-mix and sectoral drivers are defined differently across countries and
+                       sectors, so this signal is not recorded anywhere and survives mainly in
+                       individual analysis. Customer complaints and escalations arrive by email to
+                       account managers instead of a controlled incident log, so they never feed a
+                       churn-risk score. The internal accountability factor is straightforward: no
+                       decision has been tabled to move beyond transaction-only data, and no data
+                       owner has been appointed for the additional signals.
+
+
+
+
+Appendix 4
+          Field                                           Response
+
+                       Internal lead-generation assistant uses structured prompts and public-source
+ Initiative            research to recommend high-potential prospects from event and channel
+                       leads
+
+ Question              Q3 Governance outlasts sponsor
+
+ Rating                Red
+
+                       The pilot began as an ad-hoc business request to use GenAI for public-web
+                       research on prospective clients, and running the full pipeline through GenAI
+                       agents simply became the default. No decision was ever tabled to convert it
+                       into a defined capability, so the governance a production service needs was
+                       never commissioned — this is an internal accountability gap, not a resourcing
+                       one. Three consequences follow. First, no sector taxonomy exists to structure
+                       the evidence gathered, so the likelihood-to-buy rating remains wholly
+ Why this gap exists
+                       dependent on GenAI judgement. Second, the prompt instructions — largely
+                       transferable across sectors — sit with one responsible data scientist, with no
+                       controlled repository, version history, or review forum; a single people move
+                       can break the service. Third, because token costs are low and not recovered
+                       internally, there is no financial forcing function for controls. The gap will
+                       surface exactly when it hurts most: a surge in demand or a staff transition,
+                       with no documented process to fall back on.
+
+
+
+
+Appendix 5
+ Field             My response
+
+ Minimum           About 5,000 unique customer accounts per market, taken from central sales history in the
+ viable dataset    internal data lake. Each account needs 12–15 months of continuous transactions, plus
+                   semantic attributes covering the last six months of account status. Churn prediction only.
+                   Cross-sell and up-sell need a wider feature set, so they wait.
+
+ Why this is the   At that size the model sees enough accounts — and enough month-on-month movement
+ minimum           inside each one — to build stable features for supervised churn classification. Twelve to fifteen
+                   months also covers a full seasonal cycle. Churn is the rare event, so the number of churned
+                   accounts limits us, not the row count.
+ Field             My response
+
+ What you have     One market's pilot produced roughly 1,500 usable churned-account records. That is the real
+ today against     training set. Positive examples, not transaction volume, decide how much the model can learn.
+ that
+
+ The gap, and      Pool comparable markets into one representative churn dataset. That needs data-sharing
+ how it closes     clearance from each market's business data owner — and, once the pilot becomes a funded
+                   project, sign-off from the data governance council.
+
+
+
+
+Appendix 6
+ Field                                       Response
+
+ Signal needed                               A supervised churn label — a binary churned / retained flag per
+                                             account, per observation period
+
+ Does this signal exist today?               Not as a ready-made field. No churn flag is maintained anywhere
+                                             today; the label has to be derived from transaction history once
+                                             records are extracted from the central system.
+
+ Where it sits                               Account-level historical sales records are the primary source, and
+                                             they sit in the central data lake, fed from the core transaction system.
+
+ Roughly how much and over what              History is available across multiple markets globally. Larger markets
+ period                                      within a region hold five-figure account counts with 5+ years of
+                                             transactions, so pooling a comparable set of accounts over a longer
+                                             horizon generates sufficient rows — and, more importantly, enough
+                                             churned cases.
+
+ If missing: who creates or defines it       The label is derived rather than collected. A data engineer or data
+                                             scientist applies an agreed rule in which gaps and sporadic activity
+                                             are read as zero sales, and a sustained absence of orders marks the
+                                             account as churned. The churn definition itself needs sign-off from the
+                                             business data owner.
+
+ What that costs, in hours                   Roughly 2–3 weeks of dedicated data engineer or data scientist time
+                                             — about 80–120 hours — to build the rule-based extract, run it
+                                             against the full dataset, and tune the labelling logic to a usable state.
+
+ Whether that person has those hours         Not confirmed today. Capacity would have to be secured when the
+                                             work is formally scheduled and funded, as it competes with existing
+                                             reporting and analytics commitments.
+
+
+
+
+Appendix 7
+ Field                        Response
+
+ What is broken               No business owner is accountable for the definitions behind the churn-relevant
+                              metrics and fields — churn itself, premium mix, sectoral driver, engagement
+                              recency. None of them carry a signed-off entry in the data lake's data dictionary,
+                              which is why C2.1 rates Completeness and Consistency Weak.
+ Field                        Response
+
+ What it blocks               The churn label cannot be signed off, so the derivation rule in C1.3 stays
+                              provisional. Each market computes churn risk on its own attributes, so the pooled
+                              multi-market training set in C1.2 cannot be assembled, reconciled, or defended to
+                              the data governance council.
+
+ Named owner                  The regional commercial performance and business-reporting lead within
+                              Marketing Analytics — a business leader answerable for what the numbers mean
+                              and responsible for reporting
+
+ Order-of-magnitude cost      Internal effort only, no external spend: 2–3 analysts part-time with country and
+                              sector focal points over roughly 3–4 weeks, in the range of 200–300 person-hours,
+                              or ≈USD 5–10K of loaded time.
+
+ Rough time to fix            About one month to agreed definitions and a published data-dictionary entry, with
+                              sign-off tabled at the next data governance council.
+
+ What happens if not fixed    Every market reads the risk score against its own definition of churn, so a scored
+                              account list cannot be reproduced or challenged in an account-planning review.
+                              Sales revert to the two-year volume rule, and the Red on data readiness in A2
+                              stays Red.
+
+
+
+
+Appendix 8
+ Field               Detail
+
+ False positive      Account flagged as likely to churn though it would have stayed without intervention; sales
+                     diagnose the account and may offer a discount, rebate, survey or service follow-up that was
+                     not strictly needed
+
+ False negative      Genuinely at-risk account not flagged; account manager takes no retention action, volume
+                     loss continues, limited realistic chance of re-engagement
+
+ Low-band            Survey, service follow-up, or standard offer run by customer operations
+ outreach
+ examples
+
