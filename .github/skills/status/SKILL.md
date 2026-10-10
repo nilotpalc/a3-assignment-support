@@ -1,6 +1,6 @@
 ---
 name: status
-description: Where am I: gates, open items, next prompt
+description: "Where am I: gates, open items, next prompt"
 disable-model-invocation: true
 ---
 Report status. Read `ledger/ledger.md` and `drafts/`.

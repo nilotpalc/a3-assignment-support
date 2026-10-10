@@ -1,6 +1,6 @@
 # G2 Ledger Entries — Applied
 
-The author judgements below were entered in `ledger/ledger.md` with date 2026-10-10 and approver `Nilotpal`, as requested. Prior G2 K rulings are superseded by the K1–K18 entries. No G2 approval is recorded.
+The author judgements below were entered in `ledger/ledger.md` with date 2026-10-10 and approver `Nilotpal`, as requested. Prior G2 K rulings are superseded by the K1–K18 entries. G2 approval is recorded below.
 
 | Ledger key | Applied author judgement |
 |---|---|
@@ -28,4 +28,4 @@ The author judgements below were entered in `ledger/ledger.md` with date 2026-10
 - G1 approval remains recorded as 2026-10-10 by Nilotpal.
 - Requirement extraction and generation produced the named files under `build/`.
 - `req_check.py` ran against both source text copies; no marks discrepancy was reported.
-- G2 remains pending author review; this file does not constitute approval.
+- G2 approval was recorded on 2026-10-10 with no changes requested.

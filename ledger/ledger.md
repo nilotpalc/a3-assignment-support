@@ -11,7 +11,7 @@ description: Single shared reference record for Assignment 3. Written only by th
 
 <status>
 version: 0.1 (build stage)
-stage: G2 review pending (G1 approved)
+stage: G4 scope and Part A (G3 approved)
 deadline: 2026-10-15
 last_updated: 2026-10-10
 </status>
@@ -98,7 +98,13 @@ dimensions: Technology;Data;Talent;Process;Culture;Governance
 2026-10-10 | G2-K16 | Keep listed multi-row comparison tables compact; two-column Field/Your response tables may be labelled paragraphs with every worksheet field label verbatim. Detailed supporting tables may move to consolidated optional appendix; main text stands alone. Word caps remain unchanged. | Nilotpal
 2026-10-10 | G2-K17 | R4 leadership-team evidence-pack agent stays in scope as a sales-related workflow supporting S&M-driven strategy dilemmas. | Nilotpal
 2026-10-10 | G2-K18 | Use inferred form-feed page numbers when PDF page labels are unavailable. | Nilotpal
-2026-10-10 | G2 | Template, requirement register, conflict register, coverage matrix and K1-K17 rulings approved; changes: none | Nilotpal
+2026-10-10 | G2 | Template, requirement register, conflict register, coverage matrix and K1-K18 rulings approved; changes: none | Nilotpal
+2026-10-10 | G3 provisional shortlist | Approved five candidates: churn early warning; order-status/lead-time exception visibility; explainable lead-generation research; sector-matched value cases; LT evidence-pack workflow. Sales administration and a standalone CI data product remain reserves because of prior parking/overlap. | Nilotpal
+2026-10-10 | Provisional B3 preference supplied at G3 | 1 Explainable lead-generation research; 2 LT evidence-pack workflow; 3 Churn early warning. Reconfirm after A2/A4 maturity evidence; not a final B3 ranking. | Nilotpal
+2026-10-10 | G3 prior-work fact ledger | ledger/prior_work_facts.tsv confirmed correct (72 facts). A1 Red/Amber/Green rows A1-014 to A1-022 kept as legacy evidence, not transferable as Assignment 3 ratings (K4). Tightening of A1-002, A1-024, A1-032, A1-034, A2-006 to unique exact strings approved. | Nilotpal
+2026-10-10 | Provisional B3 preference reconfirmed | Top three unchanged: 1 Explainable lead-generation research; 2 LT evidence-pack workflow; 3 Churn early warning. Still subject to A2/A4 maturity evidence. | Nilotpal
+2026-10-10 | G3-K17 | R4 (LT evidence-pack workflow) stays in scope: counted as sales-related because it supports Global Sales & Marketing leadership decisions. Top three unchanged. | Nilotpal
+2026-10-10 | G3 | Prior-work fact ledger (72 facts, 0 misses), candidate assessment and five-candidate shortlist approved; changes: A1-002, A1-024, A1-032, A1-034, A2-006 tightened to source-unique exact strings; K17 ruled (R4 in scope); provisional top three unchanged | Nilotpal
 </decision_log>
 
 <k_register>
@@ -126,7 +132,7 @@ K18|Page-citation policy. Use inferred form-feed page numbers when PDF page labe
 
 <open_questions>
 - Exact organisation/function wording for Assignment 3 (G4)
-- Sales role for Part D and the 15-20 real tasks (G3/G5)
+- Sales role for Part D and the 15-20 real tasks (G5); K17 keeps the Commercial Strategy Analyst role open as an option
 </open_questions>
 
 <word_counts>
@@ -135,5 +141,9 @@ K18|Page-citation policy. Use inferred form-feed page numbers when PDF page labe
 
 <change_log>
 2026-10-10 | Ledger initialised with approvals and rulings only; no assignment content
-2026-10-10 | Recorded author G2 K1-K18 rulings; generated requirement register, conflict/gap register, structure-only template and two-way coverage matrix for review; G2 remains pending
-</change_log>
+2026-10-10 | Recorded author G2 K1-K18 rulings; generated requirement register, conflict/gap register, structure-only template and two-way coverage matrix for review; G2 approved with no changes requested
+2026-10-10 | Recorded author-approved G3 candidate pool and provisional top-three preference; G3 gate not recorded as approved
+2026-10-10 | prior_work_facts.tsv: A1-002, A1-024, A1-032, A1-034, A2-006 replaced with source-unique exact strings and clarified notes; fact_check 72 facts, 0 misses, 3 placeholders flagged; author confirmed fact ledger and top three; G3 gate still not recorded as approved
+2026-10-10 | K17 ruled (R4 in scope); G3 approved by author; stage moved to G4 scope and Part A
+2026-10-10 | g3-approve re-run for consistency: single G3 approval row reworded to the standard gate format (no duplicate added); changes already applied; no sections re-opened; build/ledger_view.md regenerated</change_log>
+2026-10-10 | Duplicate G2 approval row removed at author request; kept the K1-K18 row (K18 page-citation ruling is part of G2); no sections re-opened</change_log>

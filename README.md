@@ -20,7 +20,20 @@ Private repository. Deadline: 15 Oct 2026. Status: build complete. G2 (template 
 ## Use
 1. Open the folder in VS Code or PyCharm. In Copilot chat, select the `a3-support-agent` agent in the agent dropdown **before** running any slash command. The skills load from `.github/skills`.
 2. Test one skill first (for example ask the agent to run `a3-requirements-template` in extract mode) before relying on all four.
-3. Python 3 only, no packages. Run from the repo root.
+3. Python 3.10 or newer; the scripts currently use only the standard library. Run from the repo root.
+
+## Python environment (uv)
+Run `uv sync` to create `.venv` and sync dependencies from `pyproject.toml`.
+The project sets `[tool.uv] package = false`, so uv manages dependencies without
+building or installing this repository as a Python package.
+
+Use `uv run python` in place of `python` in the commands below, for example:
+```
+uv run python .github/skills/a3-requirements-template/scripts/req_check.py --help
+```
+Add future runtime dependencies with `uv add <package>` or development tools with
+`uv add --dev <package>`. Commit the resulting `pyproject.toml` and `uv.lock` changes
+so the environment stays reproducible.
 
 ## Commands
 ```

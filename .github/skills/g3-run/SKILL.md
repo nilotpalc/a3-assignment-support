@@ -1,6 +1,6 @@
 ---
 name: g3-run
-description: G3: prior-work fact ledger, candidate assessment and shortlist for review
+description: "G3: prior-work fact ledger, candidate assessment and shortlist for review"
 disable-model-invocation: true
 ---
 Start G3. G2 must be recorded as approved.

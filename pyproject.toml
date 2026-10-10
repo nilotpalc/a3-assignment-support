@@ -1,0 +1,10 @@
+[project]
+name = "a3-assignment-support"
+version = "0.1.0"
+description = "Assignment 3 support scripts for IIMK AIBP Course 3"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv]
+package = false

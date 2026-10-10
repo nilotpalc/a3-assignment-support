@@ -1,1 +1,73 @@
 id	doc	section	exact_text	status	note
+A1-001	A1	Executive Summary	Five of the nine A2 ratings are Red, two Amber, two Green	documented	Legacy readiness summary only; do not reuse as Assignment 3 ratings.
+A1-002	A1	Executive Summary	A supervised-classification early-warning signal for volume-loss / churn, built on 5+ years	documented	Available-data claim for churn opportunity (5+ years of account-level history); verify current availability before reuse.
+A1-003	A1	Executive Summary	~50K accounts per market	documented	Approximate account base stated for the churn opportunity.
+A1-004	A1	Executive Summary	today only after two years of volume decline	documented	Current rule timing; evidence for problem framing, not an Assignment 3 classification.
+A1-005	A1	Executive Summary	releases roughly 2,000–3,000 sales hours a year	estimate	Order-status opportunity estimate.
+A1-006	A1	Executive Summary	a potential 10–15% conversion uplift	estimate	Sector-matched value-case hypothesis; explicitly requires a pilot.
+A1-007	A1	Executive Summary	roughly one month, 200–300 person-hours	estimate	Estimated churn-definition/data-dictionary first move.
+A1-008	A1	Executive Summary	a 5% relative reduction in the derived annual churn rate against the pilot-market baseline within 12 months of go-live	estimate	Chartered target, not achieved outcome.
+A1-009	A1	A1.1	approximately 50,000 accounts	documented	Existing rule-based customer analytics module scale.
+A1-010	A1	A1.1	contributing double-digit million-dollar margin growth over three years	estimate	Attribution/value statement in prior work; do not present as independently verified.
+A1-011	A1	A1.1	typically 1,000 to 5,000 prospects	documented	Lead-generation assistant input-volume estimate.
+A1-012	A1	A1.1	more than 500 customer activations	documented	Retired segmentation platform output; A1 appendix describes it as 500+.
+A1-013	A1	A1.1	approximately low-six-figure USD incremental revenue	estimate	Prior-period value claim for retired segmentation platform.
+A1-014	A1	A2.1	Green	documented	Legacy Q1 rating for competitive-intelligence product; not transferable.
+A1-015	A1	A2.1	Red	documented	Legacy Q2 rating for competitive-intelligence product; not transferable.
+A1-016	A1	A2.1	Red	documented	Legacy Q3 rating for competitive-intelligence product; not transferable.
+A1-017	A1	A2.1	Amber	documented	Legacy Q1 rating for current customer-analytics/churn workflow; not transferable.
+A1-018	A1	A2.1	Red	documented	Legacy Q2 rating for current customer-analytics/churn workflow; not transferable.
+A1-019	A1	A2.1	Red	documented	Legacy Q3 rating for current customer-analytics/churn workflow; not transferable.
+A1-020	A1	A2.1	Green	documented	Legacy Q1 rating for lead-generation assistant; not transferable.
+A1-021	A1	A2.1	Amber	documented	Legacy Q2 rating for lead-generation assistant; not transferable.
+A1-022	A1	A2.1	Red	documented	Legacy Q3 rating for lead-generation assistant; not transferable.
+A1-023	A1	B1.1	Sales teams lack a single, reliable, real-time view of end-to-end order status and inventory	documented	Candidate 1; cross-functional sales workflow.
+A1-024	A1	B1.1	collateral is scattered,	documented	Candidate 2 problem statement (approved collateral scattered; source continues 'search is poor' on the next table line).
+A1-025	A1	B1.1	early-warning signal for volume-loss / churn risk	documented	Candidate 3; contains both churn prediction and generative account-brief work.
+A1-026	A1	B1.1	Sales capacity is constrained by high-volume, low-value administrative work	documented	Candidate 4; broad workflow opportunity, not a measured task baseline.
+A1-027	A1	B1.1	Sales teams struggle to build credible, customer-specific value cases	documented	Candidate 5; requires tagged proof points and quantified outcomes.
+A1-028	A1	B1.2	More than five years of SAP order history sits in the central data warehouse	documented	Order-status/lead-time history claim.
+A1-029	A1	B1.3	roughly six months of manufacturing and delivery history	estimate	Proposed history window for refreshing lead-time master data.
+A1-030	A1	D1.1	Roughly 2,000–3,000	estimate	Order-status opportunity indicative value.
+A1-031	A1	D1.1	10–15% time liberation	estimate	Product/collateral opportunity indicative value; not measured.
+A1-032	A1	D1.1	Supervised Risk Multi-million-dollar gross-	estimate	D1.1 churn row (supervised classification, risk category): multi-million-dollar gross-margin risk reduction; margin protected, not revenue. Phrase spans table columns on one source line.
+A1-033	A1	D1.1	about 10–15% less seller	estimate	Sales-administration opportunity hypothesis; source gives the estimate as about 10–15%.
+A1-034	A1	D1.1	about 10–15% versus the	documented	D1.1 value-case row: conversion hypothesis of about 10–15% versus the prior full-year baseline (baseline wording continues on next table line); same metric as A1-006.
+A1-035	A1	C1.2	About 5,000 unique customer accounts per market	estimate	Proposed minimum viable dataset scale.
+A1-036	A1	C1.2	12–15 months of continuous transactions	estimate	Proposed minimum history per account.
+A1-037	A1	C1.2	the last six months of account status	estimate	Proposed semantic-attribute coverage.
+A1-038	A1	C1.2	roughly 1,500 usable churned-account records	documented	One-market pilot count; usefulness and label definition still require confirmation.
+A1-039	A1	C1.2	five-figure account counts with 5+ years of transactions	documented	Approximate description of larger markets within a region.
+A1-040	A1	C1.2	Roughly 2–3 weeks	estimate	Estimated specialist effort to build and tune rule-based extract.
+A1-041	A1	C1.2	about 80–120 hours	estimate	Estimated extract/labeling effort.
+A1-042	A1	C2.2	roughly 2–3 analysts part-time	estimate	Proposed resourcing, not confirmed capacity.
+A1-043	A1	C2.2	roughly 3–4 weeks	estimate	Estimated effort window for data-definition work.
+A1-044	A1	C2.2	200–300 person-hours	estimate	Estimated data-definition effort.
+A1-045	A1	C2.2	≈USD 5–10K of loaded time	estimate	Internal-time cost estimate; not an approved budget.
+A1-046	A1	D1.2	about 5:1 in favour of avoiding false negatives	estimate	Prior error-cost framing for churn model.
+A1-047	A1	D1.2	roughly USD 15K	estimate	Estimated missed-at-risk-account cost.
+A1-048	A1	D1.2	roughly USD 3K	estimate	Estimated false-alarm effort/incentive cost.
+A1-049	A1	D1.2	around 10% of gross margin	estimate	Estimated incentive component in false-alarm cost.
+A1-050	A1	D1.3	~1,500 churned accounts	documented	Used in prior sequencing rationale; sequence itself is not Assignment 3 ranking.
+A1-051	A1	D1.3	5+ years of despatch history	documented	Used in prior sequencing rationale for order-status opportunity.
+A1-052	A1	D2.1	roughly [X]%	placeholder	Unfilled baseline; never reuse.
+A1-053	A1	D2.1	(~[N] in the pilot market)	placeholder	Unfilled account-manager count; never reuse.
+A1-054	A1	D2.1	within [3–4] months of funding	placeholder	Unfilled timeframe; never reuse.
+A1-055	A1	D2.1	within 12 months of go-live date	documented	Chartered target horizon; target itself is unachieved.
+A1-056	A1	D2.1	within 10% of gross margin protected	estimate	Proposed guardrail, not measured.
+A1-057	A1	D2.2	more than 3 percentage points for two consecutive months	estimate	Proposed drift alert threshold.
+A1-058	A1	D2.2	a top-five feature distribution shifts materially	estimate	Proposed drift indicator.
+A1-059	A1	D2.2	10–12 actual churn cases	estimate	Proposed monthly review sample.
+A2-001	A2	A1	~25 analyst-days per request	estimate	Current-state cycle-time estimate for LT strategy evidence pack.
+A2-002	A2	A1	4-5 recommendations	documented	Expected output shape for prior A2 workflow.
+A2-003	A2	A1	three primary evidences with three supporting evidences apiece	documented	Expected evidence structure; do not assume Assignment 3 requires it.
+A2-004	A2	A1	roughly doubling cycle time	estimate	Described consequence if analyst rework is required.
+A2-005	A2	A2.1	Commercial Strategy Analysts	documented	Primary users of A2 research workflow.
+A2-006	A2	A2.1	rule (every claim traced to a	documented	Grounding rule in prior design: every claim traced to a supplied document, no model-memory facts.
+A2-007	A2	B2.2	any unsupported material recommendation	documented	Prior pilot stop threshold; preserve only as design evidence, not an Assignment 3 threshold without author approval.
+A2-008	A2	B2.2	numerical mismatches exceed 2% of checked figures	estimate	Prior pilot pause threshold; explicitly an assumption.
+A2-009	A2	B2.2	wrong/missing citations exceed 5% of sampled material claims in two consecutive reports	estimate	Prior pilot pause threshold; explicitly an assumption.
+A2-010	A2	D1	~15 analyst-days versus ~25 today	estimate	Prior target cycle-time reduction; not an achieved result.
+A2-011	A2	D2	3-5 credible GenAI	documented	Prior plan activity, not a requirement for Assignment 3.
+A2-012	A2	D2	Day-90 decision recorded	documented	Prior plan milestone.
+A2-013	A2	D2	25 analyst-days	estimate	Repeated baseline used in prior stop condition.
