@@ -12,7 +12,7 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 ## Status
 
 - version: 0.1 (build stage)
-- stage: G1 build acceptance pending
+- stage: G2 review pending (G1 approved)
 - deadline: 2026-10-15
 - last_updated: 2026-10-10
 
@@ -102,6 +102,24 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 | 2026-10-10 | AI assistance | Drafting only after user supplies judgement; programme confirmation given by user | Nilotpal |
 | 2026-10-10 | K13 | Deadline 15 Oct 2026 | Nilotpal |
 | 2026-10-10 | G1 | Build acceptance approved; no changes or conditions listed | Nilotpal |
+| 2026-10-10 | G2-K1 | Table cells consume page space; recommend table/paragraph per field. Worksheet caps: A1, A3, A4, B2 rationale columns, B3, B4, C1, C3, C4, D1, D3, D4, D5 include table cells; A2 and C2 caps apply after tables; B1 and D2 have no stated word cap. Caps bind; 16-20 pages recommended and 20-page response maximum excludes references, declaration and optional evidence appendix. | Nilotpal |
+| 2026-10-10 | G2-K2 | C1 telegraphic cells with E-IDs are permitted only if cells count toward the 350-word maximum. | Nilotpal |
+| 2026-10-10 | G2-K3 | Worksheet governs D2: 15-20 discrete representative tasks in main submission; optional 30-50 task decomposition may go in appendix. | Nilotpal |
+| 2026-10-10 | G2-K4 | Use H/M/L maturity ratings only; A1 RAG may seed evidence but is not carried over as a rating. | Nilotpal |
+| 2026-10-10 | G2-K5 | Use positioning labels Lead / Fast follow / Wait. | Nilotpal |
+| 2026-10-10 | G2-K6 | C1 uses two comparators plus an optional third, following worksheet. | Nilotpal |
+| 2026-10-10 | G2-K7 | Module 1 notes supplied and used for indicators and weakest-dimension rule; energy/lubricants baseline requires new evidence or "Not evidenced". | Nilotpal |
+| 2026-10-10 | G2-K8 | Cite M2/M3 frameworks as "course notes"; verify figures before presenting as external facts; notes are not primary evidence. | Nilotpal |
+| 2026-10-10 | G2-K9 | Re-classify A1 opportunities under Course 3 definitions; Quick Win requires most required readiness already in place. | Nilotpal |
+| 2026-10-10 | G2-K10 | Do not carry A1 placeholders [X]%, [N], [3-4]; request real values or omit. | Nilotpal |
+| 2026-10-10 | G2-K11 | Scope is Strategy & Analytics within Global Sales & Marketing, using sales-related workflows. | Nilotpal |
+| 2026-10-10 | G2-K12 | Author confirmed with programme that this level of AI assistance is allowed; author remains responsible for disclosure, accuracy and analysis. | Nilotpal |
+| 2026-10-10 | G2-K13 | Deadline 15 Oct 2026; compressed gate plan may be used only with author consent. | Nilotpal |
+| 2026-10-10 | G2-K14 | No verbatim quotation of prior work; professionally rephrase and keep A1/A2 fact references in ledger. | Nilotpal |
+| 2026-10-10 | G2-K15 | Exclude vendor scoring from A2 Part C; reuse only the use case. | Nilotpal |
+| 2026-10-10 | G2-K16 | Keep listed multi-row comparison tables compact; two-column Field/Your response tables may be labelled paragraphs with every worksheet field label verbatim. Detailed supporting tables may move to consolidated optional appendix; main text stands alone. Word caps remain unchanged. | Nilotpal |
+| 2026-10-10 | G2-K17 | R4 leadership-team evidence-pack agent stays in scope as a sales-related workflow supporting S&M-driven strategy dilemmas. | Nilotpal |
+| 2026-10-10 | G2-K18 | Use inferred form-feed page numbers when PDF page labels are unavailable. | Nilotpal |
 
 ## K Register
 
@@ -116,7 +134,7 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 | K5 | Positioning labels: "Lead / Fast follow / Wait" (table) vs "lead/follow/wait" (headings, checklist, M3). | WS pp.8, 13; RB p.3 | Use the table labels. | [V] |
 | K6 | Comparators: two plus optional third (WS) vs "top 3" (M3). | WS p.7; M3 | Worksheet governs. | [V] |
 | K7 | Module 1 content (sub-dimension indicator definitions, benchmarking method, portfolio background) is referenced but absent from the supplied pages. WS lists the sub-dimension names only. | WS p.4; M2 | [v2] Module 1 notes supplied. They give indicators for each dimension (Technology: infrastructure, integration, technical debt; Data: quality, accessibility, strategic value; Talent: skills inventory, learning culture, leadership capability; Process: standardisation, documentation, automation baseline; Culture: four indicators; Governance: four components) and the weakest-dimension rule. Residual: the notes give only high-level benchmarking method and India-centred sources, so the energy/lubricants baseline is new research. | [v2] Mostly resolved |
-| K8 | M2/M3 are summaries with transcripts omitted; probable typo "GO-6N"; salary and statistics figures self-flagged as unverified. | M2, M3 | Cite as "course notes" for frameworks; verify any figure before presenting it as external fact. | [R] |
+| K8 | M2/M3 summaries omit transcripts; probable typo "GO-6N"; salary and statistics figures self-flagged as unverified. | M2, M3 | Cite as "course notes" for frameworks; verify any figure before presenting it as external fact. | [R] |
 | K9 | A1 sequences churn as "Now" although its data and governance readiness are Red; Course 3 defines Quick Win as "most required readiness already in place". | A1 D1.3, A2.1; WS p.5 | Re-classify under Course 3 definitions; do not import A1 labels. | [R] |
 | K10 | A1 charter holds unfilled placeholders ([X]%, [N], [3–4]). | A1 D2.1 | Never carry; ask you for real values or omit. | [V] |
 | K11 | A1/A2 anchor on "Strategy and Analytics (Global Lubricants)", but several A1 opportunities belong to sales or supply-chain workflows. | A1 cover; WS p.2 | [v2] Your ruling: function scope (Strategy & Analytics within Global Sales & Marketing), using sales-related workflows. Open point: whether R4 (leadership-team evidence-pack agent, an internal strategy workflow) counts as sales-related (see section 6). | [v2] Ruled; one open point |
@@ -126,12 +144,12 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 | K15 | Vendor scoring in A2 Part C vs "not a vendor-selection exercise". | A2 Part C; WS p.2 | Exclude vendor scoring; reuse only the use case. | [V] |
 | K16 | [v2] Your layout ruling (convert tables to paragraphs where answers are short) conflicts with WS p.1: "retain all section numbers, response fields and tables". | WS p.1 | Keep multi-row comparison tables (A2, A3, B1–B3, C1–C3, D2, D3, D5 test conditions) as tables, compactly set. For two-column "Field \/ Your response" tables (A1, B4, C4, D1, D4, D5 decision rows) the agent may recommend a labelled-paragraph layout that keeps every field label verbatim. You confirm before G2 that you accept this reading. | [?] |
 | K17 | [v2] "Sales-related workflows" scope may exclude R4 and its natural D1 role (Commercial Strategy Analyst); sales roles have thinner task evidence in A1/A2. | Your ruling; A1, A2 | Decide at G3 whether R4 stays in scope; supply real task data for the chosen role. | [?] |
+| K18 | Page-citation policy. Use inferred form-feed page numbers when PDF page labels are unavailable. | WS/RB source text copies | Use inferred form-feed page numbers when PDF page labels are unavailable. | Added for G2 |
 
 ## Open Questions
 
 - Exact organisation/function wording for Assignment 3 (G4)
 - Sales role for Part D and the 15-20 real tasks (G3/G5)
-- Whether word caps that say "across the table" still apply when a table becomes a labelled paragraph (agent default: yes, same cap)
 
 ## Word Counts
 
@@ -145,4 +163,5 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 | Date | Entry |
 |---|---|
 | 2026-10-10 | Ledger initialised with approvals and rulings only; no assignment content |
+| 2026-10-10 | Recorded author G2 K1-K18 rulings; generated requirement register, conflict/gap register, structure-only template and two-way coverage matrix for review; G2 remains pending |
 

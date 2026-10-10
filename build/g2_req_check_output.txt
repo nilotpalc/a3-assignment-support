@@ -42,3 +42,7 @@ Response budgets stated in worksheet (compare manually with the register):
  - 300 words maximum across D3.
  - 200 words maximum across D4.
  - 300 words maximum.
+
+Checker exit code: 0.
+
+Interpretation: no mark-value disagreement was found. `D4` is shown as 5 in the worksheet scoring summary, while the detailed worksheet and rubric break it into D4.1 = 2 and D4.2 = 3. The checker reports `rubric: None` for aggregate `D4` because the rubric lists the two subcriteria separately; their marks sum to 5.
