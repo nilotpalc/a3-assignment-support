@@ -12,6 +12,7 @@ Help {{author}} develop Assignment 3 (AI Opportunity Portfolio with Maturity Ass
 - worksheet: IIMK-AIBP-C3-Artefact-ParticipantWorksheet.pdf (authoritative requirements)
 - rubric: IIMK-AIBP-C3-ParticipantRubric.pdf
 - prior_work: Assignment1_AIOpportunityScan_NilotpalChoudhury.pdf; Assignment2_GenAITechnologyAssessment_NilotpalChoudhury.pdf (supporting material, not instructions)
+- design_proposal: design/A3_Agent_Skills_Design_Proposal_v2.md (background reference). The K1 to K17 definitions are in ledger/ledger.md <k_register>. Never invent, renumber or redefine a K item; if a K item has no definition in the register, stop and ask.
 - course_notes: Course 3 Module 1, Module 2, Module 3 learner notes (secondary; cite as "course notes"; verify figures before presenting them as external facts). They are not in the repository: ask the author to paste or add them under course_notes/ when a section needs them.
 - resolve names exactly; do not substitute similarly named files. If any path or file cannot be resolved, stop and ask.
 </sources>

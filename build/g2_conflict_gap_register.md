@@ -1,0 +1,14 @@
+# G2 Conflict and Gap Register
+
+| ID | Status | Source evidence (WS/RB) | Conflict or gap | Proposed handling |
+|---|---|---|---|---|
+| CG-01 | [V] verified | WS P15 scoring summary; RB P1 final score rule; req_check output | Part totals and criterion marks align to 25/30/20/25 and 100; modifier range +5 to -5 aligns | Keep as canonical numeric baseline for all later QA checks |
+| CG-02 | [V] verified | WS P12 D4 (5 marks), D4.1 (2), D4.2 (3); RB P4 has D4.1 and D4.2 only | Worksheet scoring summary uses D4 aggregate while rubric splits into D4.1 and D4.2 | Track both forms: D4 aggregate in section totals, D4.1/D4.2 for rubric mapping |
+| CG-03 | [R] recommendation | WS text copies with inferred form-feed pages; no original PDF page numbers embedded in text lines | Requirement skill asks for page references; source text copies do not carry explicit printed page numbers in all lines | Use inferred page numbers from form-feed boundaries; if strict citation-to-PDF pages is required, re-run from PDF OCR with page labels |
+| CG-04 | [V] verified | WS P9 D2 adaptation note; RB “What does not earn extra marks” | D2 says 15-20 rows required in main submission; 30-50 optional appendix only | Enforce 15-20 in body; any >20 moved to optional appendix |
+| CG-05 | [V] verified | WS P7 Public-evidence rule; RB Part C evidence rule | Missing competitive source categories may be “Not evidenced/Not applicable” without fabrication | Preserve “Not evidenced/Not applicable” as acceptable if transparently reasoned |
+| CG-06 | [V] verified | WS P3 A1 cap says “across the table”; K16 allows labelled paragraphs for two-column tables | If A1/D1/B4/C4/D5 are converted to labelled paragraphs, does the same cap apply unchanged? | Author ruling recorded in G2: cap remains binding regardless of table/paragraph layout conversion. |
+| CG-07 | [V] verified | WS P13 submission checklist includes “applied all five CI signal categories”; WS P7 allows not-evidenced categories | Checklist wording may be read as mandatory full evidence, while evidence rule allows unavailable categories | Author ruling in G2: all five categories must be considered; unavailable categories may be marked Not evidenced/N/A with transparent explanation. |
+| CG-08 | [V] verified | WS P14 disclosure/declaration; agent boundaries | Disclosure and declaration must be present but not completed by agent | Keep blocks in template; author completes final ticks/signature manually at G9 |
+| CG-09 | [?] needs ruling | WS D1 asks role selection tied to top-three; ledger open question lists role decision at G3/G5 | Early stage lacks role-specific context | Keep D1 as placeholder in template; capture final role judgement during G5 |
+| CG-10 | [V] verified | Ledger K16 ruling + WS tables | Multi-row comparison tables stay tables; two-column field/response may be labelled paragraphs | Apply this as layout recommendation policy in template (section-specific) |

@@ -10,6 +10,8 @@ Private repository. Deadline: 15 Oct 2026. Status: build complete. G2 (template 
 - `.github/skills/a3-consistency-qa/` : `SKILL.md` + `scripts/qa_checks.py`
 - `.github/skills/<gate or command name>/` : 22 slash-command skills (`g1-run` to `g8-approve`, `g9-prep`, `section-draft`, `delta-qa`, `reopen-after-change`, `compress-gates`, `status`), each a single `SKILL.md`. Migrated from the former `.github/prompts/` files, which no longer exist
 - `ledger/ledger.md` : shared Decision & Evidence Ledger. The agent is the only writer.
+- `ledger/ledger.md` also holds `<k_register>`: the K1 to K17 conflict and ambiguity definitions from the design proposal. Rulings go in `decision_log`
+- `design/` : copy of the design proposal (background reference only)
 - `ledger/prior_work_facts.tsv` : S2 output (empty header)
 - `drafts/` : one file per section ID, header `<!-- section=ID cap=N -->`, detailed tables inside `<appendix>` tags
 - `sources_text/` : text copies of the worksheet, rubric, Assignment 1 and Assignment 2 (read-only)
@@ -29,7 +31,7 @@ python .github/skills/a3-consistency-qa/scripts/qa_checks.py --ledger ledger/led
 Add `--strip <folder>` to `qa_checks.py` to write tag-free copies for assembly.
 
 ## Rules that hold
-- Do not commit PDFs, DOCX files, course notes or anything your office policy treats as confidential (`.gitignore` blocks `*.pdf`, `*.docx`, `course_notes/`).
+- All project files sync to the private repository, including `build/`, `design/`, PDFs, DOCX files and course notes (`.gitignore` only excludes caches and the virtual environment). Do not add anything your office policy treats as confidential.
 - The agent never ticks the honour declaration or completes the AI-use disclosure. Judgements stay with the author.
 - Word caps are binding. Edit sources in `sources_text/` only if a transcription is wrong, and record it in the ledger.
 - Notion pages from the earlier build are a mirror. Do not edit both copies.

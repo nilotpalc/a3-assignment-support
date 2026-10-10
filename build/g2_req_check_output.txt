@@ -1,0 +1,44 @@
+WS summary criteria: 17  WS headings: 19  RB criteria: 18
+Part A total (WS summary) = 25 (expected 25)
+Part B total (WS summary) = 30 (expected 30)
+Part C total (WS summary) = 20 (expected 20)
+Part D total (WS summary) = 25 (expected 25)
+Content total = 100 (expected 100)
+A1    {'summary': 3, 'heading': 3, 'rubric': 3}
+A2    {'summary': 14, 'heading': 14, 'rubric': 14}
+A3    {'summary': 4, 'heading': 4, 'rubric': 4}
+A4    {'summary': 4, 'heading': 4, 'rubric': 4}
+B1    {'summary': 10, 'heading': 10, 'rubric': 10}
+B2    {'summary': 8, 'heading': 8, 'rubric': 8}
+B3    {'summary': 8, 'heading': 8, 'rubric': 8}
+B4    {'summary': 4, 'heading': 4, 'rubric': 4}
+C1    {'summary': 8, 'heading': 8, 'rubric': 8}
+C2    {'summary': 5, 'heading': 5, 'rubric': 5}
+C3    {'summary': 4, 'heading': 4, 'rubric': 4}
+C4    {'summary': 3, 'heading': 3, 'rubric': 3}
+D1    {'summary': 3, 'heading': 3, 'rubric': 3}
+D2    {'summary': 8, 'heading': 8, 'rubric': 8}
+D3    {'summary': 5, 'heading': 5, 'rubric': 5}
+D4    {'summary': 5, 'heading': 5, 'rubric': None}
+D4.1  {'summary': None, 'heading': 2, 'rubric': 2}
+D4.2  {'summary': None, 'heading': 3, 'rubric': 3}
+D5    {'summary': 4, 'heading': 4, 'rubric': 4}
+
+Response budgets stated in worksheet (compare manually with the register):
+ - 200 words maximum across the table.
+ - 150 words maximum after the table.
+ - 250 words maximum across the table.
+ - 250 words maximum.
+ - One concise row per opportunity; no separate business case is required.
+ - 50 words maximum per opportunity across the rationale columns.
+ - 300 words maximum across B3.
+ - 250 words maximum.
+ - 350 words maximum including the final explanation.
+ - 200 words maximum after the table.
+ - 50 words maximum per opportunity rationale.
+ - 250 words maximum.
+ - 200 words maximum.
+ - Complete at least 15 rows; 20 maximum in the main submission.
+ - 300 words maximum across D3.
+ - 200 words maximum across D4.
+ - 300 words maximum.
