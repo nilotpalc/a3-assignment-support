@@ -10,7 +10,7 @@ Rules carried from the repo: H/M/L only (K4); A1 Red/Amber/Green is legacy evide
 
 - **Compressed gate plan** (combine G4+G5 and G6+G7 for the 15 Oct deadline): [ ] Yes [ ] No — **[Author decision]**. The ledger (K13) allows it only with your consent. The deadline is 5 days away, and you still have Parts B, C and D after this.
 - **Course notes:** Module 1 is already saved: [x] Yes, file name: `course_notes/c3-module 1-ai-maturity.md` (K7 records it as supplied).
-- **A3 comparators:** [ ] I will name them below [ ] Agent may propose public candidates for my choice — **[Author decision]**. Starting points are in A3.
+- **A3 comparators:** [x] I will name them below (NASSCOM, Castrol, Gulf Oil Lubricants India).
 
 ---
 
@@ -49,35 +49,26 @@ Status: **Author-confirmed (11 Oct 2026)**, synced from the Notion G4 working pa
 
 ## A3. Industry / peer benchmark (cap 250 words, table cells included; distinct from the C1 competitor scan)
 
-Public sources only, each with a link or citation. Nothing below is verified and no figures are to be used until you have opened the source. The course notes carry these figures, and K8 says to cite them as "course notes" and verify before presenting them as external facts.
+Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review. Comparators are the author's. Columns follow the worksheet (Implication for my context included). About 226 words. To confirm before `/g4-run`: Gulf items not found in the public MD&A (Gulf-ACE, Gulf One SuperApp, Salesforce, SAP Cloud, generative AI) need page references from the full report; the reading of the Gulf Data implication (peer ahead); the bp.com link did not resolve, so a republished copy is cited.
 
-| Benchmark source / peer | Source link or citation | What it suggests about AI readiness | Most relevant dimension(s) |
-|---|---|---|---|
-| **[Author decision]** | | | |
-| **[Author decision]** | | | |
-| Optional third | | | |
+| Benchmark source / peer | Source link or citation | What it suggests about AI readiness | Most relevant dimension(s) | Implication for my context |
+|---|---|---|---|---|
+| NASSCOM, India enterprise baseline | AI Adoption Index 2.0, NASSCOM, 2024, [nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption](https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption), accessed 11 Oct 2026 | India's aggregate AI maturity is 2.47 (Enthusiast stage). Data standardisation and AI risk frameworks are improving; use-case selection and execution discipline need urgent attention. | Process; Data; Governance | Data, Governance: on par. Process (L) mirrors the sector-wide execution gap. Talent: not compared. |
+| Castrol (bp), lubricants peer | Castrol turns 125, looks to the future with new strategy, bp press release, 10 Jan 2024; republished at [hellenicshippingnews.com/castrol-turns-125-looks-to-the-future-with-new-strategy](https://www.hellenicshippingnews.com/castrol-turns-125-looks-to-the-future-with-new-strategy/), accessed 11 Oct 2026 | Growth plan names end-to-end digital and service solutions and data-centre cooling; discloses no AI capability or maturity. | Technology | Digital intent only; no basis for an AI-readiness comparison. |
+| Gulf Oil Lubricants India, domestic peer | Annual Report FY2024-25, Gulf Oil Lubricants India Ltd, Jul 2025, [india.gulfoilltd.com/investors/annual-reports](https://india.gulfoilltd.com/investors/annual-reports), accessed 11 Oct 2026 | Digital tools for sales tracking, forecasting and BI; Gulf-ACE and Gulf One SuperApp channels; Salesforce and SAP Cloud performance monitoring; leaders exploring generative AI in marketing and strategy. | Technology; Data; Process | Technology: on par. Data: peer appears ahead on customer-facing channel data. Structured AI execution: not evidenced. |
 
-Candidate starting points, to verify and choose from (your selection):
-- NASSCOM AI Adoption Index 2024 (named in Module 1 notes; India-grounded, useful as an industry baseline for readiness).
-- A public AI-governance survey (PwC 2025 and an EY finding are named in the Module 1 notes; governance baseline).
-- Public reports or disclosures from one or two energy or lubricants peers: none identified yet. This is the evidence gap you flagged (K7).
-
-- **Your view of relative position** (ahead / on par / behind, and on which dimensions): **[Author decision]**
+- **Your view of relative position** (ahead / on par / behind, and on which dimensions): Absolute: A2 rates Talent and Process Low, capping readiness at Low. Relative: on par with India's enterprise baseline on Data and Governance; Process Low reflects a sector-wide execution gap; behind Gulf on customer-facing channel data; Castrol offers no basis for comparison. Talent and Culture: not evidenced against any comparator.
 
 ---
 
 ## A4. Weakest-dimension diagnosis (cap 250 words, table cells included)
 
-This section follows from A2 and A3, so I have not filled it. Once A2 is settled, the repo agent can propose options. For orientation only, the A1/A2 evidence points to blockers that recur across the five shortlisted opportunities. These are unranked candidates, not a diagnosis:
-
-- **Ownership of data definitions** (churn definition and signals): could block churn early warning and the sector-matched value cases.
-- **Master-data and SAP extract completeness** (lead-time fields, no named validating owner): could block order-status/lead-time exception visibility.
-- **Governance that outlasts a sponsor** (named owner, review forum, access control): could block explainable lead-generation research and the LT evidence-pack workflow.
+Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review; wording tightened to fit the cap (was about 300 words, now about 180). Constraints are the author's. To confirm before `/g4-run`: constraint 1 is Data (rated M) while Talent is rated L, so the choice needs a justification that follows from A2 (or a swap); define SAHLD; "20–25 processes" is a new figure to log as an assumption.
 
 | Constraint (1, optional 2) | Why it matters | Shortlisted opportunities it could block | Priority intervention | Observable evidence it has improved |
 |---|---|---|---|---|
-| **[Author decision]** | | | | |
-| Optional second | | | | |
+| Data (M): no owned data definitions | Without standard definitions, data cannot be reused as common data products across platforms; duplicated sources multiply, weakening data governance and trust in shared numbers. | Churn early warning; order-status/lead-time exception visibility; sector-matched value cases (including agreed benefit estimates) | Appoint a Data Owner who works with Process Excellence and solution and data architects to define the primary transactional sources behind most current dashboards. | Standards held in one repository, required in SAHLD designs and used on the ground. |
+| Process (L): standardisation and documentation | Without documented processes, end-user journeys cannot be mapped, so solutions use the wrong sources or sequence, stakeholders dispute insights, and platforms are not embedded in sales and marketing work. Documentation also underpins process governance. | Explainable lead-generation research; LT evidence-pack workflow | Empower Process Excellence to work with frontline teams to document the core sales and marketing excellence processes (estimated 20–25) in a controlled repository: the single source of truth for process improvement and digital initiatives. | Repository reviewed periodically, certified by the Head of Process Excellence, and used as the baseline for all sales user journeys. |
 
 Shortlisted opportunities, for reference: churn early warning; order-status/lead-time exception visibility; explainable lead-generation research; sector-matched value cases; LT evidence-pack workflow (R4). The G3 provisional B3 preference (explainable lead-generation research, then LT evidence-pack workflow, then churn early warning) is not final and should be reconfirmed after A2/A4.
 
@@ -95,3 +86,4 @@ Shortlisted opportunities, for reference: churn early warning; order-status/lead
 1. ~~Settle the scope label wording (A1).~~ Done: see A1 label.
 2. Decide whether to use the compressed gate plan.
 3. Confirm each evidence candidate is still true. A1 and A2 describe the position at the time of writing.
+4. Resolve the A3 and A4 confirmation points listed under each section status line.
