@@ -49,7 +49,7 @@ Status: **Author-confirmed (11 Oct 2026)**, synced from the Notion G4 working pa
 
 ## A3. Industry / peer benchmark (cap 250 words, table cells included; distinct from the C1 competitor scan)
 
-Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review. Comparators are the author's. Columns follow the worksheet (Implication for my context included). About 226 words. To confirm before `/g4-run`: Gulf items not found in the public MD&A (Gulf-ACE, Gulf One SuperApp, Salesforce, SAP Cloud, generative AI) need page references from the full report; the reading of the Gulf Data implication (peer ahead); the bp.com link did not resolve, so a republished copy is cited.
+Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review. Comparators are the author's. Columns follow the worksheet (Implication for my context included). About 226 words. Author confirmed the bp and Gulf findings against the sources (11 Oct 2026); the bp.com link did not resolve, so a republished copy is cited.
 
 | Benchmark source / peer | Source link or citation | What it suggests about AI readiness | Most relevant dimension(s) | Implication for my context |
 |---|---|---|---|---|
@@ -63,11 +63,11 @@ Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page
 
 ## A4. Weakest-dimension diagnosis (cap 250 words, table cells included)
 
-Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review; wording tightened to fit the cap (was about 300 words, now about 180). Constraints are the author's. To confirm before `/g4-run`: constraint 1 is Data (rated M) while Talent is rated L, so the choice needs a justification that follows from A2 (or a swap); define SAHLD; "20–25 processes" is a new figure to log as an assumption.
+Status: **Author-drafted (11 Oct 2026)**, synced from the Notion G4 working page after review; wording tightened to fit the cap (about 205 words). Constraints are the author's: Data (M) chosen over Talent (L) as constraint 1, with the rationale stated in the table (author judgement, 11 Oct 2026). To log at `/g4-run`: "20–25 processes" as an assumption.
 
 | Constraint (1, optional 2) | Why it matters | Shortlisted opportunities it could block | Priority intervention | Observable evidence it has improved |
 |---|---|---|---|---|
-| Data (M): no owned data definitions | Without standard definitions, data cannot be reused as common data products across platforms; duplicated sources multiply, weakening data governance and trust in shared numbers. | Churn early warning; order-status/lead-time exception visibility; sector-matched value cases (including agreed benefit estimates) | Appoint a Data Owner who works with Process Excellence and solution and data architects to define the primary transactional sources behind most current dashboards. | Standards held in one repository, required in SAHLD designs and used on the ground. |
+| Data (M): no owned data definitions | Without standard definitions, data cannot be reused as common data products across platforms; duplicated sources multiply, weakening data governance and trust in shared numbers. Chosen over Talent (L) because actions are easier to define, and clear data and process standards help people understand and use data with confidence, supporting upskilling. | Churn early warning; order-status/lead-time exception visibility; sector-matched value cases (including agreed benefit estimates) | Appoint a Data Owner who works with Process Excellence and solution and data architects to define the primary transactional sources behind most current dashboards. | Standards held in one repository, required in Software Architecture High Level Designs (SAHLD) and used on the ground. |
 | Process (L): standardisation and documentation | Without documented processes, end-user journeys cannot be mapped, so solutions use the wrong sources or sequence, stakeholders dispute insights, and platforms are not embedded in sales and marketing work. Documentation also underpins process governance. | Explainable lead-generation research; LT evidence-pack workflow | Empower Process Excellence to work with frontline teams to document the core sales and marketing excellence processes (estimated 20–25) in a controlled repository: the single source of truth for process improvement and digital initiatives. | Repository reviewed periodically, certified by the Head of Process Excellence, and used as the baseline for all sales user journeys. |
 
 Shortlisted opportunities, for reference: churn early warning; order-status/lead-time exception visibility; explainable lead-generation research; sector-matched value cases; LT evidence-pack workflow (R4). The G3 provisional B3 preference (explainable lead-generation research, then LT evidence-pack workflow, then churn early warning) is not final and should be reconfirmed after A2/A4.
@@ -86,4 +86,4 @@ Shortlisted opportunities, for reference: churn early warning; order-status/lead
 1. ~~Settle the scope label wording (A1).~~ Done: see A1 label.
 2. Decide whether to use the compressed gate plan.
 3. Confirm each evidence candidate is still true. A1 and A2 describe the position at the time of writing.
-4. Resolve the A3 and A4 confirmation points listed under each section status line.
+4. ~~Resolve the A3 and A4 confirmation points.~~ Done (11 Oct 2026).
