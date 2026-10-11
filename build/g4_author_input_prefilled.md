@@ -1,6 +1,6 @@
 # G4 author input (PRE-FILLED DRAFT for author review)
 
-How to read this draft. It follows `build/g4_author_input_template.md` field by field. Text marked **[Evidence candidate]** is paraphrased from Assignment 1, Assignment 2, the ledger or Module 1 notes and must be checked against what is true today. Text marked **[Author decision]** is a rating, choice or position that only you can make; none has been filled in. Delete the markers once you have confirmed or replaced each item. Nothing here is a ledger entry or a gate approval.
+Superseded as the primary artefact by `build/g4_author_input_template.md` (filled 11 Oct 2026); kept as the working record. How to read this draft. It follows `build/g4_author_input_template.md` field by field. Text marked **[Evidence candidate]** is paraphrased from Assignment 1, Assignment 2, the ledger or Module 1 notes and must be checked against what is true today. Text marked **[Author decision]** is a rating, choice or position that only you can make; none has been filled in. Delete the markers once you have confirmed or replaced each item. Nothing here is a ledger entry or a gate approval.
 
 Rules carried from the repo: H/M/L only (K4); A1 Red/Amber/Green is legacy evidence, not a rating; no placeholders from A1 ([X]%, [N]); no verbatim quotation of prior work; no detail beyond the anonymisation level already used in Assignments 1 and 2; write "Not evidenced" where you have no evidence.
 
@@ -8,8 +8,8 @@ Rules carried from the repo: H/M/L only (K4); A1 Red/Amber/Green is legacy evide
 
 ## 0. Process choices
 
-- **Compressed gate plan** (combine G4+G5 and G6+G7 for the 15 Oct deadline): [ ] Yes [ ] No — **[Author decision]**. The ledger (K13) allows it only with your consent. The deadline is 5 days away, and you still have Parts B, C and D after this.
-- **Course notes:** Module 1 is already saved: [x] Yes, file name: `course_notes/c3-module 1-ai-maturity.md` (K7 records it as supplied).
+- **Compressed gate plan** (combine G4+G5 and G6+G7 for the 15 Oct deadline): [x] Yes (author, 11 Oct 2026).
+- **Course notes:** saved under `course_notes/`; Module 1 file name to be pasted in chat at `/g4-approve`.
 - **A3 comparators:** [x] I will name them below (NASSCOM, Castrol, Gulf Oil Lubricants India).
 
 ---
@@ -84,6 +84,6 @@ Shortlisted opportunities, for reference: churn early warning; order-status/lead
 ## Open points for you before handing this to the agent
 
 1. ~~Settle the scope label wording (A1).~~ Done: see A1 label.
-2. Decide whether to use the compressed gate plan.
+2. ~~Decide whether to use the compressed gate plan.~~ Yes.
 3. Confirm each evidence candidate is still true. A1 and A2 describe the position at the time of writing.
 4. ~~Resolve the A3 and A4 confirmation points.~~ Done (11 Oct 2026).
