@@ -16,46 +16,34 @@ Rules carried from the repo: H/M/L only (K4); A1 Red/Amber/Green is legacy evide
 
 ## A1. Scope and evidence base (cap 200 words, table cells included)
 
-Ledger rulings in force: K11 (Strategy & Analytics within Global Sales & Marketing, using sales-related workflows) and K17 (R4 stays in scope).
+Status: **Author-confirmed (11 Oct 2026)**, synced from the Notion G4 working page. Ledger rulings in force: K11 and K17. The label below extends K11's wording ("Global Lubricants" added); record this at `/g4-run`.
 
-- **Assessment scope (tick one):** **[Author decision]**. Candidate reading of K11 is "Function", with the function being Strategy & Analytics, but you must tick it.
-- **Organisation / context label** (exact wording to use throughout): **[Author decision]**. One wording conflict to settle. Assignments 1 and 2 label the function "Strategy and Analytics (Global Lubricants)" and the organisation as an integrated oil and gas energy major (global lubricants division). K11 says the scope sits within Global Sales & Marketing. Pick one label and use it in every section.
-- **Why this scope is appropriate for you to assess** (role, tenure, vantage point): **[Evidence candidate]**
-  - You lead development of reporting and analytics tools for the function.
-  - You support the global marketing function on its five-year digital strategy roadmap.
-  - Add your tenure and vantage point in your own words (not evidenced in the repo files).
-- **Primary evidence available:** **[Evidence candidate]**
-  - Direct operational knowledge of the rule-based customer analytics module in production (account scale roughly 50,000 accounts).
-  - Your own Assignments 1 and 2, covering order-status, churn, lead-generation, sector value-case and evidence-pack workflows.
-  - Course 3 Module 1 notes for the six-dimension framework.
-  - Public sources (A3 only).
-  - Colleague input: Not evidenced yet. See the Module 1 action item at the end of A2.
-- **Important evidence limitations:** **[Evidence candidate]**
-  - Several ratings rest on your own vantage point, not on a cross-functional assessment.
-  - Real values for items A1 left as placeholders are not available, so they are omitted (K10).
-  - Energy and lubricants maturity baselines are not evidenced (K7).
-  - Anything outside Strategy & Analytics and the sales-related workflows is not visible to you.
+| Field | Response |
+|---|---|
+| Assessment scope | Function |
+| Organisation / context label (use throughout) | Strategy & Analytics, Global Lubricants Sales & Marketing (integrated energy major, anonymised) |
+| Why this is an appropriate scope for me to assess | I lead the Strategy & Analytics division, which builds reporting and analytics tools for the wider function and supports its five-year digital roadmap. This gives me a cross-divisional view of sales-related workflows and the pain points stakeholders raise, without claiming visibility of the wider enterprise. |
+| Primary evidence available | Direct operational knowledge, including a rule-based customer analytics module in production; recurring conversations with 10+ stakeholders across divisions; my Assignments 1 and 2 for workflow-level evidence; Course 3 Module 1 framework. Public sources for benchmarking (A3) only. Colleague ratings: Not evidenced. |
+| Important evidence limitations | Single vantage point: ratings rest on my observation and conversations, not a cross-functional assessment, and some detail cannot be shared. Divisional performance data is not readily available, so value estimates use stated industry heuristics. Enterprise capabilities (cloud, cybersecurity, compliance) are counted only as they reach the function. No energy-sector maturity baseline yet. |
 
 ---
 
 ## A2. Six-dimension maturity (H/M/L only; cap 150 words after the table for the least-confident note)
 
-All ratings are **[Author decision]**. The right-hand column is evidence only. The Module 1 rule applies: overall readiness is capped by the weakest dimension, not the strongest.
+Status: **Author-confirmed (11 Oct 2026)**, synced from the Notion G4 working page. Ratings are the author's. Technology moved from H to M on review (infrastructure strong; integration and technical debt partial). Process kept at L by the author. Module 1 rule: overall readiness is capped by the weakest dimension.
 
-| Dimension | Sub-dimensions | Rating H/M/L | Indicators / evidence candidates (verify; rephrase in your words) | Most material gap (your call) |
+| Dimension | Sub-dimensions | Rating H/M/L | Indicators / evidence | Most material gap |
 |---|---|---|---|---|
-| Technology | Infrastructure; integration; technical debt | **[Author decision]** | Order status and inventory sit across SAP, logistics and credit systems and are checked manually each day. More than five years of SAP order history is in the central data warehouse. Some lead-time fields (for example manufacturing dependency) are not consistently defined or are outside the current SAP extract. The A2 evidence-pack workflow assumes read-only integration with competitive-intelligence repositories, and integration is the largest expected cost. Infrastructure and compute: Not evidenced. | |
-| Data | Quality; accessibility; strategic value | **[Author decision]** | No signed-off churn definition or early-warning attributes. No accountable business owner for the definitions behind the churn signal. Roughly 1,500 usable churned accounts in one pilot market. Training signals are transaction-only and no decision has been tabled to broaden them. Sales engagement capture in the CRM is mandated but adoption and capture are uneven. Approved collateral is scattered. | |
-| Talent | Skills inventory; learning culture; leadership capability | **[Author decision]** | Data engineering or data science capacity for the first move is not confirmed and competes with existing reporting work. Resourcing is expected to rely on roughly 2–3 analysts part-time. Skills pyramid, AI literacy and learning culture: Not evidenced. Leadership capability: Not evidenced. | |
-| Process | Standardisation; documentation; automation baseline | **[Author decision]** | The current churn workflow is a documented rule-based production process with rules, named ownership and periodic review. Order-status updates and customer updates are manual and inconsistent. Complaint-email capture is manual against an SLA nobody monitors. | |
-| Culture | Experimentation tolerance; data-driven decisions; cross-functional collaboration; visible leadership commitment | **[Author decision]** | CRM engagement capture is mandated but adoption is uneven (a data-driven-decision indicator). Pilot-first sequencing and stop thresholds exist in A1 and A2 as design intent, not as observed culture. Leadership commitment and experimentation tolerance: Not evidenced. | |
-| Governance | Documented AI/data policies; ethics/risk review; clear accountability; incident response and monitoring | **[Author decision]** | A data governance council exists and is the proposed forum for churn definitions. Governance exists for transaction data but not for the broader signal set. Named owner roles are proposed, with appointment pending. No formal review forum for new signals. Pilot governance did not outlast its sponsor in the lead-generation case. The A1 Red ratings on governance are legacy evidence only and not transferable (K4). | |
+| Technology | Infrastructure; integration; technical debt | M | **Infrastructure:** enterprise Azure Data Lake (ADLS) and contracted compute available on request. **Integration:** SAP data increasingly streamed to ADLS and API links built per project, yet order status is still checked manually across SAP, logistics and credit systems. **Technical debt:** many dashboard products with unclear long-term owners. | Technical debt from build-for-release design: products are delivered by many DIY and IT teams with little attention to sustainability, and adoption collapses when an owner or sponsor moves, leaving unused solutions that complicate portfolio rationalisation. Some lead-time fields sit outside the current SAP extract. |
+| Data | Quality; accessibility; strategic value | M | **Quality:** SAP transactions captured at source for over a decade, so transactional error rates are low. **Accessibility:** platform teams reach data through ADLS, with near-real-time SAP feeds growing; business users building their own tools struggle. **Strategic value:** churn signals are transaction-only, with about 1,500 usable churned accounts in one pilot market. | Meaning, not volume. SAP master data no longer reflects how the business segments itself, so manual tags and SharePoint labels drive analysis. History carries no event labels for global or country-level shocks, limiting ML use. No signed-off churn definition or accountable definition owner. Low strategic value offsets good quality and accessibility. |
+| Talent | Skills inventory; learning culture; leadership capability | L | **Skills inventory:** frontline teams are strong in Excel-based performance reporting; data science sits in narrow roles, and delivery relies on 2–3 part-time analysts. **Learning culture:** regular central learning sessions exist but are business-focused, so digital literacy in business teams trails IT and data science. | Narrow role scopes limit end-to-end capability: data science stays notebook-centric, with little MLOps practice on the existing Databricks platform. **Leadership capability:** across several projects, ML limits and data-governance needs are underestimated, and deployed solutions are assumed to need little ongoing upkeep. |
+| Process | Standardisation; documentation; automation baseline | L | **Documentation:** ESSA (Eliminate, Simplify, Standardise, Automate) framework and process documents exist, but lack governance and accountability. **Standardisation:** order-status and customer updates are manual and inconsistent; complaint-email capture runs against an unmonitored SLA. **Automation baseline:** one governed rule-based churn workflow in production is the exception. | No structured process ownership or governance, so documentation drifts from practice and processes are not standardised. Automation built on them cannot perform consistently or last, which materially blocks scaling AI beyond isolated cases. |
+| Culture | Experimentation tolerance; data-driven decisions; cross-functional collaboration; visible leadership commitment | M | **Experimentation:** innovation is encouraged in principle. **Data-driven decisions:** teams want analysis grounded in data, and CRM engagement capture is mandated, but adoption is uneven. **Collaboration:** data is shared reluctantly; Finance and line functions (Sales, Supply Chain) present the same data differently. **Leadership commitment:** Not evidenced beyond stated intent. | Low trust in shared numbers. Without common definitions, dashboards serve leadership reporting rather than insight, while teams revert to their own dashboards or SAP extracts. Functions have little incentive to back a central definitions layer, so stated intent outruns observed practice. |
+| Governance | Documented AI/data policies; ethics/risk review; clear accountability; incident response and monitoring | M | **Ethics/risk review and monitoring:** enterprise cybersecurity and ethics & compliance mechanisms are robust and enforced. **Documented policies:** a data governance council covers transaction data, not the broader signal set. **Accountability:** named data-owner roles proposed, appointment pending. **AI-specific policy and incident response:** Not evidenced. | Weak data and process governance inside the function: no review forum for new signals, and pilot governance did not outlast its sponsor in the lead-generation case. Solutions go stale because data or process changes are not fed back into design. |
 
-Dimensions where evidence is thin and you should either gather something or write "Not evidenced": **Talent** (almost nothing in the repo), **Culture** (mostly design intent), and **Technology infrastructure**.
-
-- **Least-confident rating:** **[Author decision]**
-- **Why you are unsure:** **[Author decision]**
-- **Evidence that would confirm or change it:** **[Author decision]**. One option straight from the Module 1 action item: ask one colleague outside your function to rate the same six dimensions and compare. The gap shows blind spots, and it is also a credible way to raise evidence quality. Optional and quick; only worth it if you can do it before the deadline.
+- **Least-confident rating:** Talent (Low).
+- **Why I am unsure:** it rests on conversations with roughly ten colleagues, not on a skills inventory or survey, so it may reflect the teams I work with most rather than the whole function. Production today is mostly dashboards, which reveals little about latent capability.
+- **Evidence that would confirm or change it:** a simple skills and AI-literacy inventory across divisions; whether deployed ML outputs are used by frontline teams and leaders who can interpret them and act independently; and an independent rating of all six dimensions by a colleague outside my division, compared with mine. With Talent and Process at Low, overall readiness is capped at Low regardless of stronger infrastructure.
 
 ---
 
@@ -104,6 +92,6 @@ Shortlisted opportunities, for reference: churn early warning; order-status/lead
 
 ## Open points for you before handing this to the agent
 
-1. Settle the scope label wording (A1): "Strategy and Analytics (Global Lubricants)" versus K11's Global Sales & Marketing framing.
+1. ~~Settle the scope label wording (A1).~~ Done: see A1 label.
 2. Decide whether to use the compressed gate plan.
 3. Confirm each evidence candidate is still true. A1 and A2 describe the position at the time of writing.
