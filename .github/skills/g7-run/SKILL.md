@@ -1,6 +1,6 @@
 ---
 name: g7-run
-description: G7: Part D drafting loop, one section at a time
+description: "G7: Part D drafting loop, one section at a time"
 disable-model-invocation: true
 ---
 Start G7. The previous gate must be recorded as approved.

@@ -11,7 +11,7 @@ description: Single shared reference record for Assignment 3. Written only by th
 
 <status>
 version: 0.1 (build stage)
-stage: G4 scope and Part A (G3 approved)
+stage: G4+G5 combined (Parts A and B); Part A sections approved, Part B next; G3 approved
 deadline: 2026-10-15
 last_updated: 2026-10-10
 </status>
@@ -20,7 +20,8 @@ last_updated: 2026-10-10
 function: Strategy & Analytics within Global Sales & Marketing
 workflow_focus: sales-related workflows
 organisation_label_in_A1_A2: an integrated oil and gas energy major (global lubricants division); function declared in A1/A2 as "Strategy and Analytics (Global Lubricants)"
-label_to_confirm_at_G4: exact organisation and function wording for Assignment 3 (keep consistent with A1/A2 anonymisation; public peers may be named in Part C)
+a3_label: Strategy & Analytics, Global Lubricants Sales & Marketing (integrated energy major, anonymised) (author judgement 2026-10-11)
+assessment_scope: Function; sales-related workflows incl. R4 LT evidence pack
 </scope_and_context>
 
 <glossary>
@@ -42,6 +43,13 @@ dimensions: Technology;Data;Talent;Process;Culture;Governance
 
 <maturity>
 # Dimension|Rating|Confidence|Indicators_source|Weakest_flag
+Technology|Medium|Not stated|author observation (A2 input 2026-10-11)|
+Data|Medium|Not stated|author observation; A1-038|
+Talent|Low|Least confident|author observation (about ten-plus stakeholders)|weakest (tied)
+Process|Low|Not stated|author observation|weakest (tied)
+Culture|Medium|Not stated|author observation|
+Governance|Medium|Not stated|author observation|
+# Overall readiness: Low (capped by Talent and Process; weakest-dimension rule, course notes M1)
 </maturity>
 
 <portfolio>
@@ -54,10 +62,14 @@ dimensions: Technology;Data;Talent;Process;Culture;Governance
 
 <assumptions>
 # AssID|Statement|Basis|Label(assumption/estimate/hypothetical)
+AS1|The function has an estimated 20-25 core sales and marketing excellence processes to document|Author estimate (G4 input, 2026-10-11)|estimate
 </assumptions>
 
 <evidence>
 # E_ID|Title|Organisation|Date|URL|Accessed|Used_in
+E1|AI Adoption Index 2.0: Tracking India's Sectoral Progress in AI Adoption|NASSCOM|2024|https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption (findings also reproduced at indiaai.gov.in)|2026-10-11|A3
+E2|Gulf Oil Lubricants India Limited Annual Report 2025-26 (PDF pp. 27, 29, 44, 54)|Gulf Oil Lubricants India Ltd|2026-08|https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf (listed at https://india.gulfoilltd.com/investors/annual-reports)|2026-10-11|A3
+E3|Castrol turns 125 and looks to the future (press release)|Castrol (bp)|2024-01-10|https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html|2026-10-11|A3
 </evidence>
 
 <prior_work_facts>
@@ -105,6 +117,17 @@ dimensions: Technology;Data;Talent;Process;Culture;Governance
 2026-10-10 | Provisional B3 preference reconfirmed | Top three unchanged: 1 Explainable lead-generation research; 2 LT evidence-pack workflow; 3 Churn early warning. Still subject to A2/A4 maturity evidence. | Nilotpal
 2026-10-10 | G3-K17 | R4 (LT evidence-pack workflow) stays in scope: counted as sales-related because it supports Global Sales & Marketing leadership decisions. Top three unchanged. | Nilotpal
 2026-10-10 | G3 | Prior-work fact ledger (72 facts, 0 misses), candidate assessment and five-candidate shortlist approved; changes: A1-002, A1-024, A1-032, A1-034, A2-006 tightened to source-unique exact strings; K17 ruled (R4 in scope); provisional top three unchanged | Nilotpal
+2026-10-11 | A1 scope (author judgement) | Assessment scope = Function; label "Strategy & Analytics, Global Lubricants Sales & Marketing (integrated energy major, anonymised)"; sales-related workflows incl. R4 | Nilotpal
+2026-10-11 | A1 section | drafts/A1.md approved as drafted (194/200 words) | Nilotpal
+2026-10-11 | A2 ratings (author judgement) | Technology Medium; Data Medium; Talent Low; Process Low; Culture Medium; Governance Medium; overall Low (capped by Talent and Process); least-confident = Talent | Nilotpal
+2026-10-11 | A2 Talent indicator (author judgement) | "Delivery relies on 2-3 part-time analysts" confirmed as a current observed fact (distinct from A1-042, which was proposed resourcing) | Nilotpal
+2026-10-11 | A2 section | drafts/A2_table.md (table, no cap) and drafts/A2.md (129/150) approved as drafted | Nilotpal
+2026-10-11 | A3 comparators (author judgement) | NASSCOM AI Adoption Index 2.0 (E1); Gulf Oil Lubricants India AR FY2025-26 as primary, verified wording only (E2); Castrol (bp) 125 release kept as optional third row, "AI readiness not disclosed" (E3) | Nilotpal
+2026-10-11 | A3 relative position (author judgement) | On par: NASSCOM on Data and Governance (Process Low mirrors sector execution gap); Gulf on Technology. Behind Gulf on customer-facing channel data and structured sales-talent development. Castrol: no basis for comparison. Culture not evidenced against any comparator | Nilotpal
+2026-10-11 | A3 section | drafts/A3.md approved as drafted (245/250), closing absolute-vs-relative paragraph kept below the table | Nilotpal
+2026-10-11 | A4 constraints (author judgement) | Constraint 1 = Process (Low), standardisation and documentation; constraint 2 = Data (Medium), no owned data definitions; Talent (Low) addressed through process and data standards rather than as a separate constraint. Blocked opportunities: Process -> explainable lead-generation research, LT evidence pack; Data -> churn early warning, order-status/lead-time visibility, sector-matched value cases | Nilotpal
+2026-10-11 | A4 section | drafts/A4.md approved as drafted (240/250), incl. note on why Talent is not a separate constraint | Nilotpal
+2026-10-11 | Compressed gate plan | Author consents to combining G4+G5 (Parts A and B) and G6+G7 (Parts C and D) into one review each for the 15 Oct 2026 deadline. A combined gate passes only on explicit written approval of all parts in it; G4 is held open and reviewed with Part B. Post-gate edits re-open only sections named by the dependency map. G8 and G9 unchanged | Nilotpal
 </decision_log>
 
 <k_register>
@@ -131,12 +154,15 @@ K18|Page-citation policy. Use inferred form-feed page numbers when PDF page labe
 </k_register>
 
 <open_questions>
-- Exact organisation/function wording for Assignment 3 (G4)
 - Sales role for Part D and the 15-20 real tasks (G5); K17 keeps the Commercial Strategy Analyst role open as an option
 </open_questions>
 
 <word_counts>
 # SectionID|Cap|Used|Date
+A1|200|194|2026-10-11
+A2|150 (after table; table uncapped)|129 (table 623)|2026-10-11
+A3|250|245|2026-10-11
+A4|250|240|2026-10-11
 </word_counts>
 
 <change_log>
@@ -145,5 +171,11 @@ K18|Page-citation policy. Use inferred form-feed page numbers when PDF page labe
 2026-10-10 | Recorded author-approved G3 candidate pool and provisional top-three preference; G3 gate not recorded as approved
 2026-10-10 | prior_work_facts.tsv: A1-002, A1-024, A1-032, A1-034, A2-006 replaced with source-unique exact strings and clarified notes; fact_check 72 facts, 0 misses, 3 placeholders flagged; author confirmed fact ledger and top three; G3 gate still not recorded as approved
 2026-10-10 | K17 ruled (R4 in scope); G3 approved by author; stage moved to G4 scope and Part A
-2026-10-10 | g3-approve re-run for consistency: single G3 approval row reworded to the standard gate format (no duplicate added); changes already applied; no sections re-opened; build/ledger_view.md regenerated</change_log>
-2026-10-10 | Duplicate G2 approval row removed at author request; kept the K1-K18 row (K18 page-citation ruling is part of G2); no sections re-opened</change_log>
+2026-10-10 | g3-approve re-run for consistency: single G3 approval row reworded to the standard gate format (no duplicate added); changes already applied; no sections re-opened; build/ledger_view.md regenerated
+2026-10-10 | Duplicate G2 approval row removed at author request; kept the K1-K18 row (K18 page-citation ruling is part of G2); no sections re-opened
+2026-10-11 | G4 started. A1 drafted (drafts/A1.md, 194/200), delta QA 0 blocking / 0 warnings, approved by author; label recorded in scope_and_context and decision_log; open question on label closed. Stray duplicate </change_log> tag removed (format fix only)
+2026-10-11 | A3 research (early): NASSCOM claims verified; Castrol claims verified (AI appears once, heritage video only); Gulf FY2024-25 claims partly verified (genAI claim not found); E-IDs not yet assigned pending author choice
+2026-10-11 | A2 drafted as two files (A2_table.md uncapped table; A2.md 150-word response) so the QA cap check applies only to capped text; ratings recorded in maturity register; delta QA 0 blocking / 0 warnings; approved by author
+2026-10-11 | A3 drafted with E1-E3 (verified: NASSCOM; Gulf AR FY2025-26 replaced FY2024-25 at author choice; Castrol release 10 Jan 2024); delta QA 0 blocking after trim 254->245; approved by author
+2026-10-11 | A4 drafted (Process Low first, Data Medium second, per author reorder); AS1 added to assumptions; delta QA 0 blocking / 0 warnings; approved by author. All Part A sections approved; G4 not yet approved
+2026-10-11 | Compressed plan recorded: G4+G5 and G6+G7 combined; status stage updated; no gate recorded as approved; no sections re-opened</change_log>

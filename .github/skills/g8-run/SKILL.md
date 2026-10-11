@@ -1,6 +1,6 @@
 ---
 name: g8-run
-description: G8: assemble the document and run the full audit
+description: "G8: assemble the document and run the full audit"
 disable-model-invocation: true
 ---
 Start G8. G7 (or the combined gates under the compressed plan) must be recorded as approved.

@@ -1,6 +1,6 @@
 ---
 name: g4-run
-description: G4: scope and Part A drafting loop, one section at a time
+description: "G4: scope and Part A drafting loop, one section at a time"
 disable-model-invocation: true
 ---
 Start G4. The previous gate must be recorded as approved.

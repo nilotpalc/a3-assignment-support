@@ -1,6 +1,6 @@
 ---
 name: g6-run
-description: G6: Part C drafting loop, one section at a time
+description: "G6: Part C drafting loop, one section at a time"
 disable-model-invocation: true
 ---
 Start G6. The previous gate must be recorded as approved.

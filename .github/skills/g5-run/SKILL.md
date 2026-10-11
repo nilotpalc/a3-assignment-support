@@ -1,6 +1,6 @@
 ---
 name: g5-run
-description: G5: Part B drafting loop, one section at a time
+description: "G5: Part B drafting loop, one section at a time"
 disable-model-invocation: true
 ---
 Start G5. The previous gate must be recorded as approved.
