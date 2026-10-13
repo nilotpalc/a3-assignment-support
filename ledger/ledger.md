@@ -11,9 +11,9 @@ description: Single shared reference record for Assignment 3. Written only by th
 
 <status>
 version: 0.1 (build stage)
-stage: G4+G5 combined (Parts A and B); Part A sections approved, Part B next; G3 approved
+stage: G6+G7 combined (Parts C and D) next; G4+G5 approved
 deadline: 2026-10-15
-last_updated: 2026-10-10
+last_updated: 2026-10-13
 </status>
 
 <scope_and_context>
@@ -54,10 +54,22 @@ Governance|Medium|Not stated|author observation|
 
 <portfolio>
 # OppID|Name|AI_pattern|Classification|Rank|Dependency_dimension|Dependency_rating|Status
+P1|Churn early warning|Hybrid (traditional ML classification + GenAI account briefs)|Moonshot|Not top three|Data|Medium|B1 approved 2026-10-13
+P2|Order-status / lead-time exception visibility|Hybrid (rules/automation + traditional ML regression/classification predicting lead-time shift and delay risk)|Strategic Bet|3|Data|Medium|B1 approved 2026-10-13
+P3|Explainable lead-generation research|Hybrid (GenAI research + written scoring rules; supervised ML later)|Strategic Bet|2|Process|Low|B1 approved 2026-10-13
+P4|Sector-matched value cases|Hybrid (BERT-family classifiers for tagging + GenAI retrieval and drafting assistant)|Quick Win|1|Data|Medium|B1 approved 2026-10-13
+P5|LT evidence-pack workflow|Hybrid (read-only agentic GenAI + deterministic queries/traditional ML + human release gate)|Strategic Bet|Not top three|Process|Low|B1 approved 2026-10-13
 </portfolio>
 
 <figures>
 # FigID|Value|Unit|Basis|Status(documented/derived/assumption)|Source_ref|Sections_used
+F1|50,000|accounts|Scale of production rule-based customer analytics module|documented|A1-009|B1
+F2|1,500|churned-account records|Usable records in one pilot market|documented|A1-038|B1
+F3|2,000–3,000|sales hours per year|Order-status opportunity release estimate|estimate|A1-005|B1
+F4|1,000 to 5,000|prospects per batch|Lead-generation pilot input volume|documented|A1-011|B1
+F5|10–15%|conversion uplift|Sector-matched value-case hypothesis vs prior-year baseline; unproven|estimate|A1-006|B1
+F6|25|analyst-days per request|LT evidence-pack current cycle time|estimate|A2-001|B1
+F7|15|analyst-days|LT evidence-pack target first validated draft; not achieved|estimate|A2-010|B1
 </figures>
 
 <assumptions>
@@ -128,6 +140,16 @@ E3|Castrol turns 125 and looks to the future (press release)|Castrol (bp)|2024-0
 2026-10-11 | A4 constraints (author judgement) | Constraint 1 = Process (Low), standardisation and documentation; constraint 2 = Data (Medium), no owned data definitions; Talent (Low) addressed through process and data standards rather than as a separate constraint. Blocked opportunities: Process -> explainable lead-generation research, LT evidence pack; Data -> churn early warning, order-status/lead-time visibility, sector-matched value cases | Nilotpal
 2026-10-11 | A4 section | drafts/A4.md approved as drafted (240/250), incl. note on why Talent is not a separate constraint | Nilotpal
 2026-10-11 | Compressed gate plan | Author consents to combining G4+G5 (Parts A and B) and G6+G7 (Parts C and D) into one review each for the 15 Oct 2026 deadline. A combined gate passes only on explicit written approval of all parts in it; G4 is held open and reviewed with Part B. Post-gate edits re-open only sections named by the dependency map. G8 and G9 unchanged | Nilotpal
+2026-10-13 | B1 membership and size (author judgement) | Five opportunities (G3 shortlist only); reserves not added | Nilotpal
+2026-10-13 | B1 AI patterns (author judgement) | All five hybrid: P1 traditional ML + GenAI briefs; P2 rules/automation + traditional ML predicting lead-time shift and delay risk (supersedes A1 offline-only design); P3 GenAI + written scoring rules; P4 BERT-family tagging + GenAI assistant; P5 agentic GenAI + traditional ML + human gate. P3 quantified value = Not evidenced; P4 10-15% kept as hypothesis; P2 and P5 value mechanisms confirmed | Nilotpal
+2026-10-13 | B1 section | drafts/B1.md approved as drafted (uncapped table) | Nilotpal
+2026-10-13 | B2 classifications (author judgement) | P1 Moonshot; P2 Strategic Bet; P3 Strategic Bet (changed from author's input Quick Win to resolve conflict with Process Low dependency in A4/B1); P4 Quick Win (Medium Data dependency; rationale: sources exist, assistant is augmented with front-end vetting); P5 Strategic Bet | Nilotpal
+2026-10-13 | B2 section | drafts/B2.md approved as drafted (rows 49/44/46/43/45 of 50 words) | Nilotpal
+2026-10-13 | B3 top three (author judgement) | 1 Sector-matched value cases (P4); 2 Explainable lead-generation research (P3); 3 Order-status / lead-time exception visibility (P2). Replaces G3 provisional order. Churn (P1) and LT evidence pack (P5) held as options. Sequencing logic: impact + readiness/capability. Balance statement as selected by author | Nilotpal
+2026-10-13 | B3 section | drafts/B3.md approved as drafted (280/300) | Nilotpal
+2026-10-13 | B4 selected opportunity (author judgement) | Sector-matched value cases (P4, Priority 1); upstream product/technical literature; downstream sales product recommendation and wallet expansion; control = low-confidence escalation to SME | Nilotpal
+2026-10-13 | B4 section | drafts/B4.md approved as drafted (201/250), labelled paragraphs | Nilotpal
+2026-10-13 | G4+G5 | Combined gate approved (compressed plan): Part A (A1-A4) and Part B (B1-B4) accepted as drafted; changes: none | Nilotpal
 </decision_log>
 
 <k_register>
@@ -163,6 +185,10 @@ A1|200|194|2026-10-11
 A2|150 (after table; table uncapped)|129 (table 623)|2026-10-11
 A3|250|245|2026-10-11
 A4|250|240|2026-10-11
+B1|none (one row per opportunity)|table only|2026-10-13
+B2|50 per opportunity (rationale columns)|49; 44; 46; 43; 45|2026-10-13
+B3|300|280|2026-10-13
+B4|250|201|2026-10-13
 </word_counts>
 
 <change_log>
@@ -178,4 +204,9 @@ A4|250|240|2026-10-11
 2026-10-11 | A2 drafted as two files (A2_table.md uncapped table; A2.md 150-word response) so the QA cap check applies only to capped text; ratings recorded in maturity register; delta QA 0 blocking / 0 warnings; approved by author
 2026-10-11 | A3 drafted with E1-E3 (verified: NASSCOM; Gulf AR FY2025-26 replaced FY2024-25 at author choice; Castrol release 10 Jan 2024); delta QA 0 blocking after trim 254->245; approved by author
 2026-10-11 | A4 drafted (Process Low first, Data Medium second, per author reorder); AS1 added to assumptions; delta QA 0 blocking / 0 warnings; approved by author. All Part A sections approved; G4 not yet approved
-2026-10-11 | Compressed plan recorded: G4+G5 and G6+G7 combined; status stage updated; no gate recorded as approved; no sections re-opened</change_log>
+2026-10-11 | Compressed plan recorded: G4+G5 and G6+G7 combined; status stage updated; no gate recorded as approved; no sections re-opened
+2026-10-13 | G5 run started under compressed plan (G4 held open). B1 drafted from build/g5_author_input_template.md; delta QA 0 blocking / 0 warnings after rephrasing one phrase repeated from A2 table; approved by author. Portfolio P1-P5 and figures F1-F7 recorded (no ID collisions); classifications and ranks left blank pending B2/B3
+2026-10-13 | B2 drafted; author reclassified P3 Quick Win -> Strategic Bet after QA conflict (Process Low); delta QA 0 blocking, 1 warning (P4 Quick Win on Medium dependency, explicit rationale given in row); approved; classifications written to portfolio
+2026-10-13 | B3 drafted (280/300); delta QA 0 blocking, 1 carried warning (P4); approved; ranks written to portfolio. Top three changed from G3 provisional (dependency map: top three -> B4, C3, C4, D1 onward; none yet drafted)
+2026-10-13 | B4 drafted (201/250); delta QA 0 blocking, 1 carried warning (P4); approved. All Part B sections approved; G4+G5 combined gate not recorded as approved
+2026-10-13 | G4+G5 approved by author with no changes; no sections re-opened; stage moved to G6+G7</change_log>

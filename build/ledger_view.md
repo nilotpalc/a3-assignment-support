@@ -12,16 +12,17 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 ## Status
 
 - version: 0.1 (build stage)
-- stage: G4 scope and Part A (G3 approved)
+- stage: G6+G7 combined (Parts C and D) next; G4+G5 approved
 - deadline: 2026-10-15
-- last_updated: 2026-10-10
+- last_updated: 2026-10-13
 
 ## Scope And Context
 
 - function: Strategy & Analytics within Global Sales & Marketing
 - workflow_focus: sales-related workflows
 - organisation_label_in_A1_A2: an integrated oil and gas energy major (global lubricants division); function declared in A1/A2 as "Strategy and Analytics (Global Lubricants)"
-- label_to_confirm_at_G4: exact organisation and function wording for Assignment 3 (keep consistent with A1/A2 anonymisation; public peers may be named in Part C)
+- a3_label: Strategy & Analytics, Global Lubricants Sales & Marketing (integrated energy major, anonymised) (author judgement 2026-10-11)
+- assessment_scope: Function; sales-related workflows incl. R4 LT evidence pack
 
 ## Glossary
 
@@ -43,38 +44,52 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 
 ## Maturity
 
+*Overall readiness: Low (capped by Talent and Process; weakest-dimension rule, course notes M1)*
+
 | Dimension | Rating | Confidence | Indicators_source | Weakest_flag |
 |---|---|---|---|---|
-
-*(no entries yet)*
+| Technology | Medium | Not stated | author observation (A2 input 2026-10-11) |   |
+| Data | Medium | Not stated | author observation; A1-038 |   |
+| Talent | Low | Least confident | author observation (about ten-plus stakeholders) | weakest (tied) |
+| Process | Low | Not stated | author observation | weakest (tied) |
+| Culture | Medium | Not stated | author observation |   |
+| Governance | Medium | Not stated | author observation |   |
 
 ## Portfolio
 
 | OppID | Name | AI_pattern | Classification | Rank | Dependency_dimension | Dependency_rating | Status |
 |---|---|---|---|---|---|---|---|
-
-*(no entries yet)*
+| P1 | Churn early warning | Hybrid (traditional ML classification + GenAI account briefs) | Moonshot | Not top three | Data | Medium | B1 approved 2026-10-13 |
+| P2 | Order-status / lead-time exception visibility | Hybrid (rules/automation + traditional ML regression/classification predicting lead-time shift and delay risk) | Strategic Bet | 3 | Data | Medium | B1 approved 2026-10-13 |
+| P3 | Explainable lead-generation research | Hybrid (GenAI research + written scoring rules; supervised ML later) | Strategic Bet | 2 | Process | Low | B1 approved 2026-10-13 |
+| P4 | Sector-matched value cases | Hybrid (BERT-family classifiers for tagging + GenAI retrieval and drafting assistant) | Quick Win | 1 | Data | Medium | B1 approved 2026-10-13 |
+| P5 | LT evidence-pack workflow | Hybrid (read-only agentic GenAI + deterministic queries/traditional ML + human release gate) | Strategic Bet | Not top three | Process | Low | B1 approved 2026-10-13 |
 
 ## Figures
 
 | FigID | Value | Unit | Basis | Status(documented/derived/assumption) | Source_ref | Sections_used |
 |---|---|---|---|---|---|---|
-
-*(no entries yet)*
+| F1 | 50,000 | accounts | Scale of production rule-based customer analytics module | documented | A1-009 | B1 |
+| F2 | 1,500 | churned-account records | Usable records in one pilot market | documented | A1-038 | B1 |
+| F3 | 2,000–3,000 | sales hours per year | Order-status opportunity release estimate | estimate | A1-005 | B1 |
+| F4 | 1,000 to 5,000 | prospects per batch | Lead-generation pilot input volume | documented | A1-011 | B1 |
+| F5 | 10–15% | conversion uplift | Sector-matched value-case hypothesis vs prior-year baseline; unproven | estimate | A1-006 | B1 |
+| F6 | 25 | analyst-days per request | LT evidence-pack current cycle time | estimate | A2-001 | B1 |
+| F7 | 15 | analyst-days | LT evidence-pack target first validated draft; not achieved | estimate | A2-010 | B1 |
 
 ## Assumptions
 
 | AssID | Statement | Basis | Label(assumption/estimate/hypothetical) |
 |---|---|---|---|
-
-*(no entries yet)*
+| AS1 | The function has an estimated 20-25 core sales and marketing excellence processes to document | Author estimate (G4 input, 2026-10-11) | estimate |
 
 ## Evidence
 
 | E_ID | Title | Organisation | Date | URL | Accessed | Used_in |
 |---|---|---|---|---|---|---|
-
-*(no entries yet)*
+| E1 | AI Adoption Index 2.0: Tracking India's Sectoral Progress in AI Adoption | NASSCOM | 2024 | https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption (findings also reproduced at indiaai.gov.in) | 2026-10-11 | A3 |
+| E2 | Gulf Oil Lubricants India Limited Annual Report 2025-26 (PDF pp. 27, 29, 44, 54) | Gulf Oil Lubricants India Ltd | 2026-08 | https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf (listed at https://india.gulfoilltd.com/investors/annual-reports) | 2026-10-11 | A3 |
+| E3 | Castrol turns 125 and looks to the future (press release) | Castrol (bp) | 2024-01-10 | https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html | 2026-10-11 | A3 |
 
 ## Prior Work Facts
 
@@ -197,6 +212,27 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 | 2026-10-10 | Provisional B3 preference reconfirmed | Top three unchanged: 1 Explainable lead-generation research; 2 LT evidence-pack workflow; 3 Churn early warning. Still subject to A2/A4 maturity evidence. | Nilotpal |
 | 2026-10-10 | G3-K17 | R4 (LT evidence-pack workflow) stays in scope: counted as sales-related because it supports Global Sales & Marketing leadership decisions. Top three unchanged. | Nilotpal |
 | 2026-10-10 | G3 | Prior-work fact ledger (72 facts, 0 misses), candidate assessment and five-candidate shortlist approved; changes: A1-002, A1-024, A1-032, A1-034, A2-006 tightened to source-unique exact strings; K17 ruled (R4 in scope); provisional top three unchanged | Nilotpal |
+| 2026-10-11 | A1 scope (author judgement) | Assessment scope = Function; label "Strategy & Analytics, Global Lubricants Sales & Marketing (integrated energy major, anonymised)"; sales-related workflows incl. R4 | Nilotpal |
+| 2026-10-11 | A1 section | drafts/A1.md approved as drafted (194/200 words) | Nilotpal |
+| 2026-10-11 | A2 ratings (author judgement) | Technology Medium; Data Medium; Talent Low; Process Low; Culture Medium; Governance Medium; overall Low (capped by Talent and Process); least-confident = Talent | Nilotpal |
+| 2026-10-11 | A2 Talent indicator (author judgement) | "Delivery relies on 2-3 part-time analysts" confirmed as a current observed fact (distinct from A1-042, which was proposed resourcing) | Nilotpal |
+| 2026-10-11 | A2 section | drafts/A2_table.md (table, no cap) and drafts/A2.md (129/150) approved as drafted | Nilotpal |
+| 2026-10-11 | A3 comparators (author judgement) | NASSCOM AI Adoption Index 2.0 (E1); Gulf Oil Lubricants India AR FY2025-26 as primary, verified wording only (E2); Castrol (bp) 125 release kept as optional third row, "AI readiness not disclosed" (E3) | Nilotpal |
+| 2026-10-11 | A3 relative position (author judgement) | On par: NASSCOM on Data and Governance (Process Low mirrors sector execution gap); Gulf on Technology. Behind Gulf on customer-facing channel data and structured sales-talent development. Castrol: no basis for comparison. Culture not evidenced against any comparator | Nilotpal |
+| 2026-10-11 | A3 section | drafts/A3.md approved as drafted (245/250), closing absolute-vs-relative paragraph kept below the table | Nilotpal |
+| 2026-10-11 | A4 constraints (author judgement) | Constraint 1 = Process (Low), standardisation and documentation; constraint 2 = Data (Medium), no owned data definitions; Talent (Low) addressed through process and data standards rather than as a separate constraint. Blocked opportunities: Process -> explainable lead-generation research, LT evidence pack; Data -> churn early warning, order-status/lead-time visibility, sector-matched value cases | Nilotpal |
+| 2026-10-11 | A4 section | drafts/A4.md approved as drafted (240/250), incl. note on why Talent is not a separate constraint | Nilotpal |
+| 2026-10-11 | Compressed gate plan | Author consents to combining G4+G5 (Parts A and B) and G6+G7 (Parts C and D) into one review each for the 15 Oct 2026 deadline. A combined gate passes only on explicit written approval of all parts in it; G4 is held open and reviewed with Part B. Post-gate edits re-open only sections named by the dependency map. G8 and G9 unchanged | Nilotpal |
+| 2026-10-13 | B1 membership and size (author judgement) | Five opportunities (G3 shortlist only); reserves not added | Nilotpal |
+| 2026-10-13 | B1 AI patterns (author judgement) | All five hybrid: P1 traditional ML + GenAI briefs; P2 rules/automation + traditional ML predicting lead-time shift and delay risk (supersedes A1 offline-only design); P3 GenAI + written scoring rules; P4 BERT-family tagging + GenAI assistant; P5 agentic GenAI + traditional ML + human gate. P3 quantified value = Not evidenced; P4 10-15% kept as hypothesis; P2 and P5 value mechanisms confirmed | Nilotpal |
+| 2026-10-13 | B1 section | drafts/B1.md approved as drafted (uncapped table) | Nilotpal |
+| 2026-10-13 | B2 classifications (author judgement) | P1 Moonshot; P2 Strategic Bet; P3 Strategic Bet (changed from author's input Quick Win to resolve conflict with Process Low dependency in A4/B1); P4 Quick Win (Medium Data dependency; rationale: sources exist, assistant is augmented with front-end vetting); P5 Strategic Bet | Nilotpal |
+| 2026-10-13 | B2 section | drafts/B2.md approved as drafted (rows 49/44/46/43/45 of 50 words) | Nilotpal |
+| 2026-10-13 | B3 top three (author judgement) | 1 Sector-matched value cases (P4); 2 Explainable lead-generation research (P3); 3 Order-status / lead-time exception visibility (P2). Replaces G3 provisional order. Churn (P1) and LT evidence pack (P5) held as options. Sequencing logic: impact + readiness/capability. Balance statement as selected by author | Nilotpal |
+| 2026-10-13 | B3 section | drafts/B3.md approved as drafted (280/300) | Nilotpal |
+| 2026-10-13 | B4 selected opportunity (author judgement) | Sector-matched value cases (P4, Priority 1); upstream product/technical literature; downstream sales product recommendation and wallet expansion; control = low-confidence escalation to SME | Nilotpal |
+| 2026-10-13 | B4 section | drafts/B4.md approved as drafted (201/250), labelled paragraphs | Nilotpal |
+| 2026-10-13 | G4+G5 | Combined gate approved (compressed plan): Part A (A1-A4) and Part B (B1-B4) accepted as drafted; changes: none | Nilotpal |
 
 ## K Register
 
@@ -225,25 +261,18 @@ Source: `ledger/ledger.md`. Edit the ledger, never this file. Re-run `python led
 
 ## Open Questions
 
-- Exact organisation/function wording for Assignment 3 (G4)
 - Sales role for Part D and the 15-20 real tasks (G5); K17 keeps the Commercial Strategy Analyst role open as an option
 
 ## Word Counts
 
 | SectionID | Cap | Used | Date |
 |---|---|---|---|
-
-*(no entries yet)*
-
-## Change Log
-
-| Date | Entry |
-|---|---|
-| 2026-10-10 | Ledger initialised with approvals and rulings only; no assignment content |
-| 2026-10-10 | Recorded author G2 K1-K18 rulings; generated requirement register, conflict/gap register, structure-only template and two-way coverage matrix for review; G2 approved with no changes requested |
-| 2026-10-10 | Recorded author-approved G3 candidate pool and provisional top-three preference; G3 gate not recorded as approved |
-| 2026-10-10 | prior_work_facts.tsv: A1-002, A1-024, A1-032, A1-034, A2-006 replaced with source-unique exact strings and clarified notes; fact_check 72 facts, 0 misses, 3 placeholders flagged; author confirmed fact ledger and top three; G3 gate still not recorded as approved |
-| 2026-10-10 | K17 ruled (R4 in scope); G3 approved by author; stage moved to G4 scope and Part A |
-| 2026-10-10 | g3-approve re-run for consistency: single G3 approval row reworded to the standard gate format (no duplicate added); changes already applied; no sections re-opened; build/ledger_view.md regenerated`</change_log>` |
-| 2026-10-10 | Duplicate G2 approval row removed at author request; kept the K1-K18 row (K18 page-citation ruling is part of G2); no sections re-opened |
+| A1 | 200 | 194 | 2026-10-11 |
+| A2 | 150 (after table; table uncapped) | 129 (table 623) | 2026-10-11 |
+| A3 | 250 | 245 | 2026-10-11 |
+| A4 | 250 | 240 | 2026-10-11 |
+| B1 | none (one row per opportunity) | table only | 2026-10-13 |
+| B2 | 50 per opportunity (rationale columns) | 49; 44; 46; 43; 45 | 2026-10-13 |
+| B3 | 300 | 280 | 2026-10-13 |
+| B4 | 250 | 201 | 2026-10-13 |
 

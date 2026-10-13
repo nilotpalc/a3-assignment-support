@@ -119,7 +119,7 @@ Note: G3 #1 and #2 both depend on Process (Low). If they stay first, say why the
 
 Pick one of your top three. A reasoned "Not applicable" is accepted.
 
-- **Selected opportunity:** ☐
+- **Selected opportunity:** Sector-matched value cases
 
 **Prior evidence per candidate (background only; choose one and edit):**
 
@@ -140,11 +140,11 @@ Pick one of your top three. A reasoned "Not applicable" is accepted.
   - Prior control: batch reviewed before contact; versioned rules and taxonomy under a named product owner [A1 B2.1].
 
 **Fields to complete for the chosen opportunity:**
-- **Upstream function / AI output it depends on:** ☐
-- **Downstream function / decision it affects:** ☐
-- **How value could compound:** ☐
-- **How error or bias could propagate:** ☐
-- **Control / hand-off needed:** ☐
+- **Upstream function / AI output it depends on:** Well-defined product technical literature, customer success stories, guidelines on product recommendations specific to equipment specifications, product performance analysis, entry-mainstream-premium performance lubricant and reasons to migrate from lower-tier to upper-tier linked to expected machine performance output specifications
+- **Downstream function / decision it affects:** Helping sales teams recommend the right lubricant product as well as offer wallet expansion options
+- **How value could compound:** A reliable conversational assistant can reliably convert into self-service offering for customers reducing the load on basic problem solving and routine queries with human expertize utilized in complex problem solving and knowledge management to improve the conversational capabilities
+- **How error or bias could propagate:** Non-maintenance of version controlled knowledge repository could result in guidance being offered for withdrawn/discontinued or deprecated products that could result in brand erosion and in worst cases, loss of tenders or performance liabilities.
+- **Control / hand-off needed:** Product recommendations or usage recommendations with low confidence levels need to be escalated for SME support 
 
 ---
 
