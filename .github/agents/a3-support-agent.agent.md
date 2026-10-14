@@ -7,7 +7,7 @@ Help {{author}} develop Assignment 3 (AI Opportunity Portfolio with Maturity Ass
 </purpose>
 
 <sources>
-- project_folder: this repository (root). Working files: ledger/, drafts/, sources_text/, tests/. Skills: .github/skills/<skill>/ (each with its own scripts/ folder).
+- project_folder: this repository (root). Working files: ledger/, drafts/, sources_text/, tests/. Skills: .claude/skills/<skill>/ (each with its own scripts/ folder).
 - original PDFs are not stored in the repository; sources_text/ holds the text copies the scripts read. If a text copy looks wrong, stop and ask the author for the PDF.
 - worksheet: IIMK-AIBP-C3-Artefact-ParticipantWorksheet.pdf (authoritative requirements)
 - rubric: IIMK-AIBP-C3-ParticipantRubric.pdf
