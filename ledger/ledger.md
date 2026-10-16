@@ -11,7 +11,7 @@ description: Single shared reference record for Assignment 3. Written only by th
 
 <status>
 version: 0.1 (build stage)
-stage: G6+G7 combined (Parts C and D) next; G4+G5 approved
+stage: G7 (Part D) next; G4+G5 and G6 approved
 deadline: 2026-10-15
 last_updated: 2026-10-13
 </status>
@@ -70,6 +70,7 @@ F4|1,000 to 5,000|prospects per batch|Lead-generation pilot input volume|documen
 F5|10–15%|conversion uplift|Sector-matched value-case hypothesis vs prior-year baseline; unproven|estimate|A1-006|B1
 F6|25|analyst-days per request|LT evidence-pack current cycle time|estimate|A2-001|B1
 F7|15|analyst-days|LT evidence-pack target first validated draft; not achieved|estimate|A2-010|B1
+F8|43,000+|users|Castrol India GenAI WhatsApp support chatbot users (comparator, external)|documented|E4|C1
 </figures>
 
 <assumptions>
@@ -80,8 +81,15 @@ AS1|The function has an estimated 20-25 core sales and marketing excellence proc
 <evidence>
 # E_ID|Title|Organisation|Date|URL|Accessed|Used_in
 E1|AI Adoption Index 2.0: Tracking India's Sectoral Progress in AI Adoption|NASSCOM|2024|https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption (findings also reproduced at indiaai.gov.in)|2026-10-11|A3
-E2|Gulf Oil Lubricants India Limited Annual Report 2025-26 (PDF pp. 27, 29, 44, 54)|Gulf Oil Lubricants India Ltd|2026-08|https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf (listed at https://india.gulfoilltd.com/investors/annual-reports)|2026-10-11|A3
-E3|Castrol turns 125 and looks to the future (press release)|Castrol (bp)|2024-01-10|https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html|2026-10-11|A3
+E2|Gulf Oil Lubricants India Limited Annual Report 2025-26 (PDF pp. 27, 29, 44, 54)|Gulf Oil Lubricants India Ltd|2026-08|https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf (listed at https://india.gulfoilltd.com/investors/annual-reports)|2026-10-11|A3, C2
+E3|Castrol turns 125 and looks to the future (press release)|Castrol (bp)|2024-01-10|https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html|2026-10-11|A3, C2
+E4|CIL Annual Report 2025 (annual report)|Castrol India Ltd|2026-02-25|https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/cil-annual-report-2025.pdf|2026-10-15|C1
+E5|Annual Report 2023-24 (annual report)|Gulf Oil Lubricants India Ltd|2024-08-21|https://assets.gulfoilltd.com/gulfindia/files/2025-05/Gulf%20Oil_Annual%20Report%202023-24.pdf|2026-10-15|C1
+E6|Annual Report 2024-25 (annual report)|Gulf Oil Lubricants India Ltd|2025-09-05|https://assets.gulfoilltd.com/gulfindia/files/2025-09/Gulf%20Oil%20Lubricants%20India%20Limited%20-%20Annual%20Report%202024-25.pdf?VersionId=DWK7zTpKHEHMm1tUSZ9Lumstc9bdya9C|2026-10-15|C1
+E7|NSE intimation: investment in ki Mobility Solutions (exchange filing)|Castrol India Ltd|2023-01-11|https://archives.nseindia.com/corporate/CASTROLIND_11012023112638_SEIntimationNitro11Jan2023signed.pdf|2026-10-15|C1
+E8|Completion of Tirex Transmission acquisition (exchange filing)|Gulf Oil Lubricants India Ltd|2023-10-30|https://assets.gulfoilltd.com/gulfindia/files/2023-10/Acquisition.pdf?VersionId=QZGjj7vg98KK1eSJZAL7XaK3wK_MBVdA|2026-10-15|C1
+E9|Google Patents, CPC G06N assignee searches (live database; two queries: Castrol, Gulf Oil)|Google Patents|Undated (live)|https://patents.google.com/?assignee=Castrol&cpc=G06N ; https://patents.google.com/?assignee=Gulf+Oil&cpc=G06N|2026-10-15|C1
+E10|bp press release: agreement to sell 65% of Castrol to Stonepeak|bp plc|2025-12-24|https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/press-release-from-bp-plc.pdf|2026-10-15|C1
 </evidence>
 
 <prior_work_facts>
@@ -150,6 +158,25 @@ E3|Castrol turns 125 and looks to the future (press release)|Castrol (bp)|2024-0
 2026-10-13 | B4 selected opportunity (author judgement) | Sector-matched value cases (P4, Priority 1); upstream product/technical literature; downstream sales product recommendation and wallet expansion; control = low-confidence escalation to SME | Nilotpal
 2026-10-13 | B4 section | drafts/B4.md approved as drafted (201/250), labelled paragraphs | Nilotpal
 2026-10-13 | G4+G5 | Combined gate approved (compressed plan): Part A (A1-A4) and Part B (B1-B4) accepted as drafted; changes: none | Nilotpal
+2026-10-15 | C1 A3 consistency (author judgement) | A3 kept as approved and not re-opened; C1 notes that E4 (CIL Annual Report 2025, Feb 2026) is newer evidence of deployed AI uses at Castrol India than A3's E3 | Nilotpal
+2026-10-15 | C1 Gulf E2 (author judgement) | Gulf Annual Report FY2025-26 (E2) not reused in C1, to avoid repeating A3; C1 Gulf signals rest on E5, E6, E8, E9 | Nilotpal
+2026-10-15 | C1 Castrol single source (author judgement) | C1 closing explanation states that three of four positive Castrol signal findings rest on E4 alone | Nilotpal
+2026-10-15 | C1 evidence log (author judgement) | Part C evidence E4-E10 as mapped from author research; Google Patents Castrol and Gulf G06N queries logged as one source (E9); E10 kept | Nilotpal
+2026-10-15 | C1 overall positions (author judgement) | Gulf Oil Lubricants India: Scaling (early, lower confidence); Castrol India: Scaling (moderate confidence); optional third comparator omitted | Nilotpal
+2026-10-15 | C1 closest attention (author judgement) | Gulf Oil Lubricants India; supporting signals: AI in sales/account support, sales talent and retail tools across E5 and E6, same commercial space as top three, builds on A3 channel-data lead; Castrol more certain but supply-chain centred | Nilotpal
+2026-10-15 | C1 change triggers (author judgement) | Raise Gulf: AI-specific hiring or dedicated AI line in next annual report; lower: evidence tools remained pilots | Nilotpal
+2026-10-15 | C1 section | drafts/C1.md approved as drafted (274/350) | Nilotpal
+2026-10-15 | C2 force choice | Author judgement: threat of substitutes is the force changing most because of AI; P4 (Priority 1) responds best; buyer power named as close second with P2 as response. | Nilotpal
+2026-10-15 | C2 favourable side (substitutes) | Author judgement: Yes - incumbent performance data and OEM approvals support better AI-enabled services than app-only entrants. Other force ratings as in author input template. | Nilotpal
+2026-10-15 | C2 approval | Author approved C2 as drafted (table in drafts/C2_table.md; answer 122/200). | Nilotpal
+2026-10-16 | C3 | P4 position Lead (moat High, risk High/clear rules: commercial and contract liability not regulatory, readiness Medium; SME sign-off contains risk) | Nilotpal
+2026-10-16 | C3 | P3 readiness Low (overrides input Medium; consistent with B2 Process Low); position Wait | Nilotpal
+2026-10-16 | C3 | P2 position Fast follow (moat High, risk Medium, readiness Medium) | Nilotpal
+2026-10-16 | C3 | Section approved as drafted (rationales 45/42/48 words, cap 50 each) | Nilotpal
+2026-10-16 | C4 selected opportunity | P4 (Priority 1) selected for the moat test | Nilotpal
+2026-10-16 | C4 conclusion | Partial/conditional (changed from Defensible: closed loop is proposed, not built) | Nilotpal
+2026-10-16 | C4 approval | C4 draft approved as drafted (246/250 words) | Nilotpal
+2026-10-16 | G6 | Part C (C1-C4) accepted as drafted (Part C portion of the combined G6+G7 gate; G7 / Part D still to be approved); changes: none | Nilotpal
 </decision_log>
 
 <k_register>
@@ -189,6 +216,10 @@ B1|none (one row per opportunity)|table only|2026-10-13
 B2|50 per opportunity (rationale columns)|49; 44; 46; 43; 45|2026-10-13
 B3|300|280|2026-10-13
 B4|250|201|2026-10-13
+C1|350 (incl. table cells)|274|2026-10-15
+C2|200 (answer after table)|122|2026-10-15
+C3|150 (3 rationales, 50 each)|135 (45/42/48)|2026-10-16
+C4|250|246|2026-10-16
 </word_counts>
 
 <change_log>
@@ -209,4 +240,11 @@ B4|250|201|2026-10-13
 2026-10-13 | B2 drafted; author reclassified P3 Quick Win -> Strategic Bet after QA conflict (Process Low); delta QA 0 blocking, 1 warning (P4 Quick Win on Medium dependency, explicit rationale given in row); approved; classifications written to portfolio
 2026-10-13 | B3 drafted (280/300); delta QA 0 blocking, 1 carried warning (P4); approved; ranks written to portfolio. Top three changed from G3 provisional (dependency map: top three -> B4, C3, C4, D1 onward; none yet drafted)
 2026-10-13 | B4 drafted (201/250); delta QA 0 blocking, 1 carried warning (P4); approved. All Part B sections approved; G4+G5 combined gate not recorded as approved
-2026-10-13 | G4+G5 approved by author with no changes; no sections re-opened; stage moved to G6+G7</change_log>
+2026-10-13 | G4+G5 approved by author with no changes; no sections re-opened; stage moved to G6+G7
+2026-10-15 | C1 §1b signal findings filled in build/g6_author_input_template.md from author research; four author decisions recorded (A3 not re-opened; E2 excluded from C1; Castrol single-source caveat; E9 grouping). Overall positions for Gulf and Castrol still awaiting author confirmation; evidence register not yet written for E4-E10 (pending C1 draft)
+2026-10-15 | C1 drafted (274/350; two comparators, optional third omitted); approved by author with positions as drafted. Evidence E4-E10 and figure F8 added (no ID collisions); C1 judgements recorded
+2026-10-15 | C2 drafted and approved (answer 122/200; table split to drafts/C2_table.md, cap exempt as for A2/B1). E2 and E3 Used_in extended to C2. P2 name aligned to ledger. Verbatim_reuse hit is the worksheet question (kept by policy).
+2026-10-16 | C3 drafted, QA clean, approved by author
+2026-10-16 | C4 drafted and approved (P4; Partial/conditional); decision_log and word_counts updated. G6 not yet approved.
+2026-10-16 | G6 approved by author with no changes; no sections re-opened; stage moved to G7 (Part D)
+</change_log>
