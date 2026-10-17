@@ -177,6 +177,7 @@ E10|bp press release: agreement to sell 65% of Castrol to Stonepeak|bp plc|2025-
 2026-10-16 | C4 conclusion | Partial/conditional (changed from Defensible: closed loop is proposed, not built) | Nilotpal
 2026-10-16 | C4 approval | C4 draft approved as drafted (246/250 words) | Nilotpal
 2026-10-16 | G6 | Part C (C1-C4) accepted as drafted (Part C portion of the combined G6+G7 gate; G7 / Part D still to be approved); changes: none | Nilotpal
+2026-10-16 | D2 collection treatment (author instruction) | Author selected anonymised tasks, illustrative frequencies and proposed classifications for the G7 input template. This approves preparation of proposals only, not their correctness or adoption as final author judgements; D1 role choice and D2 approval remain open | Nilotpal
 </decision_log>
 
 <k_register>
@@ -247,4 +248,6 @@ C4|250|246|2026-10-16
 2026-10-16 | C3 drafted, QA clean, approved by author
 2026-10-16 | C4 drafted and approved (P4; Partial/conditional); decision_log and word_counts updated. G6 not yet approved.
 2026-10-16 | G6 approved by author with no changes; no sections re-opened; stage moved to G7 (Part D)
+2026-10-16 | Created build/g7_author_input_template.md at author's request: D1-D5 collection fields, 15-20-task table, approved A-C carry-ins, optional collection aids and rubric coverage. New judgements left for author; no Part D response drafted, no upstream decisions changed and G7 not approved
+2026-10-16 | Merged 20 anonymised attachment tasks into the G7 collection table, omitting internal references and branded identifiers. Added event-based illustrative frequency assumptions and explicitly provisional classifications, rationale and boundaries with author consent. Preserved evidence limitations; no linked internal source accessed, no frequency asserted as an observed fact, no final D2 judgement adopted and no gate passed. D1 role confirmation and compound-task granularity remain for author review
 </change_log>
