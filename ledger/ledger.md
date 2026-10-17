@@ -11,7 +11,7 @@ description: Single shared reference record for Assignment 3. Written only by th
 
 <status>
 version: 0.1 (build stage)
-stage: G7 (Part D) next; G4+G5 and G6 approved
+stage: G8 (assembly) next; G4+G5 and G6+G7 approved
 deadline: 2026-10-15
 last_updated: 2026-10-13
 </status>
@@ -67,7 +67,7 @@ F1|50,000|accounts|Scale of production rule-based customer analytics module|docu
 F2|1,500|churned-account records|Usable records in one pilot market|documented|A1-038|B1
 F3|2,000–3,000|sales hours per year|Order-status opportunity release estimate|estimate|A1-005|B1
 F4|1,000 to 5,000|prospects per batch|Lead-generation pilot input volume|documented|A1-011|B1
-F5|10–15%|conversion uplift|Sector-matched value-case hypothesis vs prior-year baseline; unproven|estimate|A1-006|B1
+F5|10–15%|conversion uplift|Sector-matched value-case hypothesis vs prior-year baseline; unproven|estimate|A1-006|B1, D3
 F6|25|analyst-days per request|LT evidence-pack current cycle time|estimate|A2-001|B1
 F7|15|analyst-days|LT evidence-pack target first validated draft; not achieved|estimate|A2-010|B1
 F8|43,000+|users|Castrol India GenAI WhatsApp support chatbot users (comparator, external)|documented|E4|C1
@@ -76,6 +76,8 @@ F8|43,000+|users|Castrol India GenAI WhatsApp support chatbot users (comparator,
 <assumptions>
 # AssID|Statement|Basis|Label(assumption/estimate/hypothetical)
 AS1|The function has an estimated 20-25 core sales and marketing excellence processes to document|Author estimate (G4 input, 2026-10-11)|estimate
+AS2|About 40% of Sales Account Manager time goes on administrative work, mostly information search|Author estimate from sales manager interviews (G7 input, 2026-10-17)|estimate
+AS3|D2 task frequency categories (High/Medium/Low) are event-based, not shares of role time|Author estimate from sales manager interviews (G7 input, 2026-10-17)|estimate
 </assumptions>
 
 <evidence>
@@ -178,6 +180,28 @@ E10|bp press release: agreement to sell 65% of Castrol to Stonepeak|bp plc|2025-
 2026-10-16 | C4 approval | C4 draft approved as drafted (246/250 words) | Nilotpal
 2026-10-16 | G6 | Part C (C1-C4) accepted as drafted (Part C portion of the combined G6+G7 gate; G7 / Part D still to be approved); changes: none | Nilotpal
 2026-10-16 | D2 collection treatment (author instruction) | Author selected anonymised tasks, illustrative frequencies and proposed classifications for the G7 input template. This approves preparation of proposals only, not their correctness or adoption as final author judgements; D1 role choice and D2 approval remain open | Nilotpal
+2026-10-17 | D1 role | Sales Account Manager selected as the role materially affected by P4 (Priority 1) | Nilotpal
+2026-10-17 | D1 40% figure | "Administrative" wording; 40% labelled as author estimate from sales manager interviews (AS2) | Nilotpal
+2026-10-17 | D1 approval | D1 approved as drafted (155/200) | Nilotpal
+2026-10-17 | D2 frequency basis | High/Medium/Low frequency categories are author estimates from sales manager interviews (AS3), event-based not shares of role time | Nilotpal
+2026-10-17 | D2 task 6 | Why text rewritten; classification kept Irreducibly human | Nilotpal
+2026-10-17 | D2 Why texts | Tasks 3, 8, 9, 18 tightened; "Authorised" wording adopted | Nilotpal
+2026-10-17 | D2 compound tasks | Tasks 2, 19, 20 kept whole (not split) | Nilotpal
+2026-10-17 | D2 approval | D2 approved as drafted (20 rows; 7 Irreducibly human, 13 Augmentable, 0 Automatable) | Nilotpal
+2026-10-17 | D3 row mapping | Routine row = steps within D2 tasks 1, 7, 8, 9, 11, 14, 18 (no whole task Automatable); Augmentable row = tasks 3, 4, 5, 10, 12, 13; Irreducibly human row = tasks 2, 6, 15, 16, 17, 19, 20 | Nilotpal
+2026-10-17 | D3 success-measure target | Reuse F5 (10–15%) for the three conversion/success measures, labelled author target and unproven | Nilotpal
+2026-10-17 | D3 capacity reality check | Freed time partly offset by verification (tasks 7, 8, 11), SME escalation (15, 16), training, rework and repository upkeep; net capacity unquantified; D1 share is current effort, not saving; no headcount change | Nilotpal
+2026-10-17 | D3 approval | D3 approved as drafted (291/300); closing answer: AI as research assistant, not decision-maker | Nilotpal
+2026-10-17 | D4.1 role | AI Product Managers; AI Systems Engineers as supporting need (author judgement) | Nilotpal
+2026-10-17 | D4.1 sourcing | Build internally: certify existing product owners; allocate internal AI Systems Engineers (author judgement) | Nilotpal
+2026-10-17 | D4.2 framework | Accenture Transition-Stage; author text overrides Deloitte tick in input template (author judgement) | Nilotpal
+2026-10-17 | D4.2 structural change | Hub-and-spoke: certified product owners embedded in Sales, drawing on group AI CoE; no new silo (author judgement) | Nilotpal
+2026-10-17 | D4 approval | D4 approved as drafted (199/200 words) | Nilotpal
+2026-10-17 | D5 task mapping | Inside frontier: D2 tasks 1, 4, 5, 7 (retrieval only), 9, 11, 14; human judgement: 2, 6, 7, 10, 13, 15, 16, 17, 19 (author judgement) | Nilotpal
+2026-10-17 | D5 thresholds | Justify: 20-40% end-to-end SLA reduction with SME rating >=4/5; redesign: <20% with rating <3/5; ratings 3-4 or mixed results inconclusive, extend trial (author judgement) | Nilotpal
+2026-10-17 | D5 trial design | 10 anonymised or synthetic enquiries per condition, matched difficulty, rotated, one SME scoring blind to condition; plan only (author judgement) | Nilotpal
+2026-10-17 | D5 approval | D5 approved as drafted | Nilotpal
+2026-10-17 | G7 | Part D (D1-D5) accepted as drafted (completes the combined G6+G7 gate); changes: none | Nilotpal
 </decision_log>
 
 <k_register>
@@ -204,7 +228,7 @@ K18|Page-citation policy. Use inferred form-feed page numbers when PDF page labe
 </k_register>
 
 <open_questions>
-- Sales role for Part D and the 15-20 real tasks (G5); K17 keeps the Commercial Strategy Analyst role open as an option
+- [Closed 2026-10-17 by author: settled in approved D1/D2] Sales role for Part D and the 15-20 real tasks (G5); K17 keeps the Commercial Strategy Analyst role open as an option
 </open_questions>
 
 <word_counts>
@@ -221,6 +245,11 @@ C1|350 (incl. table cells)|274|2026-10-15
 C2|200 (answer after table)|122|2026-10-15
 C3|150 (3 rationales, 50 each)|135 (45/42/48)|2026-10-16
 C4|250|246|2026-10-16
+D1|200|155|2026-10-17
+D2|none (15-20 rows)|20 rows|2026-10-17
+D3|300|291|2026-10-17
+D4|200|199|2026-10-17
+D5|300|268|2026-10-17
 </word_counts>
 
 <change_log>
@@ -250,4 +279,12 @@ C4|250|246|2026-10-16
 2026-10-16 | G6 approved by author with no changes; no sections re-opened; stage moved to G7 (Part D)
 2026-10-16 | Created build/g7_author_input_template.md at author's request: D1-D5 collection fields, 15-20-task table, approved A-C carry-ins, optional collection aids and rubric coverage. New judgements left for author; no Part D response drafted, no upstream decisions changed and G7 not approved
 2026-10-16 | Merged 20 anonymised attachment tasks into the G7 collection table, omitting internal references and branded identifiers. Added event-based illustrative frequency assumptions and explicitly provisional classifications, rationale and boundaries with author consent. Preserved evidence limitations; no linked internal source accessed, no frequency asserted as an observed fact, no final D2 judgement adopted and no gate passed. D1 role confirmation and compound-task granularity remain for author review
+2026-10-17 | G7 run started (G6 approved). Template reviewed; agent proposals added (collection aids, D2 task numbers for D3/D5, typo fixes), marked as proposals. D1 drafted (155/200) and approved by author; delta QA run after approval: tag on 40% sentence moved to that sentence (no wording change), AS2 added; 0 blocking, 1 carried warning (P4)
+2026-10-17 | D2 drafted (20 rows) with author judgements on frequency basis, task 6, Why-text tightening and compound tasks; AS3 added; delta QA 0 blocking, 1 carried warning (P4); approved by author
+2026-10-17 | D3 drafted with D2 task numbers mapped by agent proposal and accepted by author; trimmed 332->291; delta QA 0 blocking, 1 carried warning (P4); approved by author; F5 used_in extended to D3
+2026-10-17 | D4 drafted (role, sourcing, Accenture framework, hub-and-spoke change), QA clean, approved by author; decision_log and word_counts updated
+2026-10-17 | D5 drafted (three-condition experiment plan, 10 cases per condition, blind SME scoring, D2 task mapping, inconclusive band) and approved by author; 268/300 words; QA 0 blocking
+2026-10-17 | Part D delta QA: 0 blocking, 1 pre-existing warning (P4 Quick Win/Medium dependency). G7 approved by author.
+2026-10-17 | G7 approved by author with no changes (formal row replaces informal G7 row written at end of G7 run); no sections re-opened; stage moved to G8 (assembly)
+2026-10-17 | G8 run: approved drafts assembled (build/assemble.py; evidence tags as (En), course-note tags as (course notes, Module n), internal tags removed, worksheet titles verbatim, no wording changed) and rendered to build/A3_assembled.pdf (13 pp) and build/A3_main_body.pdf (11 pp, 6,672 words; max 20, recommended 16-20). Full audit in build/g8_audit_report.md: 0 blocking, 5 warnings (W1 page count below recommended; W2 A3/C1 Gulf wording; W3 B3 vs B4/C3/C4 governance wording; W4 E3 used_in omits C1; W5 P4 carried). Draft AI-use fact sheet build/g8_ai_use_facts.md. G8 not approved
 </change_log>

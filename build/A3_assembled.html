@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Assignment 3</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">@page { size: A4; margin: 15mm 14mm 16mm 14mm; }body { font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.3; color: #111; max-width: none; margin: 0; padding: 0; }h1 { font-size: 15pt; margin: 0 0 2pt 0; }h2 { font-size: 13pt; margin: 12pt 0 4pt 0; border-bottom: 1px solid #888; }h3 { font-size: 11.5pt; margin: 9pt 0 3pt 0; break-after: avoid; }h4 { font-size: 10.5pt; margin: 6pt 0 2pt 0; break-after: avoid; }p { margin: 3pt 0 4pt 0; }table { border-collapse: collapse; width: 100%; font-size: 9pt; line-height: 1.22; margin: 4pt 0 6pt 0; }th, td { border: 1px solid #999; padding: 2pt 3pt; vertical-align: top; overflow-wrap: break-word; }td a { word-break: break-all; }th { background: #e8e8e8; }thead { display: table-header-group; }tr { break-inside: avoid; }ul { margin: 2pt 0; padding-left: 16pt; }.pagebreak { break-before: page; }header#title-block-header { display: none; }</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Assignment 3</h1>
+</header>
+<h1 id="assignment-3-ai-opportunity-portfolio-with-maturity-assessment-competitive-analysis-and-workforce-impact-scan">Assignment
+3: AI Opportunity Portfolio with Maturity Assessment, Competitive
+Analysis, and Workforce Impact Scan</h1>
+<p>Nilotpal Choudhury | AIBP Course 3</p>
+<h2 id="part-a-organisational-ai-maturity-assessment---25-marks">Part A:
+Organisational AI Maturity Assessment - 25 marks</h2>
+<h3 id="a1-define-the-assessment-scope-and-evidence-base---3-marks">A1.
+Define the assessment scope and evidence base - 3 marks</h3>
+<p><strong>Assessment scope:</strong> Function.</p>
+<p><strong>Organisation / context label:</strong> Strategy &amp;
+Analytics, Global Lubricants Sales &amp; Marketing (integrated energy
+major, anonymised). The assessment covers the function&#39;s sales-related
+workflows, including the leadership-team evidence pack that supports
+Sales &amp; Marketing decisions.</p>
+<p><strong>Why this is an appropriate scope for you to assess:</strong>
+I lead the Strategy &amp; Analytics division, which builds reporting and
+analytics tools for the function and supports its five-year digital
+roadmap. This gives me a cross-divisional view of sales workflows and
+stakeholder pain points, but not of the wider enterprise.</p>
+<p><strong>Primary evidence available:</strong> Direct operational
+knowledge, including a rule-based customer analytics module in
+production; recurring discussions with more than ten stakeholders across
+divisions; workflow evidence from Assignments 1 and 2; the Course 3
+Module 1 maturity framework (course notes, Module 1); public sources,
+used only for benchmarking. Colleague ratings: Not evidenced.</p>
+<p><strong>Important evidence limitations:</strong> Ratings rest on one
+vantage point, my observation and conversations, not a cross-functional
+assessment; some detail cannot be shared. Divisional performance data is
+not readily available, so value estimates use stated industry
+heuristics. Enterprise capabilities (cloud, cybersecurity, compliance)
+count only where they reach the function. No energy-sector maturity
+baseline is available to me.</p>
+<h3 id="a2-six-dimension-ai-maturity-assessment---14-marks">A2.
+Six-Dimension AI Maturity Assessment - 14 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Sub-dimensions taught in Course 3</th>
+<th>Rating H/M/L</th>
+<th>Evidence / indicators</th>
+<th>Most material gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology</td>
+<td>Infrastructure; integration; technical debt</td>
+<td>Medium</td>
+<td><strong>Infrastructure:</strong> enterprise Azure Data Lake (ADLS),
+with contracted compute available on request.
+<strong>Integration:</strong> SAP data increasingly streamed to ADLS and
+API links built per project, yet order status is still checked manually
+across SAP, logistics and credit systems. <strong>Technical
+debt:</strong> many dashboard products lack a clear long-term
+owner.</td>
+<td>Build-for-release delivery: many DIY and IT teams ship products with
+little attention to sustainability, so adoption collapses when an owner
+or sponsor moves and unused solutions complicate portfolio
+rationalisation. Some lead-time fields sit outside the current SAP
+extract.</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Quality; accessibility; strategic value</td>
+<td>Medium</td>
+<td><strong>Quality:</strong> SAP transactions captured at source for
+over a decade, so transactional error rates are low.
+<strong>Accessibility:</strong> platform teams reach data through ADLS,
+with near-real-time SAP feeds growing; business users building their own
+tools struggle. <strong>Strategic value:</strong> churn signals are
+transaction-only, with roughly 1,500 usable churned accounts in one
+pilot market.</td>
+<td>Meaning rather than volume: SAP master data no longer reflects how
+the business segments customers, so manual tags and SharePoint labels
+drive analysis. History carries no event labels for global or
+country-level shocks, limiting ML use, and no churn definition is signed
+off or owned. Low strategic value offsets good quality and access.</td>
+</tr>
+<tr>
+<td>Talent</td>
+<td>Skills inventory; learning culture; leadership capability</td>
+<td>Low</td>
+<td><strong>Skills inventory:</strong> frontline teams are strong in
+Excel-based performance reporting; data science sits in narrow roles,
+and delivery relies on 2–3 part-time analysts. <strong>Learning
+culture:</strong> regular central learning sessions exist but are
+business-focused, so business teams&#39; digital literacy trails IT and data
+science. <strong>Leadership capability:</strong> across several
+projects, ML limits and data-governance needs are underestimated and
+deployed solutions are assumed to need little upkeep.</td>
+<td>Narrow role scopes limit end-to-end capability: data science remains
+notebook-centric, with little MLOps practice on the existing Databricks
+platform.</td>
+</tr>
+<tr>
+<td>Process</td>
+<td>Standardisation; documentation; automation baseline</td>
+<td>Low</td>
+<td><strong>Documentation:</strong> the ESSA framework (Eliminate,
+Simplify, Standardise, Automate) and process documents exist but lack
+governance and accountability. <strong>Standardisation:</strong>
+order-status and customer updates are manual and inconsistent;
+complaint-email capture runs against an unmonitored SLA.
+<strong>Automation baseline:</strong> one governed rule-based churn
+workflow in production is the exception.</td>
+<td>No structured process ownership or governance, so documentation
+drifts from practice and processes stay unstandardised. Automation built
+on them cannot perform consistently or last, which materially blocks
+scaling AI beyond isolated cases.</td>
+</tr>
+<tr>
+<td>Culture</td>
+<td>Experimentation tolerance; data-driven decisions; cross-functional
+collaboration; visible leadership commitment</td>
+<td>Medium</td>
+<td><strong>Experimentation:</strong> innovation is encouraged in
+principle. <strong>Data-driven decisions:</strong> teams want analysis
+grounded in data and CRM engagement capture is mandated, but adoption is
+uneven. <strong>Collaboration:</strong> data is shared reluctantly;
+Finance and line functions (Sales, Supply Chain) present the same data
+differently. <strong>Leadership commitment:</strong> Not evidenced
+beyond stated intent.</td>
+<td>Low trust in shared numbers: without common definitions, dashboards
+serve leadership reporting rather than insight, and teams revert to
+their own dashboards or SAP extracts. Functions have little incentive to
+back a central definitions layer, so stated intent outruns observed
+practice.</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Documented AI/data policies; ethics/risk review; clear
+accountability; incident response and monitoring</td>
+<td>Medium</td>
+<td><strong>Ethics/risk review and monitoring:</strong> enterprise
+cybersecurity and ethics and compliance mechanisms are robust and
+enforced. <strong>Documented policies:</strong> a data governance
+council covers transaction data, not the broader signal set.
+<strong>Accountability:</strong> named data-owner roles proposed;
+appointment pending. <strong>AI-specific policy and incident
+response:</strong> Not evidenced.</td>
+<td>Weak data and process governance inside the function: no review
+forum for new signals, and lead-generation pilot governance did not
+outlast its sponsor. Solutions go stale because data or process changes
+are not fed back into design.</td>
+</tr>
+<tr>
+<td><strong>Overall readiness</strong></td>
+<td>All six dimensions</td>
+<td><strong>Low</strong></td>
+<td>Talent and Process are both Low; under the weakest-dimension rule,
+readiness is capped by the weakest dimension rather than lifted by
+stronger Technology and Data (course notes, Module 1).</td>
+<td>Talent and Process.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which rating are you least confident about, and what
+additional evidence would you need to validate or change
+it?</strong></p>
+<p>Talent (Low). The rating rests on conversations with the stakeholders
+cited in A1 rather than a skills inventory or survey, so it may reflect
+the teams I work with most rather than the whole function. Because
+production work today is mostly dashboards, latent capability is hard to
+observe. Three pieces of evidence would confirm or change it: a simple
+skills and AI-literacy inventory across divisions; whether the frontline
+teams and leaders who receive deployed ML outputs can interpret them and
+act independently; and an independent six-dimension rating by a
+colleague outside my division, compared with mine. Even if Talent moved
+to Medium, Process (Low) would keep overall readiness at Low.</p>
+<h3 id="a3-industry--peer-benchmark---4-marks">A3. Industry / peer
+benchmark - 4 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Benchmark source / peer</th>
+<th>What the evidence suggests about AI readiness</th>
+<th>Dimension(s) most relevant</th>
+<th>Implication for your context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NASSCOM, AI Adoption Index 2.0 (2024): India cross-sector baseline
+(E1)</td>
+<td>Aggregate score 2.47 on a four-point scale, at the Enthusiast stage;
+data standardisation and AI risk frameworks improving; use-case
+selection and execution discipline still weak (E1).</td>
+<td>Process; Data; Governance</td>
+<td>On par on Data and Governance; our Low Process mirrors the
+sector-wide execution gap, so it is a shared constraint, not a peer
+disadvantage. National cross-sector index, not energy-specific.</td>
+</tr>
+<tr>
+<td>Gulf Oil Lubricants India, Annual Report FY2025-26 (2026): domestic
+lubricants peer (E2)</td>
+<td>Salesforce CRM, SAP S/4HANA Cloud and IBP, an enterprise data lake
+and Power BI dashboards giving real-time sales and channel visibility;
+early steps to embed AI and machine learning; AI-enabled sales-talent
+programme (E2).</td>
+<td>Technology; Data; Talent</td>
+<td>On par on Technology; behind on customer-facing channel data and on
+structured sales-talent development. Structured AI execution not
+evidenced.</td>
+</tr>
+<tr>
+<td>Castrol (bp), Castrol turns 125 (2024): global lubricants peer
+(E3)</td>
+<td>Names end-to-end digital and service solutions and data-centre
+cooling as growth areas; AI readiness not disclosed (E3).</td>
+<td>Technology</td>
+<td>No basis for an AI-readiness comparison.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Absolute versus relative position:</strong> Absolute: Talent
+and Process, rated Low in A2, cap our readiness at Low whatever peers
+do. Relative: we are broadly on par on Technology, Data and Governance
+but behind Gulf on channel data and sales talent; Culture is not
+evidenced against any comparator. Implication: closing the Process and
+Talent gaps matters more than matching peer technology.</p>
+<h3 id="a4-weakest-dimension-diagnosis-and-readiness-priorities---4-marks">A4.
+Weakest-dimension diagnosis and readiness priorities - 4 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Why it matters</th>
+<th>Which opportunities it could block</th>
+<th>Priority intervention</th>
+<th>Evidence that it has improved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Process (Low): standardisation and
+documentation</strong></td>
+<td>Without documented processes, end-user journeys cannot be mapped, so
+solutions draw on the wrong sources or sequence, stakeholders dispute
+insights, and platforms are never embedded in sales and marketing work.
+Documentation also underpins process governance.</td>
+<td>Explainable lead-generation research; LT evidence-pack workflow</td>
+<td>Empower Process Excellence to document, with frontline teams, the
+core sales and marketing excellence processes (an estimated 20–25) in
+one controlled repository: the single source of truth for process
+improvement and digital initiatives.</td>
+<td>Repository reviewed periodically, certified by the Head of Process
+Excellence, and used as the baseline for all sales user journeys.</td>
+</tr>
+<tr>
+<td><strong>2. Data (Medium): no owned data definitions</strong></td>
+<td>Without standard definitions, data cannot be reused as common data
+products across platforms; duplicated sources multiply, weakening
+governance and trust in shared numbers.</td>
+<td>Churn early warning; order-status/lead-time exception visibility;
+sector-matched value cases, including agreed benefit estimates</td>
+<td>Appoint a Data Owner to work with Process Excellence and solution
+and data architects to define the primary transactional sources behind
+most current dashboards.</td>
+<td>Standards held in one repository, required in Software Architecture
+High-Level Designs (SAHLD) and used in practice.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why Talent (Low) is not a separate constraint:</strong> Clear
+process and data standards help people understand and use data with
+confidence, so these two interventions are the most concrete route to
+upskilling the function.</p>
+<h2 id="part-b-ai-opportunity-portfolio-and-sequencing---30-marks">Part
+B: AI Opportunity Portfolio and Sequencing - 30 marks</h2>
+<h3 id="b1-build-a-5-7-opportunity-portfolio---10-marks">B1. Build a 5-7
+opportunity portfolio - 10 marks</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Opportunity / business problem</th>
+<th>Function / workflow</th>
+<th>AI pattern</th>
+<th>Primary value mechanism</th>
+<th>Critical readiness dependency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><strong>Churn early warning.</strong> The production rule-based
+module covers about 50,000 accounts but flags churn only after two years
+of falling volume, so account plans react too late.</td>
+<td>Sales account management and retention: account managers, with
+customer operations handling lighter-touch outreach</td>
+<td>Hybrid: traditional ML (supervised classification) detects early
+risk signals; GenAI turns flagged accounts into briefs for account
+managers</td>
+<td>Risk: gross margin protected through earlier intervention on at-risk
+accounts; protected margin, not new revenue</td>
+<td>Data: no owned churn definition; signals are transaction-only, with
+uneven CRM notes and complaints held in email; a single pilot market
+holds roughly 1,500 churned-account records fit for training</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><strong>Order-status / lead-time exception visibility.</strong> No
+single reliable view of order status and inventory across SAP, logistics
+and credit systems; daily checks are manual, customer updates
+inconsistent and business is lost when lead times shift.</td>
+<td>Sales order-to-delivery customer updates: sales and customer
+service, with supply chain and logistics</td>
+<td>Hybrid: rules/automation roll up status and flag exceptions;
+traditional ML (regression and classification) predicts lead-time shifts
+and delay risk</td>
+<td>Cost: an estimated 2,000–3,000 sales hours a year released from
+manual follow-up; fewer missed delivery expectations</td>
+<td>Data: over five years of SAP order history, but route, location,
+segment and logistics-network fields are undefined or outside the SAP
+extract, with no named owner</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><strong>Explainable lead-generation research.</strong> A GenAI pilot
+researches 1,000 to 5,000 event and channel prospects per batch, but its
+likelihood-to-buy ranking rests wholly on model judgement that sales
+cannot defend.</td>
+<td>Marketing Intelligence prospect research feeding sales
+follow-up</td>
+<td>Hybrid: GenAI for public-source research, summarisation and taxonomy
+mapping; written scoring rules over fixed features give the
+High/Medium/Low prospect grade; supervised ML once outcomes are
+logged</td>
+<td>Revenue: a better-qualified pipeline and reproducible, defensible
+prioritisation; fewer sales hours spent on mis-graded prospects.
+Quantified value: Not evidenced</td>
+<td>Process: pilot never commissioned; no sector taxonomy; prompts held
+by one data scientist with no versioned repository or review forum</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><strong>Sector-matched value cases.</strong> Testimonials, reference
+cases and quantified technical evidence are fragmented and hard to match
+to a customer&#39;s sector, so value propositions stay generic and slow to
+build.</td>
+<td>Sales proposal and value-case preparation for B2B deals</td>
+<td>Hybrid: traditional ML (BERT-family text classifiers) tags evidence
+by sector, application and outcome; GenAI retrieves tagged evidence and
+drafts through a conversational assistant</td>
+<td>Revenue: conversion uplift hypothesis of about 10–15% against the
+prior-year baseline, unproven until an assisted-versus-unassisted
+pilot</td>
+<td>Data: nothing links technical evidence to application, sector and
+quantified outcome; documentation patchy; no agreed benefit
+estimates</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><strong>LT evidence-pack workflow.</strong> Leadership-team
+questions on macroeconomic and geopolitical sensitivity need an
+evidence-backed point of view; analysts research manually, at about 25
+analyst-days per request.</td>
+<td>Commercial Strategy evidence packs for Global Sales &amp; Marketing
+leadership decisions (Commercial Strategy Analysts)</td>
+<td>Hybrid: read-only agentic GenAI plans research, retrieves from
+allowlisted sources and drafts; deterministic queries and traditional ML
+supply figures; human release gate</td>
+<td>Cost and speed: target first validated draft in about 15 rather than
+25 analyst-days (a target, not achieved); better-evidenced leadership
+decisions</td>
+<td>Process: intake, research and review steps not documented as a
+controlled process; release depends on analyst validation and manager
+approval</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b2-classify-quick-wins-strategic-bets-and-moonshots---8-marks">B2.
+Classify Quick Wins, Strategic Bets and Moonshots - 8 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Opportunity</th>
+<th>Classification</th>
+<th>Readiness rationale</th>
+<th>Time / uncertainty rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Churn early warning</td>
+<td>Moonshot</td>
+<td>A rule-based module exists but covers one market, with almost no
+data governance; at 1–2% annual churn, a genuine training set needs
+mapped historical losses plus qualitative attributes.</td>
+<td>New attributes need engineering and labelling, so training-data
+timing, and a global build beyond 12–15 months, is highly
+uncertain.</td>
+</tr>
+<tr>
+<td>2. Order-status / lead-time exception visibility</td>
+<td>Strategic Bet</td>
+<td>Data (Medium): missing logistics-network attributes can be sourced
+per market from third-party or transporter data in 6–9 months; selecting
+the delay-prediction model takes a further 6–9 months.</td>
+<td>Third-party extraction is now low-complexity, so a mature-market
+release within 12–15 months is predictable.</td>
+</tr>
+<tr>
+<td>3. Explainable lead-generation research</td>
+<td>Strategic Bet</td>
+<td>Technology is ready: web-search tooling, curated datasets and
+partner IT retrieval skills exist, and H/M/L rules are simple. Process
+is Low: taxonomy, versioned prompts and governance must first be built
+through functional Excellence teams.</td>
+<td>Technical risk is low; timing depends on establishing process
+ownership, not engineering.</td>
+</tr>
+<tr>
+<td>4. Sector-matched value cases</td>
+<td>Quick Win</td>
+<td>Data (Medium) is mostly in place: source documents exist, though
+fragmented, and SMEs add bridging knowledge assets. An augmented
+assistant with front-end vetting keeps people in control, so remaining
+gaps do not block release.</td>
+<td>No significant technical hurdles; deployment within 3–6 months.</td>
+</tr>
+<tr>
+<td>5. LT evidence-pack workflow</td>
+<td>Strategic Bet</td>
+<td>Reuses the lead-generation web-search capability, but needs data
+governance for explainable financial predictions, orchestrated tool
+hand-offs and trained human-in-the-loop validators; Process is Low.</td>
+<td>Orchestration, regression accuracy and human-in-the-loop capability
+take time; with a monthly cycle, learning extends beyond 12 months, so
+uncertainty is relatively high.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b3-sequence-the-portfolio-and-select-the-top-three---8-marks">B3.
+Sequence the portfolio and select the top three - 8 marks</h3>
+<p>Sequencing logic: impact weighed against readiness and
+capability.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Priority</th>
+<th>Opportunity</th>
+<th>Why this should move now / next</th>
+<th>Readiness condition or dependency</th>
+<th>What would change the priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Sector-matched value cases</td>
+<td>Visible, frequent use across sales teams; the smallest
+data-readiness gap; source content changes rarely, so little immediate
+governance effort is needed.</td>
+<td>A version-controlled knowledge repository with named content
+owners.</td>
+<td>Existing documentation proves poor or incomplete; or a full
+product-portfolio revamp makes the content obsolete.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Explainable lead-generation research</td>
+<td>The main gap, governance, can be agreed within a quarter. It follows
+value cases because batches run less often, so it builds trust in AI
+more slowly.</td>
+<td>Prompts, taxonomy and scoring rules under version control, owned by
+a named Marketing Intelligence product owner.</td>
+<td>Prompt designs vary so much by industry sector that standardisation
+fails, leaving ad hoc use rather than a governed platform.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Order-status / lead-time exception visibility</td>
+<td>Cuts the order-update fire-fighting that absorbs sales and
+customer-operations time, freeing it for revenue conversations.</td>
+<td>A cleaned, integrated delivery-level dataset with logistics-network
+attributes, covering six months per target market.</td>
+<td>If order, despatch and credit-block timestamps cannot be joined into
+one record, the prediction layer fails and the use case reverts to a
+reporting view rather than AI.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Balance:</strong> Value cases deliver early, visible impact
+and build confidence in AI. Lead generation and order status are
+capability builds that create the process standards and owned data
+definitions identified as the two binding constraints in A4. Churn early
+warning and the LT evidence pack are held back as options, not dropped:
+they reuse these foundations (governed data products; web-search tooling
+and process governance) once their triggers are met.</p>
+<h3 id="b4-cross-functional-compound-value-check---4-marks">B4.
+Cross-functional compound-value check - 4 marks</h3>
+<p><strong>Selected opportunity:</strong> Sector-matched value cases
+(Priority 1).</p>
+<p><strong>Upstream function / AI output it depends on:</strong> Product
+and technical teams supply well-defined technical literature, customer
+success stories, equipment-specific recommendation guidelines and
+product performance analysis, including entry, mainstream and premium
+tier positioning and the machine-performance reasons to move up a tier.
+The AI-tagged evidence library built from this content is the upstream
+output the assistant relies on.</p>
+<p><strong>Downstream function / decision it affects:</strong> Sales
+teams&#39; choice of the right lubricant for a customer&#39;s equipment, and
+their wallet-expansion offers.</p>
+<p><strong>How value could compound:</strong> Once reliable, the
+conversational assistant could evolve into a customer self-service offer
+for routine queries, freeing scarce technical experts for complex
+problem-solving and for curating the knowledge that improves the
+assistant further.</p>
+<p><strong>How error or bias could propagate:</strong> If the knowledge
+repository is not version-controlled, the assistant may recommend
+withdrawn, discontinued or superseded products. That error passes
+straight into customer conversations, risking brand erosion and, at
+worst, lost tenders or product-performance liabilities.</p>
+<p><strong>Control / hand-off needed:</strong> Product or usage
+recommendations returned with low confidence are escalated to a
+subject-matter expert before reaching the customer. This depends on
+named content owners keeping the repository versioned, the readiness
+condition set in B3.</p>
+<h2 id="part-c-competitive-ai-positioning---20-marks">Part C:
+Competitive AI Positioning - 20 marks</h2>
+<h3 id="c1-five-source-competitive-intelligence-scan---8-marks">C1.
+Five-source competitive intelligence scan - 8 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Comparator</th>
+<th>Patent / R&amp;D signals</th>
+<th>AI hiring signals</th>
+<th>Product / deployment signals</th>
+<th>Corporate / regulatory filings</th>
+<th>CI / other structured intelligence</th>
+<th>Overall position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gulf Oil Lubricants India (domestic peer)</td>
+<td>Not evidenced: no attributable G06N filing; Espacenet coverage
+incomplete (E9)</td>
+<td>Not evidenced: no dated AI vacancy on LinkedIn or Indeed</td>
+<td>AI insights for account management and sales (E5) (2024); AI sales
+academy, personalised learning chatbot, AI retail tools (E6) (2025)</td>
+<td>Data lake framed as AI foundation; IT spend doubled, not AI-specific
+(E6). AI budget line, board oversight: Not evidenced</td>
+<td>AI-specific: Not evidenced; Tirex acquisition is EV charging (E8)
+(2023)</td>
+<td>Scaling (early, lower confidence)</td>
+</tr>
+<tr>
+<td>Castrol India (global major)</td>
+<td>Not evidenced: no attributable G06N filing (E9)</td>
+<td>Not evidenced: no India AI vacancy; group roles excluded</td>
+<td>AI supply-chain decisions; Kinaxis planning; GenAI WhatsApp support
+chatbot, 43,000+ users (E4) (2026)</td>
+<td>AI learning via bp platform (E4). AI budget line, board oversight:
+Not evidenced</td>
+<td>AI-specific: Not evidenced; KMS stake is aftermarket services (E7)
+(2023); bp selling 65% to Stonepeak (E10) (2025)</td>
+<td>Scaling (moderate confidence)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which comparator warrants the closest strategic attention,
+and what combination of signals supports that conclusion?</strong> Gulf
+warrants closest attention. Two consecutive annual reports describe AI
+in sales and account support, sales-talent development and retail tools
+(E5; E6), the same commercial space as our top three opportunities, and
+they build on the channel-data lead noted in A3. Castrol&#39;s signals are
+more certain but sit mainly in supply chain (E4). For both, product and
+filings signals come from the companies&#39; own annual reports, and three
+of five categories are Not evidenced, so the multiple-signal test is
+only partly met. Three of Castrol&#39;s four positive findings rest on E4
+alone, which is newer than A3&#39;s source (E3). AI-specific hiring or a
+dedicated AI line in Gulf&#39;s next annual report would raise its position;
+evidence that its tools remained pilots would lower it.</p>
+<h3 id="c2-ai-enhanced-five-forces-scan---5-marks">C2. AI-enhanced Five
+Forces scan - 5 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Force</th>
+<th>Is AI strengthening or weakening this force?</th>
+<th>Are you on the favourable side of the shift?</th>
+<th>Most important implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Barriers to entry</td>
+<td>Strengthening: incumbents hold machine and lubricant performance
+data that a new product-level entrant cannot quickly assemble</td>
+<td>Yes</td>
+<td>The barrier only protects us if that performance data is clean and
+usable</td>
+</tr>
+<tr>
+<td>Buyer power</td>
+<td>Strengthening: conversational AI lets buyers research needs and
+self-diagnose, so they rely less on our representatives</td>
+<td>No</td>
+<td>Differentiate through customer-linked or bundled solutions, not the
+product alone</td>
+</tr>
+<tr>
+<td>Supplier power</td>
+<td>Weakening: AI-enabled logistics and procurement intermediaries
+reduce dependence on traditional providers, though physical reliability
+still dominates</td>
+<td>Partly</td>
+<td>Transporters may withhold network data; those with strong data and
+integration could command a premium and raise our switching costs</td>
+</tr>
+<tr>
+<td>Threat of substitutes</td>
+<td>Strengthening: the lubricant itself is not displaced, but AI
+diagnostic apps can substitute after-sales and product-linked services;
+a global peer names digital and service solutions as a growth area
+(E3)</td>
+<td>Yes: our performance data and OEM approvals support better
+AI-enabled services than app-only entrants can offer</td>
+<td>Data quality, user experience and integration across customer
+touchpoints become core to solution design</td>
+</tr>
+<tr>
+<td>Competitive rivalry</td>
+<td>Strengthening: AI makes insight generation cheaper across domains
+and channels, raising the minimum standard; a domestic peer is investing
+in CRM, planning and BI tools (E2)</td>
+<td>No</td>
+<td>Advantage shifts to acting on insights quickly, not only producing
+them</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which one force is changing most because of AI in your
+industry, and which opportunity in Part B best responds to that
+shift?</strong> Threat of substitutes is changing most. Industrial and
+OEM customers increasingly judge suppliers on cost-effective solutions
+built from product-performance insight, and AI diagnostic tools could
+take over the after-sales advice that currently binds them to us. P4,
+sector-matched value cases (Priority 1, Quick Win), responds best. It
+turns our technical literature and customer success stories into
+sector-specific value propositions, which brings us closer to each B2B
+customer&#39;s operating needs, aligns the portfolio to them and supports
+customer-linked after-sales service that raises switching costs. Buyer
+power is a close second in the B2C segment, where self-research weakens
+our traditional marketing channels; P2, order-status / lead-time
+exception visibility (Priority 3), is the better response there because
+reliable availability across channels supports DIY and mechanic
+purchases.</p>
+<h3 id="c3-lead--follow--wait-positioning-for-the-top-three-opportunities---4-marks">C3.
+Lead / follow / wait positioning for the top three opportunities - 4
+marks</h3>
+<table>
+<thead>
+<tr>
+<th>Top-three opportunity</th>
+<th>Data moat potential</th>
+<th>Regulatory clarity / risk</th>
+<th>Organisational readiness</th>
+<th>Position</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Priority 1: Sector-matched value cases</td>
+<td>High: internal customer success stories, technical literature and
+sector insight</td>
+<td>High risk, clear rules: commercial and contract liability if a wrong
+recommendation is executed, not regulatory exposure</td>
+<td>Medium: content exists but is fragmented across sources, with no
+governance</td>
+<td>Lead</td>
+<td>Proprietary success stories and technical literature give a moat
+that compounds once customer feedback on shared value cases flows back.
+Commercial risk is high but rules are clear; SME sign-off before release
+contains it. Readiness is Medium; Lead depends on the B3
+version-controlled repository.</td>
+</tr>
+<tr>
+<td>Priority 2: Explainable lead-generation research</td>
+<td>Medium: a curated profile layer for industrial customers, not
+directly linked to conversion</td>
+<td>Low: poor output adds manual effort but no financial or legal
+exposure</td>
+<td>Low: Process Low; taxonomy, versioned prompts and governance still
+to be built; consistent with B2 Process Low</td>
+<td>Wait</td>
+<td>Maturing LLM features may make research on CRM-logged leads a
+standard CRM capability, so a separate agent risks wasted effort.
+Readiness is Low and the moat modest. The B3 governance work (taxonomy,
+versioned prompts) still proceeds, as any tool needs it.</td>
+</tr>
+<tr>
+<td>Priority 3: Order-status / lead-time exception visibility</td>
+<td>High: integrated internal and logistics-provider data could improve
+network planning beyond peers</td>
+<td>Medium: wrong delay flags cause customer friction; no personal data,
+so low export-control risk, though contractual checks apply</td>
+<td>Medium: control towers using logistics-vendor data run in selected
+markets</td>
+<td>Fast follow</td>
+<td>Network-optimisation AI is well established, so the edge lies in
+integrating logistics-provider data well enough to flag lead-time
+exceptions accurately. Wrong flags cause customer friction; the data
+holds no personal information, though contractual and export checks
+still apply. Readiness is Medium: control towers exist in selected
+markets.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c4-proprietary-data-moat--flywheel-test---3-marks">C4.
+Proprietary-data moat / flywheel test - 3 marks</h3>
+<p><strong>Selected opportunity:</strong> P4, sector-matched value cases
+(Priority 1).</p>
+<p><strong>Does the opportunity generate proprietary data competitors
+cannot easily obtain?</strong> Yes. P4 draws on our own product
+technical literature and customer success stories. The technical reasons
+behind each customer outcome sit only in company databases and are
+guarded as trade secrets, so peers cannot rebuild them from public
+sources.</p>
+<p><strong>Does that data feed a closed-loop system that improves the AI
+with continued use?</strong> Not yet; yes by design. The proposed
+solution would capture SME feedback on low-confidence escalations and
+bring in performance-analysis data, so that technical knowledge and
+sector insights are updated with use. This loop is part of the design
+only and is not built today.</p>
+<p><strong>Does the improving system create switching costs or another
+compounding advantage?</strong> Potentially. As answers improve, the
+system could become a customer self-service and diagnosis tool bundled
+with our products. That raises loyalty and B2B switching costs, which is
+the substitutes response set out in C2.</p>
+<p><strong>Conclusion</strong> Partial/conditional. The proprietary data
+test is met, but compounding depends on a learning loop that is not yet
+built, so the moat is potential rather than defensible today.</p>
+<p><strong>What would strengthen or erode the moat?</strong> Building
+and running the SME feedback loop, with data governance that keeps
+recommendation quality high, would strengthen it and could support a
+move to a customer-facing service. If the loop is never built, or weak
+governance lets content go stale or leak, P4 is reduced to a copyable
+content tool.</p>
+<h2 id="part-d-workforce-impact-and-role-redesign---25-marks">Part D:
+Workforce Impact and Role Redesign - 25 marks</h2>
+<h3 id="d1-select-the-workforce-focus---3-marks">D1. Select the
+workforce focus - 3 marks</h3>
+<p><strong>Selected opportunity</strong> P4, sector-matched value cases,
+our Priority 1.</p>
+<p><strong>Role / role family affected</strong> Sales Account
+Manager.</p>
+<p><strong>Why this role is materially affected</strong> Interviews with
+sales managers suggest that about 40% of their time goes on
+administrative work. Most of it is searching for product and customer
+information needed to answer customer queries or build a value
+proposition. P4 targets exactly this retrieval and drafting effort.</p>
+<p><strong>Current value bottleneck in the role</strong> Relevant
+content is spread across document libraries with no structured
+ownership, so it goes stale and may not fit the case in hand. Each
+answer or proposal therefore needs lengthy human checking before
+analysis can begin.</p>
+<p><strong>What should not be assumed</strong> P4 is not a
+headcount-reduction initiative. The aim is to cut administrative
+retrieval and checking so that account managers spend more time on
+account planning, account strategy reviews and customer engagement. Any
+time released is an estimate until it is measured (see D5).</p>
+<h3 id="d2-task-triage-decompose---classify---redesign---8-marks">D2.
+Task triage: Decompose -&gt; Classify -&gt; Redesign - 8 marks</h3>
+<p><strong>Frequency basis.</strong> The frequency categories (High =
+every customer interaction; Medium = interactions needing a lubrication
+investigation, a proposal or follow-up; Low = complex investigation
+scenarios only) are the author&#39;s estimates from interviews with sales
+managers, the same basis as D1. They are event-based, not
+time-and-motion data, and do not represent shares of total role
+time.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Discrete task</th>
+<th>Current share / frequency</th>
+<th>Classification</th>
+<th>Why</th>
+<th>AI / human boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Research the customer and site before engagement: summarise its
+activities, equipment and current lubricant use.</td>
+<td>High: before each new customer or site engagement; refreshed for
+material changes</td>
+<td>Augmentable</td>
+<td>Retrieval and summarisation can be assisted, but sources may be
+incomplete or outdated; customer context must be checked before it is
+used in a formal engagement.</td>
+<td>AI drafts a research summary from permitted sources; the human
+verifies relevance and unknowns before engagement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Agree the engagement scope, attendees and site-access requirements,
+including safety induction, protective equipment and photography
+permissions.</td>
+<td>High: before each initial site visit; reconfirmed for later
+visits</td>
+<td>Irreducibly human</td>
+<td>Agreement and safety accountability depend on people and
+site-specific conditions, not a deterministic rule set.</td>
+<td>Authorised customer representatives confirm scope, permissions and
+safety requirements with the sales manager, in person or by email or
+virtual meeting; AI may only draft the visit checklist.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Capture the customer&#39;s question and pain points, such as equipment
+failures, lubricant consumption or maintenance difficulties, in a
+problem brief.</td>
+<td>High: each new enquiry and substantive discovery discussion</td>
+<td>Augmentable</td>
+<td>AI can structure permitted recordings, handwritten notes and
+customer documents, but the customer&#39;s priorities and intended meaning
+need human confirmation.</td>
+<td>AI drafts the brief from permitted notes; the human clarifies
+ambiguity and confirms the problem with the customer.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Compile equipment and operating-condition data: equipment identity,
+components, duty cycle, manufacturer details, speed, load and
+temperature.</td>
+<td>Medium: per equipment or application assessed; updated when
+operating conditions change</td>
+<td>Augmentable</td>
+<td>Structured capture is repeatable, but equipment identity and actual
+operating conditions need site validation.</td>
+<td>AI organises supplied data and flags gaps; the human verifies
+measurements and equipment identity without inferring missing
+specifications.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Compile the current lubricant inventory and application methods,
+including supplier, grade, pack information and permitted label
+photographs.</td>
+<td>High: per initial site or equipment assessment; refreshed after
+product or application changes</td>
+<td>Augmentable</td>
+<td>Extraction can be assisted (company products from internal systems;
+competitor products through web search and image extraction), but labels
+and records may not match actual use.</td>
+<td>AI extracts and structures permitted records and images; the human
+confirms the product in use, competitor details and how it is
+applied.</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Record environmental, contamination and maintenance factors,
+including temperature range, dust and water exposure, drain intervals
+and maintenance practices.</td>
+<td>Low: per complex site assessment; revisited after seasonal or
+maintenance changes</td>
+<td>Irreducibly human</td>
+<td>The significance of contamination and maintenance factors depends on
+site observation and customer practice; AI only structures the
+record.</td>
+<td>AI structures observations and flags missing fields; the human
+observes, validates conditions and confirms maintenance history.</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Retrieve and confirm the equipment manufacturer&#39;s lubricant
+requirements, specifications and applicable approvals.</td>
+<td>High: per equipment or application recommendation; rechecked when
+documentation changes</td>
+<td>Augmentable</td>
+<td>Retrieval is assistable, but document applicability, version and
+approval scope need technical review; some specifications are not
+available online and must be compiled by a person.</td>
+<td>AI retrieves candidate requirements from approved current sources
+where available; the human confirms applicability and resolves conflicts
+before any recommendation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Identify candidate equivalent grades for the current or competitor
+lubricant using equipment information, manufacturer manuals and approved
+product-selection resources.</td>
+<td>High: per product-conversion or equivalent-grade enquiry</td>
+<td>Augmentable</td>
+<td>Equivalence depends on operating context and approvals, not name
+similarity; AI analysis is only as reliable as the in-house technical
+and performance data behind it.</td>
+<td>AI proposes candidates with supporting evidence; a qualified human
+validates suitability and escalates uncertainty before customer
+use.</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Shortlist candidate lubricant grades from the relevant application
+guides, including mainstream and premium options and documented
+exceptions.</td>
+<td>High: per application-specific recommendation</td>
+<td>Augmentable</td>
+<td>Search can narrow options from in-house guides and performance data,
+but guide exceptions and fit to the customer&#39;s recorded operating
+conditions require judgement.</td>
+<td>AI retrieves options and exceptions; the human checks current
+guidance and approves the shortlist.</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Determine the viscosity grade and required lubricant properties from
+the equipment&#39;s speed, load, lubrication method and temperature.</td>
+<td>Medium: per new or materially changed application</td>
+<td>Augmentable</td>
+<td>Calculations may follow rules, but input validity and
+application-specific interpretation require expertise.</td>
+<td>AI supports calculations using approved methods; a qualified human
+validates inputs, requirements and the resulting recommendation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Check current technical data sheets for approvals, performance
+evidence, compatibility limits and documented application cautions.</td>
+<td>High: for each shortlisted product before recommendation; rechecked
+on revision</td>
+<td>Augmentable</td>
+<td>Extraction is repeatable, but conflicting evidence and
+application-specific exclusions make unsupervised clearance
+inappropriate.</td>
+<td>AI flags relevant clauses and gaps; the human confirms compliance
+and refers unresolved cautions to an SME.</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Review permitted equipment or component images for condition clues
+and possible lubrication-related damage, where suitable images
+exist.</td>
+<td>Low: per condition or failure enquiry with usable images</td>
+<td>Augmentable</td>
+<td>Images may be incomplete or misleading; pattern recognition alone
+does not establish a cause.</td>
+<td>AI may flag visual clues for expert review; the human validates
+findings and seeks inspection or further evidence rather than accepting
+an AI diagnosis.</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Review available oil-analysis and condition-monitoring results to
+assess lubricant condition and possible maintenance actions.</td>
+<td>Medium: on receipt of each relevant analysis report or condition
+alert</td>
+<td>Augmentable</td>
+<td>Trends can be summarised, but sampling quality, operating history
+and maintenance consequences require context.</td>
+<td>AI summarises trends and anomalies; qualified people interpret the
+evidence and authorise any maintenance recommendation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Retrieve comparable documented customer-value cases by sector,
+application, equipment and problem; assess relevance to the shortlisted
+grade.</td>
+<td>High: per value-case or recommendation preparation; repeated if the
+shortlist changes</td>
+<td>Augmentable</td>
+<td>Retrieval is assistable, but apparent similarity does not prove that
+outcomes will transfer.</td>
+<td>AI finds and summarises approved cases; the human checks
+comparability, evidence quality and limits on claims.</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Obtain expert challenge of the proposed recommendation by sharing a
+structured case summary with an experienced colleague or technical
+specialist.</td>
+<td>Low: for novel, complex or low-confidence recommendations</td>
+<td>Irreducibly human</td>
+<td>Independent expert challenge and accountability are the purpose of
+the task; AI cannot replace that judgement.</td>
+<td>AI prepares the case summary and questions; a human specialist
+challenges and refines the advice; low-confidence recommendations are
+escalated to an SME.</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Escalate unclear or failure cases for specialist root-cause
+assessment, arranging inspection or sample analysis through authorised
+channels.</td>
+<td>Low: whenever unresolved uncertainty or a suspected failure warrants
+it</td>
+<td>Irreducibly human</td>
+<td>Escalation urgency, investigation scope and accountability depend on
+uncertain real-world consequences.</td>
+<td>AI assembles the evidence pack; authorised people decide escalation,
+arrange investigation and approve conclusions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>Identify and validate non-lubricant causes and corrective actions,
+such as alignment, filtration or contamination-control issues.</td>
+<td>Medium: per diagnostic case where evidence suggests a non-lubricant
+contributor</td>
+<td>Irreducibly human</td>
+<td>Causal judgement needs broader equipment and site context;
+responsibility for corrective action cannot rest on an unverified
+inference.</td>
+<td>AI organises hypotheses and evidence gaps; qualified people validate
+causes and agree safe corrective actions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Prepare the customer value case using supported consumption,
+downtime and component-life inputs; distinguish measured benefits from
+estimates.</td>
+<td>Medium: per qualified proposal needing value justification</td>
+<td>Augmentable</td>
+<td>AI can assist the arithmetic and draft a first-pass case from
+standard templates, but attribution, assumptions and relevance to
+customer outcomes need review.</td>
+<td>AI structures the value narrative and calculations; the human
+validates inputs and claims.</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>Issue the reviewed written recommendation with relevant technical
+information and limitations, and agree implementation arrangements with
+the customer.</td>
+<td>High: per approved recommendation; revised when the agreed solution
+changes</td>
+<td>Irreducibly human</td>
+<td>Customer agreement, explanation of limitations and release
+accountability depend on relationships and judgement.</td>
+<td>AI drafts the communication; an authorised human approves release,
+explains limitations and secures customer agreement.</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>Coordinate a suitable trial, review performance with the customer
+and record the validated outcome in a call report or customer-value
+record.</td>
+<td>Medium: per agreed trial, at agreed milestones and close-out</td>
+<td>Irreducibly human</td>
+<td>Trial decisions and outcome acceptance depend on site context,
+customer agreement and accountable interpretation.</td>
+<td>AI supports tracking and report drafting; authorised people agree
+trial conditions, review results and validate outcome claims.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence and coverage.</strong> The 20 tasks cover the Sales
+Account Manager workflow from pre-engagement research to trial
+close-out. The author reviewed and revised the classifications,
+including task 6 to Irreducibly human and task 12 to Augmentable. No
+task is classified Automatable, because no step is yet acceptable
+without human review. Tasks 2, 19 and 20 are kept whole because each has
+one accountable output: an agreed visit scope, a released recommendation
+and a validated trial outcome.</p>
+<h3 id="d3-redesign-the-role-and-redeploy-capacity---5-marks">D3.
+Redesign the role and redeploy capacity - 5 marks</h3>
+<table>
+<thead>
+<tr>
+<th>Current role composition</th>
+<th>Redesigned role composition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Routine / automatable work now consuming capacity:</strong>
+collating scattered information and first drafts within D2 tasks 1, 7,
+8, 9, 11, 14 and 18. No whole task is Automatable.</td>
+<td><strong>What AI/automation will take over:</strong> collation,
+summarisation and first-pass analysis. Scope, relevance and sign-off
+stay human.</td>
+</tr>
+<tr>
+<td><strong>Work that remains human-led but AI-augmented:</strong>
+Augmentable D2 tasks 3, 4, 5, 10, 12 and 13. The manager gathers
+customer inputs; AI structures them.</td>
+<td><strong>How the human role changes:</strong> less time compiling,
+more on judgement: validating AI-retrieved technical and competitor
+data, checking fit-for-purpose properties in performance diagnosis, and
+weighing trade-offs before deciding.</td>
+</tr>
+<tr>
+<td><strong>Higher-value / irreducibly human work currently
+constrained:</strong> Irreducibly human D2 tasks 2, 6, 15, 16, 17, 19
+and 20. Trade-offs and final recommendations suffer because collation
+crowds out analysis.</td>
+<td><strong>Where released capacity will be redeployed:</strong>
+evaluating product recommendations and commercial value to grow volume
+and share of customer portfolio. Part of the gain is offset by verifying
+AI outputs (tasks 7, 8, 11), SME escalation (tasks 15, 16), training,
+rework from stale sources and repository upkeep. Net capacity is
+unquantified; the D1 administrative share is a current-effort estimate,
+not a saving. No headcount change.</td>
+</tr>
+<tr>
+<td><strong>Current success measures:</strong> Deal Conversion Ratio;
+Product Recommendation Conversion Ratio; number of customer success
+stories.</td>
+<td><strong>New success measures after redesign:</strong> the same three
+measures, targeting a 10–15% rise in recorded values, an author target
+and unproven.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What is the single most important role-design change required
+so that people experience AI as capability expansion rather than role
+erosion?</strong> Make AI the account manager&#39;s research assistant, not
+the decision-maker. AI identifies, organises and synthesises
+qualitative, quantitative and image-based evidence; the manager owns
+framing the problem, investigating, gathering the missing context and
+making the trade-offs behind the final recommendation.</p>
+<h3 id="d4-capability-and-organisational-redesign-response---5-marks">D4.
+Capability and organisational redesign response - 5 marks</h3>
+<h4 id="d41-emerging-ai-capability--role-family---2-marks">D4.1 Emerging
+AI capability / role family - 2 marks</h4>
+<p><strong>D4.1 Role family:</strong> AI Product Managers.</p>
+<p><strong>Why this role/capability is the current bottleneck:</strong>
+The P4 assistant must fit how account managers build value cases today,
+with SME review and approval points built into the experience. Someone
+must translate that workflow into AI scope across retrieval-based GenAI
+synthesis and deep-learning image and video processing. Supporting need:
+AI Systems Engineers to integrate a prototype embedding approval and
+governance steps.</p>
+<p><strong>Build internally / hire / source externally - and
+why:</strong> Build internally: existing lubricant-solution product
+owners gain AI product credentials, and internal AI Systems Engineers
+are allocated. Hiring would delay a Quick Win; internal owners know the
+content and can run the SME feedback that keeps it current.</p>
+<h4 id="d42-role-redesign-framework---3-marks">D4.2 Role-redesign
+framework - 3 marks</h4>
+<p><strong>D4.2 Framework selected:</strong> Accenture
+Transition-Stage.</p>
+<p><strong>Why this framework fits the maturity evidence from Part A and
+what one structural/organisational change it would prioritise:</strong>
+Talent and Process are Low, yet the function is pushing from GenAI
+experiments to agentic AI. Staged capability-building suits this better
+than sociotechnical redesign or principle-led structure, which assume
+absent maturity (course notes, Module 3). Priority change:
+hub-and-spoke, with certified product owners embedded in Sales as AI
+product managers, drawing standards, engineers and reusable components
+from the group AI CoE so central expertise does not become a silo.</p>
+<h3 id="d5-human-ai-collaboration-evidence-plan---4-marks">D5. Human-AI
+collaboration evidence plan - 4 marks</h3>
+<p>Proposed plan only: no trial has been run, and no output reaches a
+customer before human review. Ten anonymised or synthetic enquiries per
+condition, matched for difficulty and rotated across conditions; one SME
+scores outputs blind to condition.</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>What will be measured</th>
+<th>Expected learning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human alone</td>
+<td>SLA time for data collation, proposal build, decision and end to
+end</td>
+<td>Baseline performance</td>
+</tr>
+<tr>
+<td>AI alone</td>
+<td>Same SLA times, plus accuracy, wrong-source count and SME
+recommendation rating (0-5)</td>
+<td>Where AI fails without human context</td>
+</tr>
+<tr>
+<td>Human + AI</td>
+<td>Same measures, plus review, correction and escalation effort</td>
+<td>Whether collaboration beats both, and at what review cost</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Primary metric(s):</strong> Average end-to-end SLA time;
+accuracy and explainability rated 0-5 by the SME, target at least
+4/5.</p>
+<p><strong>Task(s) likely inside AI capability frontier:</strong> D2
+tasks 1, 4, 5, 9, 11 and 14, and task 7 for retrieval only: research,
+data structuring, retrieval and clause extraction.</p>
+<p><strong>Task(s) where human judgement/context remains
+important:</strong> Tasks 6 and 17 (external conditions versus
+performance); 10, 13, 15 and 16 (equipment-specific expert guidance); 7
+(whether OEM guidance applies); 2 and 19 (customer preferences). Task 7
+sits on both sides, illustrating the jagged frontier (course notes,
+Module 3).</p>
+<p><strong>What result would justify the redesigned collaboration
+pattern:</strong> Human + AI cuts average end-to-end SLA by 20-40%
+against the baseline with a rating of at least 4/5, keeping AI as the
+account manager&#39;s research assistant.</p>
+<p><strong>What result would make you redesign the workflow
+again:</strong> SLA reduction below 20% with a rating below 3/5. Ratings
+between 3 and 4, or mixed results such as strong SLA gains with a rating
+below 4, are inconclusive: extend the trial with more cases before
+deciding.</p>
+<div class="pagebreak"></div>
+
+<h2 id="submission-checklist">Submission Checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>My assessment scope is clear and my
+claims do not exceed the evidence I can credibly access.</label></li>
+<li><label><input type="checkbox"></input>All six maturity dimensions are
+rated using the Course 3 sub-dimensions and evidence.</label></li>
+<li><label><input type="checkbox"></input>I have distinguished self-assessment
+from industry/peer benchmarking.</label></li>
+<li><label><input type="checkbox"></input>My portfolio contains 5-7 distinct
+opportunities and does not force every problem into GenAI.</label></li>
+<li><label><input type="checkbox"></input>Quick Win / Strategic Bet / Moonshot
+classifications match readiness and time/uncertainty.</label></li>
+<li><label><input type="checkbox"></input>My top-three sequence is consistent
+with Part A maturity constraints.</label></li>
+<li><label><input type="checkbox"></input>Competitive claims are publicly
+sourced or marked Not evidenced / Not applicable.</label></li>
+<li><label><input type="checkbox"></input>I have applied all five
+competitive-intelligence signal categories without inventing unavailable
+evidence.</label></li>
+<li><label><input type="checkbox"></input>Lead / follow / wait positions are
+initiative-specific and use data moat, regulatory clarity/risk and
+readiness.</label></li>
+<li><label><input type="checkbox"></input>My workforce analysis focuses on
+tasks and role redesign rather than assuming job
+elimination.</label></li>
+<li><label><input type="checkbox"></input>I completed at least 15
+representative tasks in the task-triage table.</label></li>
+<li><label><input type="checkbox"></input>Released capacity is deliberately
+redeployed to higher-value human/augmented work.</label></li>
+<li><label><input type="checkbox"></input>The selected organisational redesign
+framework matches Part A maturity.</label></li>
+<li><label><input type="checkbox"></input>The human-AI evidence plan compares
+Human alone / AI alone / Human + AI.</label></li>
+<li><label><input type="checkbox"></input>Assumptions, anonymisation and
+hypothetical elements are clearly labelled.</label></li>
+<li><label><input type="checkbox"></input>AI assistance, if used, is disclosed
+and I remain responsible for the final submission.</label></li>
+</ul>
+<h2 id="competitive--benchmark-evidence-reference-log">Competitive /
+Benchmark Evidence Reference Log</h2>
+<table>
+<thead>
+<tr>
+<th>Evidence ID</th>
+<th>Organisation / topic</th>
+<th>Source title / source type</th>
+<th>Date</th>
+<th>URL / location if shareable</th>
+<th>Used in section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td>NASSCOM</td>
+<td>AI Adoption Index 2.0: Tracking India&#39;s Sectoral Progress in AI
+Adoption</td>
+<td>2024</td>
+<td><a href="https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption">https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption</a>
+(findings also reproduced at indiaai.gov.in)</td>
+<td>A3</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>Gulf Oil Lubricants India Ltd</td>
+<td>Gulf Oil Lubricants India Limited Annual Report 2025-26 (PDF pp. 27,
+29, 44, 54)</td>
+<td>2026-08</td>
+<td><a href="https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf">https://assets.gulfoilltd.com/gulfindia/files/2026-08/GOLIL_Annual_Report_2025-26_0.pdf</a>
+(listed at <a href="https://india.gulfoilltd.com/investors/annual-reports">https://india.gulfoilltd.com/investors/annual-reports</a>)</td>
+<td>A3, C2</td>
+</tr>
+<tr>
+<td>E3</td>
+<td>Castrol (bp)</td>
+<td>Castrol turns 125 and looks to the future (press release)</td>
+<td>2024-01-10</td>
+<td><a href="https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html">https://www.castrol.com/en/global/corporate/about-castrol/newsroom/castrol-125.html</a></td>
+<td>A3, C1, C2</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>Castrol India Ltd</td>
+<td>CIL Annual Report 2025 (annual report)</td>
+<td>2026-02-25</td>
+<td><a href="https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/cil-annual-report-2025.pdf">https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/cil-annual-report-2025.pdf</a></td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>Gulf Oil Lubricants India Ltd</td>
+<td>Annual Report 2023-24 (annual report)</td>
+<td>2024-08-21</td>
+<td><a href="https://assets.gulfoilltd.com/gulfindia/files/2025-05/Gulf%20Oil_Annual%20Report%202023-24.pdf">https://assets.gulfoilltd.com/gulfindia/files/2025-05/Gulf%20Oil_Annual%20Report%202023-24.pdf</a></td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E6</td>
+<td>Gulf Oil Lubricants India Ltd</td>
+<td>Annual Report 2024-25 (annual report)</td>
+<td>2025-09-05</td>
+<td><a href="https://assets.gulfoilltd.com/gulfindia/files/2025-09/Gulf%20Oil%20Lubricants%20India%20Limited%20-%20Annual%20Report%202024-25.pdf?VersionId=DWK7zTpKHEHMm1tUSZ9Lumstc9bdya9C">https://assets.gulfoilltd.com/gulfindia/files/2025-09/Gulf%20Oil%20Lubricants%20India%20Limited%20-%20Annual%20Report%202024-25.pdf?VersionId=DWK7zTpKHEHMm1tUSZ9Lumstc9bdya9C</a></td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E7</td>
+<td>Castrol India Ltd</td>
+<td>NSE intimation: investment in ki Mobility Solutions (exchange
+filing)</td>
+<td>2023-01-11</td>
+<td><a href="https://archives.nseindia.com/corporate/CASTROLIND_11012023112638_SEIntimationNitro11Jan2023signed.pdf">https://archives.nseindia.com/corporate/CASTROLIND_11012023112638_SEIntimationNitro11Jan2023signed.pdf</a></td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E8</td>
+<td>Gulf Oil Lubricants India Ltd</td>
+<td>Completion of Tirex Transmission acquisition (exchange filing)</td>
+<td>2023-10-30</td>
+<td><a href="https://assets.gulfoilltd.com/gulfindia/files/2023-10/Acquisition.pdf?VersionId=QZGjj7vg98KK1eSJZAL7XaK3wK_MBVdA">https://assets.gulfoilltd.com/gulfindia/files/2023-10/Acquisition.pdf?VersionId=QZGjj7vg98KK1eSJZAL7XaK3wK_MBVdA</a></td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E9</td>
+<td>Google Patents</td>
+<td>Google Patents, CPC G06N assignee searches (live database; two
+queries: Castrol, Gulf Oil)</td>
+<td>Undated (live)</td>
+<td><a href="https://patents.google.com/?assignee=Castrol&amp;cpc=G06N">https://patents.google.com/?assignee=Castrol&amp;cpc=G06N</a><br>https://patents.google.com/?assignee=Gulf+Oil&amp;cpc=G06N</td>
+<td>C1</td>
+</tr>
+<tr>
+<td>E10</td>
+<td>bp plc</td>
+<td>bp press release: agreement to sell 65% of Castrol to Stonepeak</td>
+<td>2025-12-24</td>
+<td><a href="https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/press-release-from-bp-plc.pdf">https://www.castrol.com/content/dam/castrol/country-sites-new/en_in/india/home/documents/investors/press-release-from-bp-plc.pdf</a></td>
+<td>C1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="academic-integrity-and-ai-assistance-disclosure">Academic
+Integrity and AI-Assistance Disclosure</h2>
+<table>
+<thead>
+<tr>
+<th>Disclosure field</th>
+<th>Your response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Did you use an AI tool while preparing this assignment?</td>
+<td>[ ] No [ ] Yes</td>
+</tr>
+<tr>
+<td>If yes, name the tool(s) and describe how they were used</td>
+<td></td>
+</tr>
+<tr>
+<td>What did you independently verify or materially revise?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="honour-declaration">Honour Declaration</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>The analysis and judgement in this
+submission are my own.</label></li>
+<li><label><input type="checkbox"></input>Organisational facts are accurate to
+the best of my knowledge; estimates, assumptions, anonymisation and
+hypothetical elements are clearly labelled.</label></li>
+<li><label><input type="checkbox"></input>I have not fabricated benchmark,
+competitor, patent, hiring, product, filing or other
+competitive-intelligence evidence.</label></li>
+<li><label><input type="checkbox"></input>I have not disclosed confidential,
+personal or proprietary information that I am not authorised to
+share.</label></li>
+<li><label><input type="checkbox"></input>Where I used AI assistance, I have
+disclosed it above and remain responsible for the final
+submission.</label></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Date</th>
+<th>Signature / typed acknowledgement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="optional-evidence-appendix">Optional Evidence Appendix</h2>
+<p>No optional evidence appendix material is included.</p>
+</body>
+</html>
